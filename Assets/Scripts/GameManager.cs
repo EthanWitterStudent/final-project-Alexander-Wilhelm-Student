@@ -12,8 +12,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] float stageStartDelay;
     [SerializeField] float stageEndDelay;
-    [SerializeField] float fadeHold;
-    [SerializeField] float fadeSpeed;
 
     [SerializeField] TextMeshProUGUI stageStartText;
     [SerializeField] TextMeshProUGUI stageEndText;
@@ -33,7 +31,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         enemySpawner = FindObjectOfType<EnemySpawner>();
-        player = FindObjectOfType<Player>().gameObject;
         music = FindObjectOfType<MusicLoop>().gameObject;
         musicSrc = music.GetComponent<AudioSource>();
         defaultMusicVol = musicSrc.volume;
@@ -47,13 +44,11 @@ public class GameManager : MonoBehaviour
         {
             stageStartText.text = stage.GetStageName();
             yield return new WaitForSeconds(stageStartDelay);
-            StartCoroutine(FadeText(stageStartText, fadeSpeed));
             NextStage(stage);
             stagePlaying = true;
             do { yield return null; }
             while (enemySpawner.spawningEnemies || GameObject.FindGameObjectsWithTag("Enemy").Length > 0);
             stagePlaying = false;
-            StartCoroutine(FadeText(stageEndText, fadeSpeed/3));
             StartCoroutine(FadeMusic());
             yield return new WaitForSeconds(stageEndDelay);
             
@@ -85,6 +80,10 @@ public class GameManager : MonoBehaviour
         musicSrc.Stop();
     }
 
+/* from space defender, could be of use later
+    put into ui script, let's not leave this here!!!!
+
+
     public IEnumerator FadeText(TextMeshProUGUI text, float fadeFactor) {
         
         text.color = new Color(text.color.r, text.color.g, text.color.b, 1);
@@ -97,6 +96,8 @@ public class GameManager : MonoBehaviour
         }
         
     }
+
+    */
 
     public void StopGame() {
         StopCoroutine(HandleStages());

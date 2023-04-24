@@ -15,7 +15,6 @@ public class MusicLoop : MonoBehaviour
     void Start()
     {
         src = GetComponent<AudioSource>();
-        Debug.Log(src.clip.name);
     }
 
     // Update is called once per frame

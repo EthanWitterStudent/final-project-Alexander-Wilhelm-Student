@@ -9,6 +9,8 @@ public class EnemySpawner : MonoBehaviour
     //[SerializeField] float waveDelay = 0f;
     WaveSO currentWave;
     public bool spawningEnemies;
+
+    public Transform[] spawnPoints;
     // START MORE LIKE DOO DOO FART HAHA!
     void Start()
     {
@@ -42,14 +44,39 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator SpawnEnemies(WaveSO wave)
     {
+        Vector3 spawnloc;
         for (int j = 0; j < wave.GetEnemyCount(); j++)
         {
-            GameObject enemy = Instantiate(wave.GetEnemyPrefab(j),
-                        wave.GetStartWaypoint().position,
+            EnemySpawn currentspawn = wave.GetEnemySpawn(j);
+
+            switch (currentspawn.spawnLocation) {
+                case SpawnLocation.Random:
+                    spawnloc = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
+                    break;
+                case SpawnLocation.Top:
+                    spawnloc = spawnPoints[0].position;
+                    break;
+                case SpawnLocation.TopMiddle:
+                    spawnloc = spawnPoints[1].position;
+                    break;
+                case SpawnLocation.Middle:
+                    spawnloc = spawnPoints[2].position;
+                    break;
+                case SpawnLocation.BottomMiddle:
+                    spawnloc = spawnPoints[3].position;
+                    break;
+                case SpawnLocation.Bottom:
+                    spawnloc = spawnPoints[4].position;
+                    break;
+                default:
+                    spawnloc = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
+                    break;
+            }
+
+            GameObject enemy = Instantiate(wave.GetEnemySpawn(j).enemy,
+                        spawnloc,
                         Quaternion.identity,
                         transform);
-            if (enemy.GetComponent<Pathfinder>() != null) enemy.GetComponent<Pathfinder>().wave = wave;
-            if (enemy.GetComponent<HoverOverPlayer>() != null) enemy.GetComponent<HoverOverPlayer>().moveSpeed = wave.GetMoveSpeed();
             yield return new WaitForSeconds(wave.GetRandomSpawnInterval());
         }
     }
