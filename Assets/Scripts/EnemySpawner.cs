@@ -51,7 +51,7 @@ public class EnemySpawner : MonoBehaviour
 
             switch (currentspawn.spawnLocation) {
                 case SpawnLocation.Random:
-                    spawnloc = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
+                    spawnloc = spawnPoints[Random.Range(0, 4)].position;
                     break;
                 case SpawnLocation.Top:
                     spawnloc = spawnPoints[0].position;
@@ -69,7 +69,7 @@ public class EnemySpawner : MonoBehaviour
                     spawnloc = spawnPoints[4].position;
                     break;
                 default:
-                    spawnloc = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
+                    spawnloc = spawnPoints[Random.Range(0, 4)].position;
                     break;
             }
 
