@@ -13,7 +13,6 @@ public enum SpawnLocation {
 public struct EnemySpawn
 {
     public GameObject enemy;
-    public bool randomSpawn;
 
     public SpawnLocation spawnLocation;
     

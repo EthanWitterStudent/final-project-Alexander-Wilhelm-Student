@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] float stageStartDelay;
     [SerializeField] float stageEndDelay;
 
-    [SerializeField] TextMeshProUGUI stageStartText;
-    [SerializeField] TextMeshProUGUI stageEndText;
+    //[SerializeField] TextMeshProUGUI stageStartText;
+    //[SerializeField] TextMeshProUGUI stageEndText;
 
     EnemySpawner enemySpawner;
 
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     {
         foreach (StageSO stage in stageList)
         {
-            stageStartText.text = stage.GetStageName();
+            //stageStartText.text = stage.GetStageName();
             yield return new WaitForSeconds(stageStartDelay);
             NextStage(stage);
             stagePlaying = true;
