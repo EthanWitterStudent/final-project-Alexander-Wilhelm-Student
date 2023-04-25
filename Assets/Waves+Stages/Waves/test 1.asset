@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: test 1
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - enemy: {fileID: 2608760837481594740, guid: c29abd8f3b24dcf41845a449d2db84a2, type: 3}
-    randomSpawn: 0
+  - enemy: {fileID: 2218950390812419724, guid: 65eb6a54638d37847a9e30d78b28919b, type: 3}
+    spawnLocation: 0
+  - enemy: {fileID: 2218950390812419724, guid: 65eb6a54638d37847a9e30d78b28919b, type: 3}
     spawnLocation: 0
   spawnInterval: 1
   spawnIntervalVariance: 0

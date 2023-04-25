@@ -7,7 +7,6 @@ public class Health : MonoBehaviour
     // big chungus
     [SerializeField] int health = 50;
     [SerializeField] bool player;
-    [SerializeField] int scoreValue = 50;
     [SerializeField] float flashLength = 0.025f;
 
     [SerializeField] GameObject deathEffect;
@@ -53,12 +52,11 @@ public class Health : MonoBehaviour
 
     }
 
-    void DeathStuff()
+    public void DeathStuff()
     {
         if (deathEffect != null) Instantiate(deathEffect, transform.position, Quaternion.identity);
         if (deathSound != null) audioPlayer.PlayClip(deathSound, deathVolume);
         shake.setShake(deathShakeAmount, ShakeDecay);
-        FindObjectOfType<GameManager>().score += scoreValue;
         Destroy(gameObject);
     }
 
