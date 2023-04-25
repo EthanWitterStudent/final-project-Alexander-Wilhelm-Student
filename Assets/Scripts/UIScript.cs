@@ -2,59 +2,63 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 using TMPro;
 
 public class UIScript : MonoBehaviour
 {
 
-    [SerializeField] TextMeshProUGUI scoreText;
-    [SerializeField] TextMeshProUGUI healthText;
-    [SerializeField] Slider healthSlider;
-    [SerializeField] Image sliderFillArea;
+    [SerializeField] TextMeshProUGUI moneyText;
+    [SerializeField] Transform[] gridButtons;
 
-    [SerializeField] Color goodHealthColor;
-    [SerializeField] Color badHealthColor;
-    
-
-    [SerializeField] float badHealthValue;
+    [SerializeField] GameObject test;
 
     GameManager gameManager;
-    GameObject player;
 
-    int score;
-    float health;
 
-    float maxhealth;
 
 
     // Start is called before the first frame update
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
-        player = FindObjectOfType<Player>().gameObject;
-        maxhealth = player.GetComponent<Health>().GetHealth();
     }
 
     // Update is called once per frame
     void Update()
     {
-        score = gameManager.score;
-        if (score > 9999999) score = 9999999; //prevent score ui from looking funky
-
-        scoreText.text = score.ToString("D7");
-
-        if (player != null) health = player.GetComponent<Health>().GetHealth();
-        else health = 0;
-
-        healthText.text = ((int)health).ToString();
-
-        healthSlider.value = (health/maxhealth);
-
-        if (((float) health) / ((float) maxhealth) <= badHealthValue) {
-            sliderFillArea.color = badHealthColor;
-        } else sliderFillArea.color = goodHealthColor;
-         
 
 
     }
+
+    public void GridButtonClick()
+    {
+        Transform tf = GetClosestButton(gridButtons); // get the screen position of the button we're clicking
+        Debug.Log("Screen point: " + tf.position);  
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(tf.position); //get its position in the world
+        worldPos = new Vector3(worldPos.x, worldPos.y, 0); //snap to zero 
+        Debug.Log("World point: " + Camera.main.ScreenToWorldPoint(tf.position));
+
+        Instantiate(test, worldPos, Quaternion.identity); //test, later we use this to spawn towers
+
+    }
+
+
+    Transform GetClosestButton(Transform[] buttons) //get the closest button (the one we're clicking)
+    {                                               //i do this not by choice but because i can't be assed to spend my best years dragging shit in the inspector
+        Transform tMin = null;
+        float minDist = Mathf.Infinity;
+        Vector2 currentPos = Mouse.current.position.ReadValue();
+        foreach (Transform t in buttons)
+        {
+            float dist = Vector2.Distance(t.position, currentPos);
+            if (dist < minDist)
+            {
+                tMin = t;
+                minDist = dist;
+            }
+        }
+        return tMin;
+    }
+
 }
