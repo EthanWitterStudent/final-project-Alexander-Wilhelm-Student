@@ -17,7 +17,7 @@ public class CameraShake : MonoBehaviour
     void FixedUpdate()
     {
         if (shakeAmount > 0) {
-            shakeAmount -= shakeDecay;
+            shakeAmount -= shakeDecay * Time.fixedDeltaTime;
             Camera.main.transform.position = new Vector3(Random.Range(-shakeAmount, shakeAmount), Random.Range(-shakeAmount, shakeAmount), -10);
         } else Camera.main.transform.position = new Vector3(0, 0, -10);
     }

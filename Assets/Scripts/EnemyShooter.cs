@@ -32,7 +32,7 @@ public class EnemyShooter : MonoBehaviour
     void Start()
     {
         audioPlayer = FindObjectOfType<AudioPlayer>();
-        player = FindObjectOfType<Player>().gameObject;
+        //player = FindObjectOfType<Player>().gameObject;
         StartCoroutine(FireStuff());
     }
 
@@ -47,8 +47,9 @@ public class EnemyShooter : MonoBehaviour
                 {
                     for (int j = 0; j < shootCount; j++)
                     {
-                        float rot;
-
+                        
+                        /*
+                        old logic from space defender, could be useful later
                         if (aimAtPlayer)
                         {
                             //rot = -Vector2.Angle(transform.position, player.transform.position) ; //todo : get player angle
@@ -57,15 +58,15 @@ public class EnemyShooter : MonoBehaviour
                             dir = player.transform.InverseTransformDirection(dir);
                             rot = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
                             //Debug.Log(rot);
-                        }
-                        else rot = transform.rotation.eulerAngles.z + 180;
+                        } */
+                        float rot = transform.rotation.eulerAngles.z;
                         rot += Random.Range(-randomSpread, randomSpread);
 
                         Quaternion finalAngle = Quaternion.Euler(0, 0, rot);
 
                         Instantiate(projectilePrefab, transform.position + offset, finalAngle);
                     }
-                    audioPlayer.PlayClip(shootSound, shootVolume);
+                    //audioPlayer.PlayClip(shootSound, shootVolume);
                     yield return new WaitForSeconds(fireRate + Random.Range(0, fireRateVariance));
                 }
                 else yield return null;

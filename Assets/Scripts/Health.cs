@@ -56,7 +56,7 @@ public class Health : MonoBehaviour
     {
         if (deathEffect != null) Instantiate(deathEffect, transform.position, Quaternion.identity);
         if (deathSound != null) audioPlayer.PlayClip(deathSound, deathVolume);
-        shake.setShake(deathShakeAmount, ShakeDecay);
+        //shake.setShake(deathShakeAmount, ShakeDecay);
         Destroy(gameObject);
     }
 

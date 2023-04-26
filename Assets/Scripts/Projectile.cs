@@ -19,7 +19,7 @@ public class Projectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        radians = Mathf.Deg2Rad*(transform.rotation.eulerAngles.z + 90);
+        radians = Mathf.Deg2Rad*(transform.rotation.eulerAngles.z);
         angle = new Vector2((float)Mathf.Cos(radians), (float)Mathf.Sin(radians)) * Mathf.Rad2Deg;
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = angle.normalized * moveSpeed;

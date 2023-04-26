@@ -21,13 +21,17 @@ public class Lawnmower : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        if (mowing) rb.velocity = mowSpeed * Time.fixedDeltaTime;
+        if (mowing) {
+            rb.velocity = mowSpeed * Time.fixedDeltaTime;
+            if (rb.position.x > destroyPastX) Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.layer == LayerMask.GetMask("Enemy")) {
+
+        if (other.gameObject.tag == "Enemy") {
             other.gameObject.GetComponent<Health>().DeathStuff();   //kill em
-            if (activateSound != null) audioplayer.PlayClip(activateSound, 1); //loud = funny
+            if (activateSound != null &! mowing) audioplayer.PlayClip(activateSound, 1); //loud = funny
             mowing = true; //only start mowing once we kill a guy
         }
     }
