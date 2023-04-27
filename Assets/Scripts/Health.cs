@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
     [SerializeField] GameObject deathEffect;
 
     AudioPlayer audioPlayer;
-    [SerializeField] AudioClip hitSound;
+    [SerializeField] AudioClip[] hitSounds;
     [SerializeField] float hitVolume = 1;
     [SerializeField] AudioClip deathSound;
     [SerializeField] float deathVolume = 1;
@@ -26,7 +26,7 @@ public class Health : MonoBehaviour
     [SerializeField] float deathShakeAmount;
     [SerializeField] float ShakeDecay;
 
-    
+
     void Start()
     {
         audioPlayer = FindObjectOfType<AudioPlayer>();
@@ -43,8 +43,8 @@ public class Health : MonoBehaviour
         flashTimer -= Time.deltaTime;
     }
 
-    
-    
+
+
 
     public void DeathStuff()
     {
@@ -57,9 +57,13 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         if (!player || FindObjectOfType<GameManager>().stagePlaying)
-        health -= damage;
+            health -= damage;
         flashTimer = flashLength;
-        if (hitSound != null) audioPlayer.PlayClip(hitSound, hitVolume);
+        if (hitSounds.Length > 0)
+        {
+            AudioClip hitSound = hitSounds[Random.Range(0, hitSounds.Length)];
+            if (hitSound != null) audioPlayer.PlayClip(hitSound, hitVolume);
+        }
         shake.setShake(hitShakeAmount, ShakeDecay);
         if (health <= 0)
         {
@@ -67,7 +71,8 @@ public class Health : MonoBehaviour
         }
     }
 
-    public int GetHealth() {
+    public int GetHealth()
+    {
         return health;
     }
 

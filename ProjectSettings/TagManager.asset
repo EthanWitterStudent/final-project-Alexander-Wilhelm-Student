@@ -8,6 +8,8 @@ TagManager:
   - Title
   - Story Canvas
   - Level Select Screen
+  - Projectile
+  - Tower
   layers:
   - Default
   - TransparentFX
