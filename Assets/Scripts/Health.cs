@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     [SerializeField] int health = 50;
     [SerializeField] bool player;
     [SerializeField] float flashLength = 0.025f;
+    [SerializeField] int cashOnDeath;
 
     [SerializeField] GameObject deathEffect;
 
@@ -31,6 +32,7 @@ public class Health : MonoBehaviour
         audioPlayer = FindObjectOfType<AudioPlayer>();
         flash = GetComponentInChildren<SpriteRenderer>().material;
         shake = FindObjectOfType<CameraShake>();
+        Debug.Log(gameObject.name);
     }
 
     void Update()
@@ -40,17 +42,9 @@ public class Health : MonoBehaviour
 
         flashTimer -= Time.deltaTime;
     }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        DamageDealer damageDealer = other.GetComponent<DamageDealer>();
 
-        if (damageDealer != null)
-        {
-            TakeDamage(damageDealer.GetDamage());
-            damageDealer.Hit();
-        }
-
-    }
+    
+    
 
     public void DeathStuff()
     {
@@ -60,7 +54,7 @@ public class Health : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         if (!player || FindObjectOfType<GameManager>().stagePlaying)
         health -= damage;

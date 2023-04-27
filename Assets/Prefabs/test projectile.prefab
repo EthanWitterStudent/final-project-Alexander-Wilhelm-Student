@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6450487868134819291}
   - component: {fileID: 8788963998696668500}
   - component: {fileID: 4074312668531796178}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: test projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,8 +147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75ef3aea4fe6154ebab3abcc531b38b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 30
+  damage: 10
   destroyOnHit: 1
+  damageInterval: 0
 --- !u!61 &8788963998696668500
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -183,16 +184,16 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2854810196801811929}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 2

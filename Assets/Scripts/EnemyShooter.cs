@@ -32,6 +32,7 @@ public class EnemyShooter : MonoBehaviour
     void Start()
     {
         audioPlayer = FindObjectOfType<AudioPlayer>();
+        Debug.Log(audioPlayer == null);
         //player = FindObjectOfType<Player>().gameObject;
         StartCoroutine(FireStuff());
     }
@@ -66,7 +67,7 @@ public class EnemyShooter : MonoBehaviour
 
                         Instantiate(projectilePrefab, transform.position + offset, finalAngle);
                     }
-                    //audioPlayer.PlayClip(shootSound, shootVolume);
+                    audioPlayer.PlayClip(shootSound, shootVolume);
                     yield return new WaitForSeconds(fireRate + Random.Range(0, fireRateVariance));
                 }
                 else yield return null;

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: sprite
+  m_Name: flash
   m_Shader: {fileID: 4800000, guid: eb652705395cddd41a940dff173e9eea, type: 3}
   m_ValidKeywords:
   - PIXELSNAP_ON

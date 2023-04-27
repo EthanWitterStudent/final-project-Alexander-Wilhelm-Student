@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8a8f5aa8dab3f4b4a94613704db342d5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 5201306128907651695}
   - component: {fileID: 5201306128907651693}
   - component: {fileID: 1762681945}
+  - component: {fileID: 7694251208792842990}
   m_Layer: 6
   m_Name: pog
   m_TagString: Untagged
@@ -183,7 +184,7 @@ MonoBehaviour:
   alwaysShoot: 1
   shootTrigger: {fileID: 0}
   shootSound: {fileID: 8300000, guid: 392aabca38bf2d843864e21dc2f64114, type: 3}
-  shootVolume: 0.75
+  shootVolume: 0.45
   projectilePrefab: {fileID: 2854810196801811929, guid: c51d0f78a2eb0d94fae973055efed17e, type: 3}
   fireRate: 1
   fireRateVariance: 0
@@ -194,3 +195,24 @@ MonoBehaviour:
   burstCount: 1
   burstRate: 0
   burstDelay: 0
+--- !u!50 &7694251208792842990
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5201306128907651694}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

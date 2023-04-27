@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     AudioSource musicSrc;
     float defaultMusicVol;
 
-    public int score;
+    int cash;
 
     public bool stagePlaying;
 
@@ -80,6 +80,13 @@ public class GameManager : MonoBehaviour
         musicSrc.Stop();
     }
 
+    public int GetCash() {
+        return cash;
+    }
+
+    public void AddCash(int x) {
+        cash += x;
+    }
 /* from space defender, could be of use later
     put into ui script, let's not leave this here!!!!
 
