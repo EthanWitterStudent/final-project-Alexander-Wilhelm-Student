@@ -141,7 +141,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 2
+  m_Constraints: 6
 --- !u!61 &2218950390812419722
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -185,7 +185,7 @@ MonoBehaviour:
   flashLength: 0.025
   cashOnDeath: 0
   deathEffect: {fileID: 0}
-  hitSound: {fileID: 0}
+  hitSounds: []
   hitVolume: 1
   deathSound: {fileID: 8300000, guid: 282362d0ea6c7964f91eef2745ed3554, type: 3}
   deathVolume: 1
