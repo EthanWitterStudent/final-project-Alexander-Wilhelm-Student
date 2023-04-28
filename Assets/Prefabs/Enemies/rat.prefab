@@ -133,15 +133,15 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.3
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 2
+  m_Constraints: 6
 --- !u!61 &2218950390812419722
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -181,16 +181,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
-  player: 0
+  cashOnDeath: 0
   flashLength: 0.025
-  deathEffect: {fileID: 0}
-  hitSound: {fileID: 0}
-  hitVolume: 1
-  deathSound: {fileID: 8300000, guid: 282362d0ea6c7964f91eef2745ed3554, type: 3}
-  deathVolume: 1
+  deathEffect: {fileID: 646044222004944096, guid: daf8931e116bfd74b9d5c4dccd326de9, type: 3}
   hitShakeAmount: 0
   deathShakeAmount: 0
   ShakeDecay: 0
+  spawnSound: {fileID: 0}
+  spawnVolume: 0
+  hitSounds: []
+  hitVolume: 1
+  deathSounds: []
+  deathVolume: 1
+  idleSounds: []
+  idleVolume: 0.6
+  idleSoundInterval: 0
+  idleSoundIntervalVariance: 0
 --- !u!114 &2218950390812419719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f0fe7a5be20ce469d606186ee3289a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 150
+  moveSpeed: 120
 --- !u!114 &-7450539848108967595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,4 +224,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   destroyOnHit: 0
+  collisionEnterOnly: 0
   damageInterval: 0.5
+  damageCollider: {fileID: 0}

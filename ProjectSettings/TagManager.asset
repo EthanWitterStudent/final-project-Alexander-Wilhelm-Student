@@ -8,6 +8,8 @@ TagManager:
   - Title
   - Story Canvas
   - Level Select Screen
+  - Projectile
+  - Tower
   layers:
   - Default
   - TransparentFX
@@ -53,6 +55,9 @@ TagManager:
     locked: 0
   - name: towers
     uniqueID: 3354976975
+    locked: 0
+  - name: effects
+    uniqueID: 440276039
     locked: 0
   - name: foreground
     uniqueID: 2985372809

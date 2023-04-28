@@ -6,6 +6,7 @@ public class EnemyShooter : MonoBehaviour
 
 {
 
+    GameManager gm;
     [SerializeField] bool alwaysShoot;
     [SerializeField] Collider2D shootTrigger;
 
@@ -31,6 +32,7 @@ public class EnemyShooter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gm = FindObjectOfType<GameManager>();
         audioPlayer = FindObjectOfType<AudioPlayer>();
         Debug.Log(audioPlayer == null);
         //player = FindObjectOfType<Player>().gameObject;
@@ -44,7 +46,7 @@ public class EnemyShooter : MonoBehaviour
         {
             for (int i = 0; i < burstCount; i++)
             {
-                if (alwaysShoot || (shootTrigger != null && shootTrigger.IsTouchingLayers(LayerMask.GetMask("Player"))))
+                if (gm.stagePlaying && (alwaysShoot || (shootTrigger != null && shootTrigger.IsTouchingLayers(LayerMask.GetMask("Player")))))
                 {
                     for (int j = 0; j < shootCount; j++)
                     {
