@@ -10,6 +10,8 @@ public class Projectile : MonoBehaviour
 
     [SerializeField] float lifetime;
 
+    [SerializeField] AudioClip impactSounds;
+
     float timeAlive = 0;
 
     Vector2 angle;
@@ -34,6 +36,6 @@ public class Projectile : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.tag == "Enemy") Debug.LogWarning("Damage dealing to be implemented.");
+        
     }
 }

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5227353597465690909}
   - component: {fileID: 5227353597465690914}
   - component: {fileID: 5227353597465690913}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: lawnmower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
