@@ -56,6 +56,9 @@ TagManager:
   - name: towers
     uniqueID: 3354976975
     locked: 0
+  - name: effects
+    uniqueID: 440276039
+    locked: 0
   - name: foreground
     uniqueID: 2985372809
     locked: 0

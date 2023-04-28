@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: test
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - enemy: {fileID: 2608760837481594740, guid: 5e0701eeb64e63745a8f3282238802de, type: 3}
-    randomSpawn: 0
-    spawnLocation: 1
-  - enemy: {fileID: 2608760837481594740, guid: 5e0701eeb64e63745a8f3282238802de, type: 3}
-    randomSpawn: 0
-    spawnLocation: 2
-  spawnInterval: 1
-  spawnIntervalVariance: 0
-  waveDuration: 2
+  - enemy: {fileID: 2218950390812419724, guid: 65eb6a54638d37847a9e30d78b28919b, type: 3}
+    spawnLocation: 0
+  - enemy: {fileID: 2218950390812419724, guid: 65eb6a54638d37847a9e30d78b28919b, type: 3}
+    spawnLocation: 0
+  - enemy: {fileID: 2218950390812419724, guid: 65eb6a54638d37847a9e30d78b28919b, type: 3}
+    spawnLocation: 0
+  spawnInterval: 0.5
+  spawnIntervalVariance: 0.2
+  waveDuration: 3
   waitToSpawn: 0
