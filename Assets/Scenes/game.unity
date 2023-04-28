@@ -8344,10 +8344,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageList:
   - {fileID: 11400000, guid: a6400677d7a1d1e41845d505529c9401, type: 2}
-  musicFadeFactor: 3
   stageStartDelay: 0
   stageEndDelay: 0
-  stagePlaying: 0
+  musicFadeFactor: 3
+  startingCash: 500
+  passiveCashAmount: 50
+  passiveCashDelay: 5
+  passiveCashSound: {fileID: 8300000, guid: eb2a8955c9f0b614d94b1f2415e40986, type: 3}
+  passiveCashVolume: 0.6
 --- !u!1 &1609938353
 GameObject:
   m_ObjectHideFlags: 0

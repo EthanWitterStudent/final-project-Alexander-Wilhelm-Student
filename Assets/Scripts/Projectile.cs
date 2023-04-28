@@ -33,7 +33,7 @@ public class Projectile : MonoBehaviour
         timeAlive += Time.deltaTime;
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {   //TODO: get this working
+    private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Enemy") Debug.LogWarning("Damage dealing to be implemented.");
     }
 }

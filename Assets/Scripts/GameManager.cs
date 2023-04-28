@@ -5,27 +5,35 @@ using TMPro; //no im not making a separate script for stage ui lol
 
 public class GameManager : MonoBehaviour
 {
-
+    [Header("Stages")]
     [SerializeField] List<StageSO> stageList;
-
-    [SerializeField] float musicFadeFactor;
-
     [SerializeField] float stageStartDelay;
     [SerializeField] float stageEndDelay;
+    [System.NonSerialized] public bool stagePlaying;
 
     //[SerializeField] TextMeshProUGUI stageStartText;
     //[SerializeField] TextMeshProUGUI stageEndText;
 
     EnemySpawner enemySpawner;
 
+    [Header("Music")]
     GameObject music;
-    GameObject player;
     AudioSource musicSrc;
     float defaultMusicVol;
+    [SerializeField] float musicFadeFactor;
 
+
+    [Header("Cash")]
     int cash;
 
-    public bool stagePlaying;
+    [SerializeField] int startingCash;
+    [SerializeField] int passiveCashAmount;
+    [SerializeField] float passiveCashDelay;
+    [SerializeField] AudioClip passiveCashSound;
+    [SerializeField] float passiveCashVolume;
+    float cashtimer;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +43,7 @@ public class GameManager : MonoBehaviour
         musicSrc = music.GetComponent<AudioSource>();
         defaultMusicVol = musicSrc.volume;
         StartCoroutine(HandleStages());
+        StartCoroutine(PassiveCash());
     }
 
 
@@ -51,11 +60,8 @@ public class GameManager : MonoBehaviour
             stagePlaying = false;
             StartCoroutine(FadeMusic());
             yield return new WaitForSeconds(stageEndDelay);
-            
+
         }
-
-        
-
     }
 
     void NextStage(StageSO stage)
@@ -80,33 +86,61 @@ public class GameManager : MonoBehaviour
         musicSrc.Stop();
     }
 
-    public int GetCash() {
+    public int GetCash()
+    {
         return cash;
     }
 
-    public void AddCash(int x) {
+    public void AddCash(int x)
+    {
         cash += x;
     }
-/* from space defender, could be of use later
-    put into ui script, let's not leave this here!!!!
 
-
-    public IEnumerator FadeText(TextMeshProUGUI text, float fadeFactor) {
-        
-        text.color = new Color(text.color.r, text.color.g, text.color.b, 1);
-        yield return new WaitForSeconds(fadeHold);
-        Debug.Log($"{text.color.r} {text.color.g} {text.color.b} {text.color.a}");
-        while (text.color.a >= Mathf.Epsilon)
-        {
-            text.color = new Color(text.color.r, text.color.g, text.color.b, (text.color.a - (fadeFactor*Time.deltaTime))); //INSANE!!!! WHY AM I DOING THIS
-            yield return null;
-        }
-        
+    public float GetCashTimer() {
+        return cashtimer;
     }
 
-    */
+    public float GetCashDelay() {
+        return passiveCashDelay;
+    }
 
-    public void StopGame() {
+    IEnumerator PassiveCash() //using an enumerator because i don't wanna make a whole-ass update loop for one function
+    {
+        while (true)
+        {
+            yield return new WaitForFixedUpdate();
+            cashtimer += Time.fixedDeltaTime;
+            if (cashtimer >= passiveCashDelay) {
+                cashtimer = 0;                      //using a timer instead of yield return to give the ui something to play with
+                AddCash(passiveCashAmount);
+                FindObjectOfType<AudioPlayer>().PlayClip(passiveCashSound, passiveCashVolume);
+            }
+            
+        }
+    }
+
+
+    /* from space defender, could be of use later
+        put into ui script, let's not leave this here!!!!
+
+
+        public IEnumerator FadeText(TextMeshProUGUI text, float fadeFactor) {
+
+            text.color = new Color(text.color.r, text.color.g, text.color.b, 1);
+            yield return new WaitForSeconds(fadeHold);
+            Debug.Log($"{text.color.r} {text.color.g} {text.color.b} {text.color.a}");
+            while (text.color.a >= Mathf.Epsilon)
+            {
+                text.color = new Color(text.color.r, text.color.g, text.color.b, (text.color.a - (fadeFactor*Time.deltaTime))); //INSANE!!!! WHY AM I DOING THIS
+                yield return null;
+            }
+
+        }
+
+        */
+
+    public void StopGame()
+    {
         StopCoroutine(HandleStages());
     }
 }
