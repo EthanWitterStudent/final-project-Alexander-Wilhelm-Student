@@ -39,7 +39,7 @@ public class Health : MonoBehaviour
         audioPlayer = FindObjectOfType<AudioPlayer>();
         flash = GetComponentInChildren<SpriteRenderer>().material;
         shake = FindObjectOfType<CameraShake>();
-        Debug.Log(gameObject.name);
+        //Debug.Log(gameObject.name);
         if (spawnSound != null) audioPlayer.PlayClip(spawnSound, spawnVolume);
         if (idleSounds.Length > 0) StartCoroutine(IdleSound());
         

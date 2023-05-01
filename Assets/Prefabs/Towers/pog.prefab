@@ -149,7 +149,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ca4c9143293e1094fa8cdf45a4c5ce37, type: 3}
   hitVolume: 0.8
   deathSounds:
-  - {fileID: 8300000, guid: 9edd54920b3075d4aaf71f18c079248b, type: 3}
+  - {fileID: 8300000, guid: b11757c0753374243bd71e9d6601a15a, type: 3}
   deathVolume: 0.6
   idleSounds: []
   idleVolume: 0.6
@@ -193,11 +193,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d60720c441b2d4ea7f461f9cec9d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alwaysShoot: 1
+  alwaysShoot: 0
   shootTrigger: {fileID: 8530783661962324796}
-  shootSound: {fileID: 8300000, guid: 392aabca38bf2d843864e21dc2f64114, type: 3}
+  shootSound: {fileID: 8300000, guid: 140c566c95911ab4b9e10146ed2072c1, type: 3}
   shootVolume: 0.45
-  projectilePrefab: {fileID: 2854810196801811929, guid: c51d0f78a2eb0d94fae973055efed17e, type: 3}
+  projectilePrefab: {fileID: 2854810196801811929, guid: c4cc2b6f0f0c2664d8186234dc8d056b, type: 3}
   fireRate: 1.75
   fireRateVariance: 0
   offset: {x: 0, y: 0, z: 0}

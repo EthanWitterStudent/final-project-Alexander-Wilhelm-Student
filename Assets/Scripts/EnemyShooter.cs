@@ -46,7 +46,7 @@ public class EnemyShooter : MonoBehaviour
         {
             for (int i = 0; i < burstCount; i++)
             {
-                if (gm.stagePlaying && (alwaysShoot || (shootTrigger != null && shootTrigger.IsTouchingLayers(LayerMask.GetMask("Player")))))
+                if (gm.stagePlaying && (alwaysShoot || (shootTrigger != null && shootTrigger.IsTouchingLayers(LayerMask.GetMask("Enemy")))))
                 {
                     for (int j = 0; j < shootCount; j++)
                     {
