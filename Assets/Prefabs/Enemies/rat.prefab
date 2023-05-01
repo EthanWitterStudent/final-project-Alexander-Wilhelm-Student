@@ -187,16 +187,23 @@ MonoBehaviour:
   hitShakeAmount: 0
   deathShakeAmount: 0
   ShakeDecay: 0
-  spawnSound: {fileID: 0}
+  spawnSound: {fileID: 8300000, guid: f00694d16539cc5479027bfc6e7e3ba2, type: 3}
   spawnVolume: 0
-  hitSounds: []
-  hitVolume: 1
-  deathSounds: []
-  deathVolume: 1
-  idleSounds: []
-  idleVolume: 0.6
-  idleSoundInterval: 0
-  idleSoundIntervalVariance: 0
+  hitSounds:
+  - {fileID: 8300000, guid: 54fd6949b36362745afdd757fbafe920, type: 3}
+  - {fileID: 8300000, guid: 97afe18869fe17a45a66a20aff940db8, type: 3}
+  - {fileID: 8300000, guid: df2d766c3185efa4aa39480ee8f59bb7, type: 3}
+  hitVolume: 0.4
+  deathSounds:
+  - {fileID: 8300000, guid: c1931f87125d1bb4ca237ec8d3c4f642, type: 3}
+  deathVolume: 0.6
+  idleSounds:
+  - {fileID: 8300000, guid: f00694d16539cc5479027bfc6e7e3ba2, type: 3}
+  - {fileID: 8300000, guid: 97afe18869fe17a45a66a20aff940db8, type: 3}
+  - {fileID: 8300000, guid: df2d766c3185efa4aa39480ee8f59bb7, type: 3}
+  idleVolume: 0.3
+  idleSoundInterval: 3
+  idleSoundIntervalVariance: 2
 --- !u!114 &2218950390812419719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,3 +234,5 @@ MonoBehaviour:
   collisionEnterOnly: 0
   damageInterval: 0.5
   damageCollider: {fileID: 0}
+  damageSounds: []
+  damageVolume: 0

@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 5201306128410804053}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.42, y: 0.42, z: 0.42}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5201306128907651692}
@@ -97,9 +97,10 @@ GameObject:
   - component: {fileID: 5201306128907651693}
   - component: {fileID: 1762681945}
   - component: {fileID: 7694251208792842990}
+  - component: {fileID: 8530783661962324796}
   m_Layer: 6
   m_Name: pog
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,17 +134,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 150
-  player: 0
-  flashLength: 0.025
   cashOnDeath: 0
+  flashLength: 0.025
   deathEffect: {fileID: 0}
-  hitSound: {fileID: 8300000, guid: dd3956a41a7dc864a93a4790e993fe0a, type: 3}
-  hitVolume: 1
-  deathSound: {fileID: 0}
-  deathVolume: 1
   hitShakeAmount: 0
   deathShakeAmount: 0
   ShakeDecay: 0
+  spawnSound: {fileID: 0}
+  spawnVolume: 0
+  hitSounds:
+  - {fileID: 8300000, guid: ec8a344e23e1de34a8dc81330ab07b3e, type: 3}
+  - {fileID: 8300000, guid: 9e71902018a9eea41b86d0d066601b4e, type: 3}
+  - {fileID: 8300000, guid: 0d68ab8eace04604188f813fbb45fdc5, type: 3}
+  - {fileID: 8300000, guid: ca4c9143293e1094fa8cdf45a4c5ce37, type: 3}
+  hitVolume: 0.8
+  deathSounds:
+  - {fileID: 8300000, guid: 9edd54920b3075d4aaf71f18c079248b, type: 3}
+  deathVolume: 0.6
+  idleSounds: []
+  idleVolume: 0.6
+  idleSoundInterval: 0
+  idleSoundIntervalVariance: 0
 --- !u!61 &5201306128907651693
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -157,7 +168,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.05}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -168,7 +179,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.08, y: 1.08}
+  m_Size: {x: 0.98, y: 0.98}
   m_EdgeRadius: 0
 --- !u!114 &1762681945
 MonoBehaviour:
@@ -183,7 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alwaysShoot: 1
-  shootTrigger: {fileID: 0}
+  shootTrigger: {fileID: 8530783661962324796}
   shootSound: {fileID: 8300000, guid: 392aabca38bf2d843864e21dc2f64114, type: 3}
   shootVolume: 0.45
   projectilePrefab: {fileID: 2854810196801811929, guid: c51d0f78a2eb0d94fae973055efed17e, type: 3}
@@ -217,3 +228,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &8530783661962324796
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5201306128907651694}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 8, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16, y: 0.25}
+  m_EdgeRadius: 0
