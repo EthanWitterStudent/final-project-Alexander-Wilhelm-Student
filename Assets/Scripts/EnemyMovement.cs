@@ -4,23 +4,30 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] float moveSpeed; 
+    [SerializeField] float maxSpeed; 
+    [SerializeField] float moveAccel; 
     Rigidbody2D rb;
     Vector2 moveVec; //dont calculate every frame cause that's bad
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        moveVec = new Vector2(-moveSpeed, 0);
+        moveVec = new Vector2(-moveAccel, 0);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.velocity = moveVec * Time.fixedDeltaTime;
+        rb.AddForce(moveVec);
+        if (Mathf.Abs(rb.velocity.x) > maxSpeed)
+        rb.velocity = new Vector2 (Mathf.Clamp(rb.velocity.x, -maxSpeed, Mathf.Infinity), rb.velocity.y);
     }
 
-    public void SetEnemySpeed(float x) {
+    public void SetEnemyAccel(float x) {
         moveVec = new Vector2(-x, 0);
+    }
+
+    public void SetEnemyMaxSpeed(float x) {
+        maxSpeed = x;
     }
 }
