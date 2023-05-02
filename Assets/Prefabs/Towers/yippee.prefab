@@ -213,9 +213,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnObject: {fileID: 646044222004944096, guid: 4f9322a5516b86f4cbf398134d377986, type: 3}
-  spawnSound: {fileID: 8300000, guid: 140c566c95911ab4b9e10146ed2072c1, type: 3}
+  spawnSound: {fileID: 8300000, guid: 4e758cc55e0fe1540aac92354890483d, type: 3}
   soundVolume: 3
   SpawnDelay: 4
   SpawnDelayVariance: 10
-  postSoundDelay: 1
+  postSoundDelay: 0
   destroyOnSpawn: 1
