@@ -11,7 +11,7 @@ public class UIScript : MonoBehaviour
     [SerializeField] TextMeshProUGUI moneyText;
     [SerializeField] Transform[] gridButtons;
 
-    [SerializeField] GameObject test;
+    //[SerializeField] GameObject test;
 
     GameManager gameManager;
 
@@ -31,16 +31,19 @@ public class UIScript : MonoBehaviour
 
     }
 
-    public void GridButtonClick()
+    public Vector3 GridButtonClick()
     {
         Transform tf = GetClosestButton(gridButtons); // get the screen position of the button we're clicking
-        Debug.Log("Screen point: " + tf.position);  
+        return tf.position;
+
+        /* unused
+        //Debug.Log("Screen point: " + tf.position);  
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(tf.position); //get its position in the world
         worldPos = new Vector3(worldPos.x, worldPos.y, 0); //snap to zero 
-        Debug.Log("World point: " + Camera.main.ScreenToWorldPoint(tf.position));
-
-        Instantiate(test, worldPos, Quaternion.identity); //test, later we use this to spawn towers
-
+        //Debug.Log("World point: " + Camera.main.ScreenToWorldPoint(tf.position));
+        return worldPos;
+        //Instantiate(test, worldPos, Quaternion.identity); //test, later we use this to spawn towers
+        */
     }
 
 
@@ -49,15 +52,17 @@ public class UIScript : MonoBehaviour
         Transform tMin = null;
         float minDist = Mathf.Infinity;
         Vector2 currentPos = Mouse.current.position.ReadValue();
+        
         foreach (Transform t in buttons)
         {
             float dist = Vector2.Distance(t.position, currentPos);
-            if (dist < minDist)
+            if (dist <= minDist)
             {
                 tMin = t;
                 minDist = dist;
             }
         }
+        
         return tMin;
     }
 

@@ -24,7 +24,7 @@ public class MusicLoop : MonoBehaviour
             src.clip = LoopMusic;
             src.loop = true;
             src.Play();
-            Debug.Log("huh");
+            //Debug.Log("huh");
         }
 
         //Debug.Log($"IS PLAYING: {src.isPlaying} LOOP: {src.loop} LOOPING: {looping} LOADED {Time.timeSinceLevelLoad > 0.02}");

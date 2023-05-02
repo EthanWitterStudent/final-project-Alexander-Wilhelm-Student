@@ -139,7 +139,7 @@ MonoBehaviour:
   hitShakeAmount: 0
   deathShakeAmount: 0
   ShakeDecay: 0
-  spawnSound: {fileID: 0}
+  spawnSound: {fileID: 8300000, guid: 0a21e78f27c99f94d9c197b1a95eb124, type: 3}
   spawnVolume: 0.9
   hitSounds:
   - {fileID: 8300000, guid: ec8a344e23e1de34a8dc81330ab07b3e, type: 3}
@@ -147,7 +147,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0d68ab8eace04604188f813fbb45fdc5, type: 3}
   hitVolume: 0.8
   deathSounds:
-  - {fileID: 8300000, guid: 9edd54920b3075d4aaf71f18c079248b, type: 3}
+  - {fileID: 8300000, guid: 888424061061b58448a93f79daf811ad, type: 3}
   deathVolume: 0.6
   idleSounds: []
   idleVolume: 0.6
@@ -212,8 +212,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4551056668a980e47b14e5a79b925f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnObject: {fileID: 646044222004944096, guid: daf8931e116bfd74b9d5c4dccd326de9, type: 3}
-  spawnSound: {fileID: 8300000, guid: 9edd54920b3075d4aaf71f18c079248b, type: 3}
+  spawnObject: {fileID: 646044222004944096, guid: 4f9322a5516b86f4cbf398134d377986, type: 3}
+  spawnSound: {fileID: 8300000, guid: 140c566c95911ab4b9e10146ed2072c1, type: 3}
   soundVolume: 3
   SpawnDelay: 4
   SpawnDelayVariance: 10
