@@ -27,7 +27,7 @@ public class TowerManager : MonoBehaviour
         Vector3 pos = FindObjectOfType<UIScript>().GridButtonClick();
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(pos); //get its position in the world
         worldPos = new Vector3(worldPos.x, worldPos.y, 0); //snap to zero 
-        Debug.Log("World point: " + worldPos);
+        //Debug.Log("World point: " + worldPos);
         BoxCollider2D check = Instantiate(towerCheck, worldPos, Quaternion.identity);
         ContactFilter2D filter = new ContactFilter2D(); filter.SetLayerMask(LayerMask.GetMask("Tower"));
         //List<Collider2D> hits = new List<Collider2D>();

@@ -216,7 +216,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f0fe7a5be20ce469d606186ee3289a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 120
+  maxSpeed: 3
+  moveAccel: 4
 --- !u!114 &-7450539848108967595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +233,7 @@ MonoBehaviour:
   damage: 10
   destroyOnHit: 0
   collisionEnterOnly: 0
+  colliderOnly: 1
   damageInterval: 0.5
   damageCollider: {fileID: 0}
   damageSounds: []
