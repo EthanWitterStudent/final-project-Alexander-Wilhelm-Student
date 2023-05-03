@@ -196,8 +196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alwaysShoot: 0
   shootTrigger: {fileID: 8530783661962324796}
-  shootSound: {fileID: 8300000, guid: 140c566c95911ab4b9e10146ed2072c1, type: 3}
-  shootVolume: 0.45
+  shootSound: {fileID: 8300000, guid: 3df2074458f54284b9e61fe1df58b2d8, type: 3}
+  shootVolume: 3
   projectilePrefab: {fileID: 2854810196801811929, guid: c4cc2b6f0f0c2664d8186234dc8d056b, type: 3}
   fireRate: 1.25
   fireRateVariance: 0
