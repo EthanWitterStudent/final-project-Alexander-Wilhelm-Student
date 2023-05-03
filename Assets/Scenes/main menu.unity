@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1113937820}
     m_Modifications:
+    - target: {fileID: 1143145947782672399, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerLink
+      value: 
+      objectReference: {fileID: 5201306128907651694, guid: 46b318783b3b1ea4b89fbdd8dfa028c8, type: 3}
+    - target: {fileID: 1143145947782672399, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: memeTowerLinked
+      value: 
+      objectReference: {fileID: 5201306128907651694, guid: 46b318783b3b1ea4b89fbdd8dfa028c8, type: 3}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -313,25 +321,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 847109623}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 2045395749}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -517,6 +513,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1113937820}
     m_Modifications:
+    - target: {fileID: 1143145947782672399, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerLink
+      value: 
+      objectReference: {fileID: 5201306128907651694, guid: 19fa154c95bf7b942ba927a50a761d25, type: 3}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1598,6 +1598,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1113937820}
     m_Modifications:
+    - target: {fileID: 1143145947782672399, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerLink
+      value: 
+      objectReference: {fileID: 5201306128907651694, guid: 1fac362106892454e9ccf4fd46a4dbb7, type: 3}
+    - target: {fileID: 1143145947782672399, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: memeTowerLinked
+      value: 
+      objectReference: {fileID: 5201306128907651694, guid: 1fac362106892454e9ccf4fd46a4dbb7, type: 3}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2574,7 +2582,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2045395750}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &947946169
 MonoBehaviour:
@@ -2652,6 +2660,58 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947946167}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1030523156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1030523157}
+  - component: {fileID: 1030523158}
+  m_Layer: 0
+  m_Name: SelectionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1030523157
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030523156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2045395750}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1030523158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030523156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f95216df76fc244186722538c94b818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startLevelButton: {fileID: 105582797}
+  towerRoster: []
+  maxTowersSelected: 0
 --- !u!1 &1036774090
 GameObject:
   m_ObjectHideFlags: 0
@@ -2934,7 +2994,7 @@ Transform:
   - {fileID: 682828348}
   - {fileID: 688795156}
   m_Father: {fileID: 2045395750}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1190696829
 GameObject:
@@ -3964,7 +4024,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2045395750}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -4227,7 +4287,7 @@ Transform:
   - {fileID: 1480295345}
   - {fileID: 105582796}
   m_Father: {fileID: 2045395750}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1658164591
 PrefabInstance:
@@ -4236,6 +4296,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1113937820}
     m_Modifications:
+    - target: {fileID: 1143145947782672399, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerLink
+      value: 
+      objectReference: {fileID: 5201306128907651694, guid: 48c0dda462006894b8efd3f3e1ed3bfc, type: 3}
+    - target: {fileID: 1143145947782672399, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: memeTowerLinked
+      value: 
+      objectReference: {fileID: 5201306128907651694, guid: 48c0dda462006894b8efd3f3e1ed3bfc, type: 3}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5097,7 +5165,6 @@ GameObject:
   - component: {fileID: 2045395754}
   - component: {fileID: 2045395753}
   - component: {fileID: 2045395752}
-  - component: {fileID: 2045395755}
   m_Layer: 0
   m_Name: Tower Select Canvas
   m_TagString: Title
@@ -5117,6 +5184,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1030523157}
   - {fileID: 1625815419}
   - {fileID: 1113937820}
   - {fileID: 1559861551}
@@ -5190,18 +5258,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &2045395755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045395749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6201637e6449f0f41ba8273c3131dc5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2049466559
 GameObject:
   m_ObjectHideFlags: 0
