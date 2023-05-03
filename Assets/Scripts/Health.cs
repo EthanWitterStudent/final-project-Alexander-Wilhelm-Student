@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     GameManager gm;
     [Header("General")]
     [SerializeField] int health = 50;
+    [SerializeField] int cashCost = 0;
     [SerializeField] int cashOnDeath;
 
     [Header("Effects")]
@@ -100,6 +101,11 @@ public class Health : MonoBehaviour
     public int GetHealth()
     {
         return health;
+    }
+
+    public int GetCashCost()
+    {
+        return cashCost;
     }
 
 

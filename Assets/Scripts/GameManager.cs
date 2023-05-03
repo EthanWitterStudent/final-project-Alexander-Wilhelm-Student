@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
         music = FindObjectOfType<MusicLoop>().gameObject;
         musicSrc = music.GetComponent<AudioSource>();
         defaultMusicVol = musicSrc.volume;
+        cash = startingCash;
         StartCoroutine(HandleStages());
         StartCoroutine(PassiveCash());
     }

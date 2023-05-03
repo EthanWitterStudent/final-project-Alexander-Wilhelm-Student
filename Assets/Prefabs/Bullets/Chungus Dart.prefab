@@ -133,8 +133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   homingFactor: 0
-  moveSpeed: 30
-  lifetime: 5
+  moveSpeed: 10
+  lifetime: 0.3
   impactSounds: {fileID: 0}
 --- !u!114 &6450487868134819291
 MonoBehaviour:
@@ -202,4 +202,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 2
+  m_Constraints: 6

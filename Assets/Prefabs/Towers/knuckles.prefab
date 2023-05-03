@@ -133,7 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d73ca2253af1bb4db27790749f68958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
+  health: 200
+  cashCost: 250
   cashOnDeath: 0
   flashLength: 0.025
   deathEffect: {fileID: 0}
@@ -241,8 +242,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   punchCollider: {fileID: -9079202605872292227}
-  punchDamage: 30
-  punchDuration: 0.45
+  punchDamage: 60
+  punchDuration: 2
   punchKnockback: 3
   punchEffect: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
