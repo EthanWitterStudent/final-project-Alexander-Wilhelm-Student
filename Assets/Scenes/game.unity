@@ -353,7 +353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227353597465690914, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
       propertyPath: soundVolume
-      value: 0.3
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5227353597465690915, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
       propertyPath: m_RootOrder
@@ -946,7 +946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227353597465690914, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
       propertyPath: soundVolume
-      value: 0.3
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5227353597465690915, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
       propertyPath: m_RootOrder
@@ -6575,7 +6575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227353597465690914, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
       propertyPath: soundVolume
-      value: 0.3
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5227353597465690915, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
       propertyPath: m_RootOrder
@@ -8405,7 +8405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageList:
-  - {fileID: 11400000, guid: a6400677d7a1d1e41845d505529c9401, type: 2}
+  - {fileID: 11400000, guid: 0be2ec3910347a04c9b3ba991b5aca84, type: 2}
   stageStartDelay: 0
   stageEndDelay: 4
   musicFadeFactor: 3
@@ -8427,7 +8427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towers:
-  - {fileID: 5201306128907651694, guid: 19fa154c95bf7b942ba927a50a761d25, type: 3}
+  - {fileID: 5201306128907651694, guid: 46b318783b3b1ea4b89fbdd8dfa028c8, type: 3}
   boxCastSize: 0
   towerCheck: {fileID: 9008034108270426231, guid: c62c9705f3cdbcc4d83d3b178b8203e2, type: 3}
   placeFailSound: {fileID: 0}
@@ -9007,7 +9007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227353597465690914, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
       propertyPath: soundVolume
-      value: 0.3
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5227353597465690915, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
       propertyPath: m_RootOrder
@@ -10363,7 +10363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227353597465690914, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
       propertyPath: soundVolume
-      value: 0.3
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5227353597465690915, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
       propertyPath: m_RootOrder
