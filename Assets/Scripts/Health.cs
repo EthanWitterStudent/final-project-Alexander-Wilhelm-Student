@@ -20,7 +20,7 @@ public class Health : MonoBehaviour
     float flashTimer;
     Material flash;
     CameraShake shake;
-    
+
     [Header("SFX")]
     AudioPlayer audioPlayer;
     [SerializeField] AudioClip spawnSound;
@@ -43,7 +43,7 @@ public class Health : MonoBehaviour
         //Debug.Log(gameObject.name);
         if (spawnSound != null) audioPlayer.PlayClip(spawnSound, spawnVolume);
         if (idleSounds.Length > 0) StartCoroutine(IdleSound());
-        
+
     }
 
     void Update()
@@ -59,7 +59,11 @@ public class Health : MonoBehaviour
 
     public void DeathStuff()
     {
-        if (cashOnDeath > 0) gm.AddCash(cashOnDeath);
+        if (cashOnDeath > 0)
+        {
+            gm.AddCash(cashOnDeath);
+            FindObjectOfType<UIScript>().UpdateMoneyText();
+        }
         if (deathEffect != null) Instantiate(deathEffect, transform.position, Quaternion.identity);
         if (deathSounds.Length > 0)
         {
@@ -72,7 +76,7 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        
+
         health -= damage;
         flashTimer = flashLength;
         if (hitSounds.Length > 0)

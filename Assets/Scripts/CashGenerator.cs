@@ -28,6 +28,7 @@ public class CashGenerator : MonoBehaviour
     {
         yield return new WaitForSeconds(cashInterval);
         gm.AddCash(cashAmount);
+        FindObjectOfType<UIScript>().UpdateMoneyText();
         if (animator != null && animatorTrigger != null) animator.SetTrigger(animatorTrigger);
         audioplayer.PlayClip(cashSound, cashVolume);
     }

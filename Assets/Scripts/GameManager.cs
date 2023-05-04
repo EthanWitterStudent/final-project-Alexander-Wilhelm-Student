@@ -115,6 +115,7 @@ public class GameManager : MonoBehaviour
                 cashtimer = 0;                      //using a timer instead of yield return to give the ui something to play with
                 AddCash(passiveCashAmount);
                 FindObjectOfType<AudioPlayer>().PlayClip(passiveCashSound, passiveCashVolume);
+                FindObjectOfType<UIScript>().UpdateMoneyText();
             }
             
         }
