@@ -8427,7 +8427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towers:
-  - {fileID: 5201306128907651694, guid: 46b318783b3b1ea4b89fbdd8dfa028c8, type: 3}
+  - {fileID: 5201306128907651694, guid: c63e1d00aef928e41b22228e8fb1e611, type: 3}
   boxCastSize: 0
   towerCheck: {fileID: 9008034108270426231, guid: c62c9705f3cdbcc4d83d3b178b8203e2, type: 3}
   placeFailSound: {fileID: 0}

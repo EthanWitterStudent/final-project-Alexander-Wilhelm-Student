@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   homingFactor: 0
-  moveSpeed: 30
-  lifetime: 5
+  moveSpeed: 35
+  lifetime: 4
   impactSounds: {fileID: 0}
 --- !u!114 &6450487868134819291
 MonoBehaviour:
@@ -65,6 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 60
+  damageEffect: {fileID: 0}
   destroyOnHit: 1
   collisionEnterOnly: 0
   colliderOnly: 1

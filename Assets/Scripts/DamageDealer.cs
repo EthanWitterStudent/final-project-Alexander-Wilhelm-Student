@@ -5,6 +5,7 @@ using UnityEngine;
 public class DamageDealer : MonoBehaviour
 {
     [SerializeField] int damage = 10;
+    [SerializeField] GameObject damageEffect;
     [SerializeField] bool destroyOnHit;
     [SerializeField] bool collisionEnterOnly;
     [SerializeField] bool colliderOnly = true;
@@ -34,13 +35,8 @@ public class DamageDealer : MonoBehaviour
         if (collisionEnterOnly && (damageCollider == null || other.collider == damageCollider))
         {
             Health health = other.gameObject.GetComponent<Health>();
-
-            if (health != null && timer < 0)
-            {
-                health.TakeDamage(damage);
-                timer = damageInterval;
-                if (destroyOnHit) Destroy(gameObject);
-            }
+            
+            DealDamage(health);
         }
     }
 
@@ -50,12 +46,7 @@ public class DamageDealer : MonoBehaviour
         {
             Health health = other.gameObject.GetComponent<Health>();
 
-            if (health != null && timer < 0)
-            {
-                health.TakeDamage(damage);
-                timer = damageInterval;
-                if (destroyOnHit) Destroy(gameObject);
-            }
+            DealDamage(health);
         }
     }
 
@@ -65,12 +56,7 @@ public class DamageDealer : MonoBehaviour
         {
             Health health = other.gameObject.GetComponent<Health>();
 
-            if (health != null && timer < 0)
-            {
-                health.TakeDamage(damage);
-                timer = damageInterval;
-                if (destroyOnHit) Destroy(gameObject);
-            }
+            DealDamage(health);
         }
     }
 
@@ -80,12 +66,7 @@ public class DamageDealer : MonoBehaviour
         {
             Health health = other.gameObject.GetComponent<Health>();
 
-            if (health != null && timer < 0)
-            {
-                health.TakeDamage(damage);
-                timer = damageInterval;
-                if (destroyOnHit) Destroy(gameObject);
-            }
+            DealDamage(health);
         }
     }
 
@@ -96,11 +77,24 @@ public class DamageDealer : MonoBehaviour
         }
     }
 
+    void DealDamage(Health health) {
+        if (health != null && timer < 0)
+            {
+                if (damageEffect != null) Instantiate(damageEffect, transform.position, Quaternion.identity);
+                health.TakeDamage(damage);
+                timer = damageInterval;
+                PlaySound();
+                if (destroyOnHit) Destroy(gameObject);
+            }
+    }
+
 
     public float GetTimer()
     {
         return timer;
     }
+
+
 
 
 }
