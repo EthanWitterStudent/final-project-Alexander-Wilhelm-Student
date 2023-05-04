@@ -22,17 +22,17 @@ public class UIScript : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
+        UpdateMoneyText();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
 
     }
 
     public void UpdateMoneyText() {
-        moneyText.text = gameManager.GetCash().ToString("D4");
+        moneyText.text = $"x{gameManager.GetCash().ToString("D4")}";
     }
 
     public Vector3 GridButtonClick()
