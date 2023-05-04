@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: HoundTest
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - enemy: {fileID: 2218950390812419724, guid: e3f99251ac9466649ad9249ae823ffa9, type: 3}
-    spawnLocation: 0
-  - enemy: {fileID: 2218950390812419724, guid: e3f99251ac9466649ad9249ae823ffa9, type: 3}
-    spawnLocation: 0
-  - enemy: {fileID: 2218950390812419724, guid: e3f99251ac9466649ad9249ae823ffa9, type: 3}
-    spawnLocation: 0
-  - enemy: {fileID: 2218950390812419724, guid: e3f99251ac9466649ad9249ae823ffa9, type: 3}
-    spawnLocation: 0
-  - enemy: {fileID: 2218950390812419724, guid: e3f99251ac9466649ad9249ae823ffa9, type: 3}
-    spawnLocation: 0
-  spawnInterval: 0.3
-  spawnIntervalVariance: 0
+  - enemy: {fileID: 2218950390812419724, guid: 4c87e955b0856164a8489457bf47dd59, type: 3}
+    spawnLocation: 1
+  - enemy: {fileID: 2218950390812419724, guid: 4c87e955b0856164a8489457bf47dd59, type: 3}
+    spawnLocation: 1
+  - enemy: {fileID: 2218950390812419724, guid: 4c87e955b0856164a8489457bf47dd59, type: 3}
+    spawnLocation: 3
+  - enemy: {fileID: 2218950390812419724, guid: 4c87e955b0856164a8489457bf47dd59, type: 3}
+    spawnLocation: 5
+  - enemy: {fileID: 2218950390812419724, guid: 4c87e955b0856164a8489457bf47dd59, type: 3}
+    spawnLocation: 5
+  spawnInterval: 1
+  spawnIntervalVariance: 0.3
   waveDuration: 2
   waitToSpawn: 0

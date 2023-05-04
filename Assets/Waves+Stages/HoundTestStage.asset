@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: HoundTestStage
   m_EditorClassIdentifier: 
   stageName: DOKI DOKI LITERATURE CLUB!!!11!!1!
-  waves: []
+  waves:
+  - {fileID: 11400000, guid: b048eda147acc8144b21cc14c5bf9040, type: 2}
   introMusic: {fileID: 0}
-  loopMusic: {fileID: 0}
+  loopMusic: {fileID: 8300000, guid: 75af993c9474db04d848ef0fbe2b1bfe, type: 3}
