@@ -302,7 +302,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9529412, g: 0.8077716, b: 0.38039222, a: 0.23529412}
     m_PressedColor: {r: 0.95294124, g: 0.8078432, b: 0.3803922, a: 1}
     m_SelectedColor: {r: 0.95294124, g: 0.9215687, b: 0.3803922, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.4745098}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1712,6 +1712,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1113937820}
     m_Modifications:
+    - target: {fileID: 1143145947782672399, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerLink
+      value: 
+      objectReference: {fileID: 5201306128907651694, guid: 6a1e47e155cf4ff4b914c4143a9d88c2, type: 3}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1955,6 +1959,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1113937820}
     m_Modifications:
+    - target: {fileID: 1143145947782672399, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerLink
+      value: 
+      objectReference: {fileID: 5201306128907651694, guid: dbbe45edd68b2df49acf0e43d35ddcbb, type: 3}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2198,6 +2206,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1113937820}
     m_Modifications:
+    - target: {fileID: 1143145947782672399, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerLink
+      value: 
+      objectReference: {fileID: 5201306128907651694, guid: ee69e238a94f29c4085ff3f6e2b1707f, type: 3}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2711,7 +2723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startLevelButton: {fileID: 105582797}
   towerRoster: []
-  maxTowersSelected: 0
+  maxTowersSelectable: 5
 --- !u!1 &1036774090
 GameObject:
   m_ObjectHideFlags: 0
@@ -3748,6 +3760,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1113937820}
     m_Modifications:
+    - target: {fileID: 1143145947782672399, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerLink
+      value: 
+      objectReference: {fileID: 5201306128907651694, guid: 8d2e555304bd84948b4f5b8490a9a1cf, type: 3}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5301,6 +5317,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1113937820}
     m_Modifications:
+    - target: {fileID: 1143145947782672399, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerLink
+      value: 
+      objectReference: {fileID: 5201306128907651694, guid: 4625e82b1482ae94d8ab7f0364c7c079, type: 3}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_TargetGraphic
       value: 
