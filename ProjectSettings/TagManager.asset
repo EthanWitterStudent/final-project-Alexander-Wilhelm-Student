@@ -10,6 +10,7 @@ TagManager:
   - Level Select Screen
   - Projectile
   - Tower
+  - Selector
   layers:
   - Default
   - TransparentFX
