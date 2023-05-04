@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Obsolete("old bad tower script, use NewTowerMenu instead.")] 
 public class TowerMenu : MonoBehaviour
-{   
+{
+      
     GameObject[] towerSelectors;
     [SerializeField] Button startLevelButton;
     //Needs to be public, as the list determines what the player can use

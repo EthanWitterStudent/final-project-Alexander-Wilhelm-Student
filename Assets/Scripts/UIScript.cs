@@ -27,8 +27,12 @@ public class UIScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
+    }
 
+    public void UpdateMoneyText() {
+        moneyText.text = gameManager.GetCash().ToString("D4");
     }
 
     public Vector3 GridButtonClick()

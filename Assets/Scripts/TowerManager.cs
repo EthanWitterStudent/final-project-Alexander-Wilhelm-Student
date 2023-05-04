@@ -17,12 +17,9 @@ public class TowerManager : MonoBehaviour
     {
         gm = FindObjectOfType<GameManager>();
         audioPlayer = FindObjectOfType<AudioPlayer>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        TowerInfo tinfo = FindObjectOfType<TowerInfo>();
+        towers = tinfo.towers.ToArray();
+        Destroy(tinfo); //don't need this no more!
     }
 
     public void PlaceTower()
@@ -44,9 +41,5 @@ public class TowerManager : MonoBehaviour
             } else audioPlayer.PlayClip(placeFailSound, 1);
             Destroy(check.gameObject);
         } else audioPlayer.PlayClip(placeFailSound, 1);
-
-        //BoxCollider2D checkCollider = Instantiate(towerCheck, pos, Quaternion.identity);
-        //check if tower is there already
-
     }
 }
