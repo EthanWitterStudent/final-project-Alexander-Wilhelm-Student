@@ -9,6 +9,7 @@ public class UIScript : MonoBehaviour
 {
 
     [SerializeField] TextMeshProUGUI moneyText;
+    [SerializeField] Button[] towerButtons;
     [SerializeField] Transform[] gridButtons;
 
     //[SerializeField] GameObject test;
@@ -29,6 +30,14 @@ public class UIScript : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void setupTowerButton(int index, GameObject tower, Sprite image) {
+        //Debug.Log($"SETTING TOWER BUTTON INDEX {index} TOWER {tower.name} IMAGE {image.name}");
+        Button button = towerButtons[index];
+        button.gameObject.SetActive(true);
+        if (image != null) button.GetComponent<Image>().sprite = image;
+        button.GetComponentInChildren<TextMeshProUGUI>().text = $"${tower.GetComponent<Health>().GetCashCost()}";
     }
 
     public void UpdateMoneyText() {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5033174, g: 0.49926096, b: 0.47094893, a: 1}
+  m_IndirectSpecularColor: {r: 0.50325847, g: 0.49916387, b: 0.47090644, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -142,6 +142,10 @@ PrefabInstance:
       propertyPath: tower
       value: 
       objectReference: {fileID: 5201306128907651694, guid: 46b318783b3b1ea4b89fbdd8dfa028c8, type: 3}
+    - target: {fileID: 1945890109619059811, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 60b4e7b0c7e165f468206eff6c907272, type: 3}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -555,6 +559,10 @@ PrefabInstance:
       propertyPath: tower
       value: 
       objectReference: {fileID: 5201306128907651694, guid: 19fa154c95bf7b942ba927a50a761d25, type: 3}
+    - target: {fileID: 1945890109619059811, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 4f470e3ceb311214ca3b4d4b142d1c80, type: 3}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1122,6 +1130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1113937820}
     m_Modifications:
+    - target: {fileID: 1945890109619059811, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 58859b6965ed1c8439fc6ceda81042c4, type: 3}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1708,6 +1720,10 @@ PrefabInstance:
       propertyPath: tower
       value: 
       objectReference: {fileID: 5201306128907651694, guid: 1fac362106892454e9ccf4fd46a4dbb7, type: 3}
+    - target: {fileID: 1945890109619059811, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerImage
+      value: 
+      objectReference: {fileID: 21300000, guid: b07382a9a8509084b8cf37c2a7e4b820, type: 3}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1852,6 +1868,10 @@ PrefabInstance:
       propertyPath: tower
       value: 
       objectReference: {fileID: 5201306128907651694, guid: 6a1e47e155cf4ff4b914c4143a9d88c2, type: 3}
+    - target: {fileID: 1945890109619059811, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerImage
+      value: 
+      objectReference: {fileID: 21300000, guid: dc925ac5c8003ff46b9fe8136cfd7966, type: 3}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2133,6 +2153,10 @@ PrefabInstance:
       propertyPath: tower
       value: 
       objectReference: {fileID: 5201306128907651694, guid: dbbe45edd68b2df49acf0e43d35ddcbb, type: 3}
+    - target: {fileID: 1945890109619059811, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 77403e2fbffc7c74dbd482708812125c, type: 3}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2414,6 +2438,10 @@ PrefabInstance:
       propertyPath: tower
       value: 
       objectReference: {fileID: 5201306128907651694, guid: ee69e238a94f29c4085ff3f6e2b1707f, type: 3}
+    - target: {fileID: 1945890109619059811, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerImage
+      value: 
+      objectReference: {fileID: 21300000, guid: b7e91baad1a79d04ebfebe14f600aa40, type: 3}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -4048,6 +4076,10 @@ PrefabInstance:
       propertyPath: tower
       value: 
       objectReference: {fileID: 5201306128907651694, guid: 8d2e555304bd84948b4f5b8490a9a1cf, type: 3}
+    - target: {fileID: 1945890109619059811, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 3bceede33e19feb49b63de8e178fdc74, type: 3}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -4638,6 +4670,10 @@ PrefabInstance:
       propertyPath: tower
       value: 
       objectReference: {fileID: 5201306128907651694, guid: 48c0dda462006894b8efd3f3e1ed3bfc, type: 3}
+    - target: {fileID: 1945890109619059811, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 805348c355fce1147801825425d55f05, type: 3}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -5697,6 +5733,10 @@ PrefabInstance:
       propertyPath: tower
       value: 
       objectReference: {fileID: 5201306128907651694, guid: 4625e82b1482ae94d8ab7f0364c7c079, type: 3}
+    - target: {fileID: 1945890109619059811, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 31e518ede5d5b98498c056c00f58372a, type: 3}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_TargetGraphic
       value: 
