@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.50325847, g: 0.49916387, b: 0.47090644, a: 1}
+  m_IndirectSpecularColor: {r: 0.5033174, g: 0.49926096, b: 0.47094893, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1130,6 +1130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1113937820}
     m_Modifications:
+    - target: {fileID: 1945890109619059811, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: tower
+      value: 
+      objectReference: {fileID: 1775759298618913294, guid: f585eaa3fe9e0da4f971946f618d511f, type: 3}
     - target: {fileID: 1945890109619059811, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: towerImage
       value: 
