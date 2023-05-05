@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.51275027, g: 0.5011588, b: 0.47208512, a: 1}
+  m_IndirectSpecularColor: {r: 0.5128097, g: 0.5012013, b: 0.47210705, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8830,6 +8830,7 @@ GameObject:
   - component: {fileID: 1567643559}
   - component: {fileID: 1567643562}
   - component: {fileID: 1567643561}
+  - component: {fileID: 1567643563}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -8930,6 +8931,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1567643563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567643558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b264323748b2a438efda7f9dbd425f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1571760370
 GameObject:
   m_ObjectHideFlags: 0
