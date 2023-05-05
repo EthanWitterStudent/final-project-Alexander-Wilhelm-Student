@@ -8,6 +8,8 @@ public class Lawnmower : MonoBehaviour
     [SerializeField] float destroyPastX;
     [SerializeField] AudioClip activateSound;
     [SerializeField] float soundVolume;
+    [SerializeField] float screenShake;
+    [SerializeField] float shakeDecay;
     bool mowing;
 
     Rigidbody2D rb;
@@ -34,6 +36,7 @@ public class Lawnmower : MonoBehaviour
             other.gameObject.GetComponent<Health>().DeathStuff();   //kill em
             if (activateSound != null &! mowing) audioplayer.PlayClip(activateSound, soundVolume); //loud = funny
             mowing = true; //only start mowing once we kill a guy
+            FindObjectOfType<CameraShake>().setShake(screenShake, shakeDecay);
         }
     }
 }

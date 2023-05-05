@@ -78,7 +78,5 @@ public class EnemyShooter : MonoBehaviour
 
             yield return new WaitForSeconds(burstDelay);
         }
-
-
     }
 }

@@ -11,10 +11,18 @@ public class UIScript : MonoBehaviour
     [SerializeField] TextMeshProUGUI moneyText;
     [SerializeField] Button[] towerButtons;
     [SerializeField] Transform[] gridButtons;
+    [SerializeField] Image stonksPanel;
+
+    [SerializeField] TextMeshProUGUI winText;
+    [SerializeField] float randomTextColor;
+    [SerializeField] Image fadePanel;
+    [SerializeField] float panelFadeTime;
 
     //[SerializeField] GameObject test;
 
     GameManager gameManager;
+
+    Color fadecolor;
 
 
 
@@ -23,13 +31,14 @@ public class UIScript : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
+        fadecolor = new Color(0, 0, 0, Time.deltaTime/panelFadeTime); //dont recalculate this
         UpdateMoneyText();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        stonksPanel.fillAmount = gameManager.GetCashTimer()/gameManager.GetCashDelay();
     }
 
     public void setupTowerButton(int index, GameObject tower, Sprite image) {
@@ -41,7 +50,7 @@ public class UIScript : MonoBehaviour
     }
 
     public void UpdateMoneyText() {
-        moneyText.text = $"x{gameManager.GetCash().ToString("D4")}";
+        moneyText.text = $"${gameManager.GetCash().ToString("D4")}";
     }
 
     public Vector3 GridButtonClick()
@@ -79,4 +88,39 @@ public class UIScript : MonoBehaviour
         return tMin;
     }
 
+    public IEnumerator WinText() {
+        winText.gameObject.SetActive(true);
+        while (true) {
+            winText.color = Color.white - new Color(Random.Range(0, randomTextColor), Random.Range(0, randomTextColor), Random.Range(0, randomTextColor), 0);
+            yield return null;
+        }
+    }
+    public IEnumerator FadePanel() {
+            fadePanel.gameObject.SetActive(true);
+            fadePanel.color = new Color(0, 0, 0, 0);
+            while (fadePanel.color.a <= 1)
+            {
+                fadePanel.color += fadecolor;
+                yield return null;
+            }
+        }
+
+    /* from space defender, could be of use later
+        put into ui script, let's not leave this here!!!!
+
+
+        public IEnumerator FadeText(TextMeshProUGUI text, float fadeFactor) {
+
+            text.color = new Color(text.color.r, text.color.g, text.color.b, 1);
+            yield return new WaitForSeconds(fadeHold);
+            Debug.Log($"{text.color.r} {text.color.g} {text.color.b} {text.color.a}");
+            while (text.color.a >= Mathf.Epsilon)
+            {
+                text.color = new Color(text.color.r, text.color.g, text.color.b, (text.color.a - (fadeFactor*Time.deltaTime))); //INSANE!!!! WHY AM I DOING THIS
+                yield return null;
+            }
+
+        }
+
+        */
 }

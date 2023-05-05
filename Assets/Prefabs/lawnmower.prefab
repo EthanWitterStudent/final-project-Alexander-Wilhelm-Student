@@ -76,7 +76,9 @@ MonoBehaviour:
   moveSpeed: 350
   destroyPastX: 20
   activateSound: {fileID: 8300000, guid: 2aea34b336355424c8b6f054ad6223c1, type: 3}
-  soundVolume: 3
+  soundVolume: 0.5
+  screenShake: 0.03
+  shakeDecay: 0.015
 --- !u!50 &5227353597465690913
 Rigidbody2D:
   serializedVersion: 4

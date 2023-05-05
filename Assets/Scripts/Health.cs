@@ -53,10 +53,7 @@ public class Health : MonoBehaviour
 
         flashTimer -= Time.deltaTime;
     }
-
-
-
-
+    
     public void DeathStuff()
     {
         if (cashOnDeath > 0)

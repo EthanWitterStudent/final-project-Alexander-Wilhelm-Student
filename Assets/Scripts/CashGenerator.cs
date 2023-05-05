@@ -17,7 +17,7 @@ public class CashGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         audioplayer = FindObjectOfType<AudioPlayer>();
         gm = FindObjectOfType<GameManager>();
         StartCoroutine(GiveCash());

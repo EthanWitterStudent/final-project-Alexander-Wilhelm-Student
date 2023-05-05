@@ -25,7 +25,7 @@ public class Punch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         audioplayer = FindObjectOfType<AudioPlayer>();
         kbVector = new Vector2(punchKnockback, 0);
         

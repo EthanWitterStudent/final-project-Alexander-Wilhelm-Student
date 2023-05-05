@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     AudioSource musicSrc;
     float defaultMusicVol;
     [SerializeField] float musicFadeFactor;
+    AudioPlayer sfxSrc;
 
 
     [Header("Cash")]
@@ -33,6 +34,23 @@ public class GameManager : MonoBehaviour
     [SerializeField] float passiveCashVolume;
     float cashtimer;
 
+    [Header("Win Stuff")]
+    [SerializeField] float winDelay;
+    [SerializeField] float fadeDelay;
+    [SerializeField] GameObject winEffect;
+
+    [SerializeField] AudioClip winMusic;
+    [SerializeField] float menuDelay;
+
+    [SerializeField] Collider2D loseCollider;
+
+    [SerializeField] AudioClip loseSound;
+
+    //misc hidden vars
+
+    bool lostGame; //unused as of yet, i plan to move losing logic here
+    UIScript uiscript;
+    
 
 
     // Start is called before the first frame update
@@ -41,8 +59,11 @@ public class GameManager : MonoBehaviour
         enemySpawner = FindObjectOfType<EnemySpawner>();
         music = FindObjectOfType<MusicLoop>().gameObject;
         musicSrc = music.GetComponent<AudioSource>();
+        sfxSrc = FindObjectOfType<AudioPlayer>();
         defaultMusicVol = musicSrc.volume;
+        uiscript = FindObjectOfType<UIScript>();
         cash = startingCash;
+        uiscript.UpdateMoneyText();
         StartCoroutine(HandleStages());
         StartCoroutine(PassiveCash());
     }
@@ -61,20 +82,41 @@ public class GameManager : MonoBehaviour
             stagePlaying = false;
             StartCoroutine(FadeMusic());
             yield return new WaitForSeconds(stageEndDelay);
-
         }
+        Debug.Log("based");
+        if (!lostGame) {
+            Debug.Log("super based?");
+            yield return new WaitForSeconds(winDelay);
+            StartCoroutine(WinGame());
+        }
+
     }
 
     void NextStage(StageSO stage)
     {
         enemySpawner.waveList = stage.GetWaves();
         StartCoroutine(enemySpawner.SpawnWaves());
-        musicSrc.clip = stage.GetIntroMusic();
-        music.GetComponent<MusicLoop>().LoopMusic = stage.GetLoopMusic();
+        if (stage.GetIntroMusic() != null) musicSrc.clip = stage.GetIntroMusic();
+        if (stage.GetLoopMusic() != null) music.GetComponent<MusicLoop>().LoopMusic = stage.GetLoopMusic();
         musicSrc.loop = false;
         musicSrc.volume = defaultMusicVol;
         musicSrc.Play();
+    }
 
+    IEnumerator WinGame() {
+        Debug.Log("wintext");
+        StartCoroutine(uiscript.WinText());
+        Debug.Log("winmusic");
+        musicSrc.clip = winMusic;
+        music.GetComponent<MusicLoop>().looping = false;
+        musicSrc.loop = false;
+        musicSrc.volume = defaultMusicVol;
+        musicSrc.Play();
+        
+        yield return new WaitForSeconds(fadeDelay);
+        StartCoroutine(uiscript.FadePanel());
+        yield return new WaitForSeconds(menuDelay);
+        FindObjectOfType<LevelManager>().LoadMainMenu();
     }
 
     public IEnumerator FadeMusic()
@@ -112,6 +154,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForFixedUpdate();
             cashtimer += Time.fixedDeltaTime;
             if (cashtimer >= passiveCashDelay) {
+                yield return new WaitUntil(() => stagePlaying);
                 cashtimer = 0;                      //using a timer instead of yield return to give the ui something to play with
                 AddCash(passiveCashAmount);
                 FindObjectOfType<AudioPlayer>().PlayClip(passiveCashSound, passiveCashVolume);
@@ -121,25 +164,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-    /* from space defender, could be of use later
-        put into ui script, let's not leave this here!!!!
-
-
-        public IEnumerator FadeText(TextMeshProUGUI text, float fadeFactor) {
-
-            text.color = new Color(text.color.r, text.color.g, text.color.b, 1);
-            yield return new WaitForSeconds(fadeHold);
-            Debug.Log($"{text.color.r} {text.color.g} {text.color.b} {text.color.a}");
-            while (text.color.a >= Mathf.Epsilon)
-            {
-                text.color = new Color(text.color.r, text.color.g, text.color.b, (text.color.a - (fadeFactor*Time.deltaTime))); //INSANE!!!! WHY AM I DOING THIS
-                yield return null;
-            }
-
+    void OnTriggerEnter2D(Collider2D other) { //lose the game idiot!!
+        Debug.Log("gg");
+        if (other.gameObject.tag == "Enemy" && !lostGame) {
+            Debug.Log("wait");
+            StartCoroutine(LoseGame());
         }
+    }
 
-        */
+    IEnumerator LoseGame() {
+        Debug.Log("whar???");
+        StopGame();
+        lostGame = true;
+        sfxSrc.PlayClip(loseSound, 1);
+        StartCoroutine(uiscript.FadePanel());
+        Debug.Log("WHAR???");
+        yield return new WaitForSeconds(menuDelay);
+        FindObjectOfType<LevelManager>().LoadGameOver();
+    }
 
     public void StopGame()
     {

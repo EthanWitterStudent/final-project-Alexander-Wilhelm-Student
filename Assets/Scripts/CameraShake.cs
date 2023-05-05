@@ -6,24 +6,26 @@ public class CameraShake : MonoBehaviour
 {
 
     float shakeAmount;
-    [SerializeField] float shakeDecay;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    float shakeDecay;
 
+    Transform tf;
+
+    void Start() {
+        tf = Camera.main.transform;
+    }
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (shakeAmount > 0) {
-            shakeAmount -= shakeDecay * Time.fixedDeltaTime;
-            Camera.main.transform.position = new Vector3(Random.Range(-shakeAmount, shakeAmount), Random.Range(-shakeAmount, shakeAmount), -10);
-        } else Camera.main.transform.position = new Vector3(0, 0, -10);
+            shakeAmount -= shakeDecay * Time.deltaTime;
+            tf.position = Random.insideUnitCircle * shakeAmount;
+            tf.position = new Vector3(tf.position.x, tf.position.y, -10);
+        } else tf.position = new Vector3(0, 0, -10);
     }
 
     public void setShake(float shake, float decay) {
-        if (decay >= shakeDecay || shakeAmount < Mathf.Epsilon) shakeDecay = decay; //dont remember why i checked shakeamount here but im sure its helpful yessir
+        Debug.Log($"shake {shake} decay {decay}");
+        if (shake >= shakeAmount || shakeAmount < Mathf.Epsilon) shakeDecay = decay; //dont remember why i checked shakeamount here but im sure its helpful yessir
         if (shake >= shakeAmount) shakeAmount = shake;
     }
 }
