@@ -1054,6 +1054,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1113937820}
     m_Modifications:
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 1945890109619059811, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: tower
+      value: 
+      objectReference: {fileID: 1775759298618913294, guid: f585eaa3fe9e0da4f971946f618d511f, type: 3}
+    - target: {fileID: 1945890109619059811, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: towerImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 58859b6965ed1c8439fc6ceda81042c4, type: 3}
+    - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1030523159}
+    - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: checkMaxTowers
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NewTowerMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3648,7 +3687,6 @@ GameObject:
   - component: {fileID: 1366539308}
   - component: {fileID: 1366539307}
   - component: {fileID: 1366539306}
-  - component: {fileID: 1366539309}
   m_Layer: 0
   m_Name: Title Canvas
   m_TagString: Title
@@ -3741,18 +3779,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1366539309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1366539304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d15197470f4afe44a5cff0057b35751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1397151686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4431,7 +4457,6 @@ GameObject:
   - component: {fileID: 1669787432}
   - component: {fileID: 1669787431}
   - component: {fileID: 1669787430}
-  - component: {fileID: 1669787433}
   m_Layer: 0
   m_Name: Story Canvas
   m_TagString: Story Canvas
@@ -4522,18 +4547,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1669787433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669787428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d15197470f4afe44a5cff0057b35751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1670517733
 GameObject:
   m_ObjectHideFlags: 0

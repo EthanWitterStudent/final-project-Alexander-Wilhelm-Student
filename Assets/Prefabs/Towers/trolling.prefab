@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1775759298618913288}
   - component: {fileID: 1775759298618913289}
+  - component: {fileID: -7877800105709665651}
   m_Layer: 0
   m_Name: trolling
   m_TagString: Untagged
@@ -45,3 +46,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trolling: {fileID: 8160040172283106415, guid: 14474acdad05e5d4a82ea0eb1bb96618, type: 3}
+--- !u!114 &-7877800105709665651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775759298618913294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d73ca2253af1bb4db27790749f68958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  cashCost: 3000
+  cashOnDeath: 0
+  flashLength: 0.025
+  deathEffect: {fileID: 0}
+  hitShakeAmount: 0
+  deathShakeAmount: 0
+  ShakeDecay: 0
+  spawnSound: {fileID: 0}
+  spawnVolume: 0
+  hitSounds: []
+  hitVolume: 0.6
+  deathSounds: []
+  deathVolume: 0.6
+  idleSounds: []
+  idleVolume: 0.6
+  idleSoundInterval: 0
+  idleSoundIntervalVariance: 0
