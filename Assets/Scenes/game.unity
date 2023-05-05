@@ -12058,8 +12058,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 210, y: 20}
-  m_SizeDelta: {x: 265.98, y: 68.5584}
+  m_AnchoredPosition: {x: 242.35333, y: 20}
+  m_SizeDelta: {x: 265, y: 70}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &1762552111306217553
 GameObject:
@@ -12107,7 +12107,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: x6969
+  m_text: $6969
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9406c74ffb3f2914c8492df07da10afd, type: 2}
   m_sharedMaterial: {fileID: 7316880027699950516, guid: 9406c74ffb3f2914c8492df07da10afd, type: 2}
@@ -12141,7 +12141,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -12170,7 +12170,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -1.0711823, y: -5.461609, z: -0.000091552734, w: 0}
+  m_margin: {x: -1.0711823, y: 0, z: -132.63947, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
