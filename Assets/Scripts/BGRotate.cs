@@ -9,6 +9,6 @@ public class BGRotate : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z + (spinSpeed * Time.deltaTime));
+        transform.rotation = Quaternion.Euler(1, 0, transform.rotation.eulerAngles.z + (spinSpeed * Time.deltaTime));
     }
 }
