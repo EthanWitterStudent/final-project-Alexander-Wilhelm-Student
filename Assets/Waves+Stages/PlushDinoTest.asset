@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93aba325c28d20d42a2d80f9286221c2, type: 3}
-  m_Name: WormTestStage
+  m_Name: PlushDinoTest
   m_EditorClassIdentifier: 
-  stageName: BALDI'S BASICS!!
+  stageName: MINECRAFT!!
   waves:
-  - {fileID: 11400000, guid: c49364c030e3a1948abd2f9a5ee69128, type: 2}
+  - {fileID: 11400000, guid: f2e876ffe2d5c9b449dd9c4e6c82a30b, type: 2}
+  - {fileID: 11400000, guid: f2e876ffe2d5c9b449dd9c4e6c82a30b, type: 2}
+  - {fileID: 11400000, guid: f2e876ffe2d5c9b449dd9c4e6c82a30b, type: 2}
+  - {fileID: 11400000, guid: f2e876ffe2d5c9b449dd9c4e6c82a30b, type: 2}
   introMusic: {fileID: 0}
-  loopMusic: {fileID: 8300000, guid: 57f1b6c50f8cb4d48be6ab4223e4fb9c, type: 3}
+  loopMusic: {fileID: 0}

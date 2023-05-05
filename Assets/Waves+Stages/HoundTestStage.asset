@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93aba325c28d20d42a2d80f9286221c2, type: 3}
   m_Name: HoundTestStage
   m_EditorClassIdentifier: 
-  stageName: DOKI DOKI LITERATURE CLUB!!!11!!1!
+  stageName: DOKI DOKI LITERATURE CLUB!!
   waves:
   - {fileID: 11400000, guid: b048eda147acc8144b21cc14c5bf9040, type: 2}
   introMusic: {fileID: 0}
