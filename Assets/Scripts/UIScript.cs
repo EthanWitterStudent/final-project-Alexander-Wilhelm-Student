@@ -8,8 +8,10 @@ using TMPro;
 public class UIScript : MonoBehaviour
 {
 
+    [SerializeField] Canvas canvas;
     [SerializeField] TextMeshProUGUI moneyText;
     [SerializeField] Button[] towerButtons;
+    
     [SerializeField] Transform[] gridButtons;
     [SerializeField] Image stonksPanel;
 

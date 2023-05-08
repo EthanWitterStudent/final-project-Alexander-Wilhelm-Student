@@ -17,7 +17,12 @@ public class TowerManager : MonoBehaviour
     GameManager gm;
     UIScript uiscript;
 
+    unapprochableGimic ug; //TODO: im sorry ethan but this is doo doo fart
+
+
     int towerIndex;
+
+    LayerMask towerFilters;
 
     // Start is called before the first frame update
     void Start()
@@ -38,20 +43,23 @@ public class TowerManager : MonoBehaviour
         }
 
         Destroy(tinfo); //don't need this no more!
+
+        towerFilters = LayerMask.GetMask(new string[]{"Tower", "Enemy"});
     }
 
 
 
     public void PlaceTower()
     {
+        ug = FindObjectOfType<unapprochableGimic>(); //placed here to avoid the problem of it only happening once
         int cashCost = towers[towerIndex].GetComponent<Health>().GetCashCost();
-        if (cashCost <= gm.GetCash())
+        if (cashCost <= gm.GetCash() && ug.socialable == false)
         {
             Vector3 pos = FindObjectOfType<UIScript>().GridButtonClick();
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(pos); //get its position in the world
             worldPos = new Vector3(worldPos.x, worldPos.y, 0); //snap to zero 
             BoxCollider2D check = Instantiate(towerCheck, worldPos, Quaternion.identity);
-            ContactFilter2D filter = new ContactFilter2D(); filter.SetLayerMask(LayerMask.GetMask("Tower"));
+            ContactFilter2D filter = new ContactFilter2D(); filter.SetLayerMask(towerFilters);
             //List<Collider2D> hits = new List<Collider2D>();
             if (check.OverlapCollider(filter, new List<Collider2D>()) == 0) //ensure there are no collisions
             {
