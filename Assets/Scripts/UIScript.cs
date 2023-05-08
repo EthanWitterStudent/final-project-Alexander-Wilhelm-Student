@@ -46,7 +46,7 @@ public class UIScript : MonoBehaviour
         Button button = towerButtons[index];
         button.gameObject.SetActive(true);
         if (image != null) button.GetComponent<Image>().sprite = image;
-        button.GetComponentInChildren<TextMeshProUGUI>().text = $"${tower.GetComponent<Health>().GetCashCost()}";
+        if (tower.GetComponent<Health>() != null) button.GetComponentInChildren<TextMeshProUGUI>().text = $"${tower.GetComponent<Health>().GetCashCost()}";
     }
 
     public void UpdateMoneyText() {

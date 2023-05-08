@@ -213,10 +213,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4551056668a980e47b14e5a79b925f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnObject: {fileID: 646044222004944096, guid: 4f9322a5516b86f4cbf398134d377986, type: 3}
-  spawnSound: {fileID: 8300000, guid: 4e758cc55e0fe1540aac92354890483d, type: 3}
-  soundVolume: 3
+  spawnObject: {fileID: 646044222004944096, guid: 27b5330aaa8a1fb4786b8421b5cc7f88, type: 3}
+  spawnSound: {fileID: 8300000, guid: 66af770ad7c1a1f4f9af121c31a1378f, type: 3}
+  soundVolume: 0.8
   SpawnDelay: 4
   SpawnDelayVariance: 10
-  postSoundDelay: 0
+  postSoundDelay: 0.7
   destroyOnSpawn: 1

@@ -9,7 +9,10 @@ public class TowerManager : MonoBehaviour
     [SerializeField] float boxCastSize;
     [SerializeField] BoxCollider2D towerCheck;
 
+    [SerializeField] AudioClip towerSelectSound;
+    [SerializeField] AudioClip alreadySelectedSound;
     [SerializeField] AudioClip placeFailSound;
+    [SerializeField] AudioClip insufficientCashSound;
     AudioPlayer audioPlayer;
     GameManager gm;
     UIScript uiscript;
@@ -59,11 +62,21 @@ public class TowerManager : MonoBehaviour
             else audioPlayer.PlayClip(placeFailSound, 1);
             Destroy(check.gameObject);
         }
-        else audioPlayer.PlayClip(placeFailSound, 1);
+        else audioPlayer.PlayClip(insufficientCashSound, 1);
     }
 
     public void setTowerIndex(int x)
     {
-        towerIndex = x;
+        if (x == towerIndex) audioPlayer.PlayClip(alreadySelectedSound, 1);
+        else
+        {
+            int cashCost = towers[x].GetComponent<Health>().GetCashCost();
+            if (cashCost <= gm.GetCash())
+            {
+                towerIndex = x;
+                audioPlayer.PlayClip(towerSelectSound, 1);
+            }
+            else audioPlayer.PlayClip(insufficientCashSound, 1);
+        }
     }
 }

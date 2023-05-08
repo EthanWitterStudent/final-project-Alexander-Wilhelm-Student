@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5128097, g: 0.5012013, b: 0.47210705, a: 1}
+  m_IndirectSpecularColor: {r: 0.51275027, g: 0.5011588, b: 0.47208512, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9679,6 +9679,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towers:
   - {fileID: 5201306128907651694, guid: 46b318783b3b1ea4b89fbdd8dfa028c8, type: 3}
+  - {fileID: 5201306128907651694, guid: dbbe45edd68b2df49acf0e43d35ddcbb, type: 3}
+  - {fileID: 5201306128907651694, guid: 48c0dda462006894b8efd3f3e1ed3bfc, type: 3}
+  - {fileID: 5201306128907651694, guid: c63e1d00aef928e41b22228e8fb1e611, type: 3}
   towerImages:
   - {fileID: 21300000, guid: 02e03f90595a5674591847e952a321ee, type: 3}
   - {fileID: 21300000, guid: 02e03f90595a5674591847e952a321ee, type: 3}
@@ -9687,7 +9690,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 02e03f90595a5674591847e952a321ee, type: 3}
   boxCastSize: 0
   towerCheck: {fileID: 9008034108270426231, guid: c62c9705f3cdbcc4d83d3b178b8203e2, type: 3}
-  placeFailSound: {fileID: 0}
+  towerSelectSound: {fileID: 8300000, guid: 9d626c1f80b00e441a29242c959f5130, type: 3}
+  alreadySelectedSound: {fileID: 8300000, guid: 457fee35193cc9946abc12abc4c44682, type: 3}
+  placeFailSound: {fileID: 8300000, guid: e75bdf5b84b77b3468f65dec9b6e34f0, type: 3}
+  insufficientCashSound: {fileID: 8300000, guid: 9e752f2bc19891240ac55513f7192aec, type: 3}
 --- !u!61 &1603511465
 BoxCollider2D:
   m_ObjectHideFlags: 0

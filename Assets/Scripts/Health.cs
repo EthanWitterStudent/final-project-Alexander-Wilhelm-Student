@@ -48,12 +48,16 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        if (flashTimer > 0) flash.SetFloat("_FlashAmount", 1);
+        if (flashTimer > 0)
+        {
+            flash.SetFloat("_FlashAmount", 1);
+            Debug.Log("flash works");
+        }
         else flash.SetFloat("_FlashAmount", 0);
 
         flashTimer -= Time.deltaTime;
     }
-    
+
     public void DeathStuff()
     {
         if (cashOnDeath > 0)
