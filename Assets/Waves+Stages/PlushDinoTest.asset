@@ -18,5 +18,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f2e876ffe2d5c9b449dd9c4e6c82a30b, type: 2}
   - {fileID: 11400000, guid: f2e876ffe2d5c9b449dd9c4e6c82a30b, type: 2}
   - {fileID: 11400000, guid: f2e876ffe2d5c9b449dd9c4e6c82a30b, type: 2}
+  - {fileID: 11400000, guid: f2e876ffe2d5c9b449dd9c4e6c82a30b, type: 2}
+  - {fileID: 11400000, guid: f2e876ffe2d5c9b449dd9c4e6c82a30b, type: 2}
+  - {fileID: 11400000, guid: f2e876ffe2d5c9b449dd9c4e6c82a30b, type: 2}
+  - {fileID: 11400000, guid: f2e876ffe2d5c9b449dd9c4e6c82a30b, type: 2}
   introMusic: {fileID: 0}
   loopMusic: {fileID: 0}
