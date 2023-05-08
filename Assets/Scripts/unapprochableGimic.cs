@@ -6,7 +6,7 @@ public class unapprochableGimic : MonoBehaviour
 {
     public bool socialable;
 
-    private void OnEnable() 
+    private void Start() 
     {
         socialable = false;
     }

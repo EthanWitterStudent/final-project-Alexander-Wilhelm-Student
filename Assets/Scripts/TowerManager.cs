@@ -14,7 +14,7 @@ public class TowerManager : MonoBehaviour
     GameManager gm;
     UIScript uiscript;
 
-    unapprochableGimic ug;
+    unapprochableGimic ug; //TODO: im sorry ethan but this is doo doo fart
 
 
     int towerIndex;

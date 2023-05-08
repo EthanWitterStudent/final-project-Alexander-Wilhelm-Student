@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageName: FORTNITE!!
   waves:
-  - {fileID: 11400000, guid: 5431ba58efd7bc644ae4e66a539a112c, type: 2}
+  - {fileID: 11400000, guid: abe7b210c5e81da4fb9b80f7c265a33f, type: 2}
   introMusic: {fileID: 8300000, guid: 7fd2e9a2580140440853d272a5a0ce0b, type: 3}
   loopMusic: {fileID: 8300000, guid: 03977dfb76d74d944b258f148b77b797, type: 3}
