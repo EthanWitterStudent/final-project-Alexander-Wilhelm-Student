@@ -14,6 +14,9 @@ public class TowerManager : MonoBehaviour
     GameManager gm;
     UIScript uiscript;
 
+    unapprochableGimic ug;
+
+
     int towerIndex;
 
     // Start is called before the first frame update
@@ -41,8 +44,9 @@ public class TowerManager : MonoBehaviour
 
     public void PlaceTower()
     {
+        ug = FindObjectOfType<unapprochableGimic>(); //placed here to avoid the problem of it only happening once
         int cashCost = towers[towerIndex].GetComponent<Health>().GetCashCost();
-        if (cashCost <= gm.GetCash())
+        if (cashCost <= gm.GetCash() && ug.socialable == false)
         {
             Vector3 pos = FindObjectOfType<UIScript>().GridButtonClick();
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(pos); //get its position in the world
