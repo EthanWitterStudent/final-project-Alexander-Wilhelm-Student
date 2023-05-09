@@ -43,8 +43,10 @@ public class NewTowerMenu : MonoBehaviour
     public void TowerSetup()
     {
 
-        TowerInfo towerinfo = Instantiate(towerInfoPrefab, Vector3.zero, Quaternion.identity).GetComponent<TowerInfo>();
-        DontDestroyOnLoad(towerinfo); //prepare it to be sent to game stage;
+        //TowerInfo towerinfo = Instantiate(towerInfoPrefab, Vector3.zero, Quaternion.identity).GetComponent<TowerInfo>();
+        //DontDestroyOnLoad(towerinfo); //prepare it to be sent to game stage;
+
+        TowerInfo towerinfo = FindObjectOfType<TowerInfo>();
         foreach (Toggle sel in towerSelectors)
         {
             if (sel.isOn)

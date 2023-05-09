@@ -17,7 +17,7 @@ public class TowerManager : MonoBehaviour
     GameManager gm;
     UIScript uiscript;
 
-    public bool socialable; //Note to Alex: I think I fixed the issue
+    public bool juanCheck;
     int towerIndex;
 
     LayerMask towerFilters;
@@ -40,7 +40,7 @@ public class TowerManager : MonoBehaviour
             uiscript.setupTowerButton(i, towers[i], towerImages[i]);
         }
 
-        Destroy(tinfo); //don't need this no more!
+        // Destroy(tinfo); //don't need this no more!
 
         towerFilters = LayerMask.GetMask(new string[]{"Tower", "Enemy"});
     }
@@ -49,8 +49,9 @@ public class TowerManager : MonoBehaviour
 
     public void PlaceTower()
     {
+        if (juanCheck) audioPlayer.PlayClip(placeFailSound, 1); else {
         int cashCost = towers[towerIndex].GetComponent<Health>().GetCashCost();
-        if (cashCost <= gm.GetCash() && socialable == true)
+        if (cashCost <= gm.GetCash())
         {
             Vector3 pos = FindObjectOfType<UIScript>().GridButtonClick();
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(pos); //get its position in the world
@@ -68,6 +69,7 @@ public class TowerManager : MonoBehaviour
             Destroy(check.gameObject);
         }
         else audioPlayer.PlayClip(insufficientCashSound, 1);
+        }
     }
 
     public void setTowerIndex(int x)

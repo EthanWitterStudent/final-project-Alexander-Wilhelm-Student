@@ -9,11 +9,12 @@ public class unapprochableGimic : MonoBehaviour
 
     private void Start() 
     {
-        tm.socialable = false;
+        tm = FindObjectOfType<TowerManager>();
+        tm.juanCheck = true;
     }
 
     private void OnDestroy() 
     {
-        tm.socialable = true;
+        tm.juanCheck = false;
     }
 }
