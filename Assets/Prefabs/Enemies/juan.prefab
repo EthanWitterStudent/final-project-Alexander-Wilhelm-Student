@@ -16,11 +16,7 @@ GameObject:
   - component: {fileID: -7450539848108967595}
   - component: {fileID: 3519192364551537056}
   m_Layer: 7
-<<<<<<<< Updated upstream:Assets/Prefabs/Enemies/juan.prefab
   m_Name: juan
-========
-  m_Name: Unapproachable Horse
->>>>>>>> Stashed changes:Assets/Prefabs/Enemies/Unapproachable Horse.prefab
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
