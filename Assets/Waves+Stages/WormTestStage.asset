@@ -15,5 +15,6 @@ MonoBehaviour:
   stageName: BALDI'S BASICS!!
   waves:
   - {fileID: 11400000, guid: c49364c030e3a1948abd2f9a5ee69128, type: 2}
+  - {fileID: 11400000, guid: a7af74684f48c2a46b1c71445063bc6a, type: 2}
   introMusic: {fileID: 0}
   loopMusic: {fileID: 8300000, guid: 57f1b6c50f8cb4d48be6ab4223e4fb9c, type: 3}

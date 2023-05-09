@@ -66,9 +66,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 40
   damageEffect: {fileID: 0}
+  multipleDamage: 0
   destroyOnHit: 0
   collisionEnterOnly: 1
-  colliderOnly: 1
+  colliderOnly: 0
   damageInterval: 0
   damageCollider: {fileID: 0}
   damageSounds: []
@@ -83,7 +84,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

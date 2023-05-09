@@ -217,6 +217,6 @@ MonoBehaviour:
   spawnSound: {fileID: 8300000, guid: 66af770ad7c1a1f4f9af121c31a1378f, type: 3}
   soundVolume: 0.8
   SpawnDelay: 4
-  SpawnDelayVariance: 10
+  SpawnDelayVariance: 4
   postSoundDelay: 0.7
   destroyOnSpawn: 1

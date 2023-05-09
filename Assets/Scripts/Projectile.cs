@@ -33,6 +33,7 @@ public class Projectile : MonoBehaviour
         
         if (timeAlive > lifetime) Destroy(gameObject);
         timeAlive += Time.deltaTime;
+        rb.velocity = angle.normalized * moveSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
