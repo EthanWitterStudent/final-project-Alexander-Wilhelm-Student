@@ -17,9 +17,7 @@ public class TowerManager : MonoBehaviour
     GameManager gm;
     UIScript uiscript;
 
-    unapprochableGimic ug; //TODO: im sorry ethan but this is doo doo fart
-
-
+    public bool socialable; //Note to Alex: I think I fixed the issue
     int towerIndex;
 
     LayerMask towerFilters;
@@ -51,9 +49,8 @@ public class TowerManager : MonoBehaviour
 
     public void PlaceTower()
     {
-        ug = FindObjectOfType<unapprochableGimic>(); //placed here to avoid the problem of it only happening once
         int cashCost = towers[towerIndex].GetComponent<Health>().GetCashCost();
-        if (cashCost <= gm.GetCash() && ug.socialable == false)
+        if (cashCost <= gm.GetCash() && socialable == true)
         {
             Vector3 pos = FindObjectOfType<UIScript>().GridButtonClick();
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(pos); //get its position in the world

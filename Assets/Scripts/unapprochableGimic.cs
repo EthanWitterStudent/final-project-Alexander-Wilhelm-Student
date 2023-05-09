@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class unapprochableGimic : MonoBehaviour
 {
-    public bool socialable;
+    TowerManager tm;
+
 
     private void Start() 
     {
-        socialable = false;
+        tm.socialable = false;
     }
 
     private void OnDestroy() 
     {
-        socialable = true;
+        tm.socialable = true;
     }
 }
