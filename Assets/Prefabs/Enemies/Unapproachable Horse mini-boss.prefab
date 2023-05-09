@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -7450539848108967595}
   - component: {fileID: 3519192364551537056}
   m_Layer: 7
-  m_Name: Unapproachable Horse
+  m_Name: Unapproachable Horse mini-boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   damageEffect: {fileID: 0}
+  multipleDamage: 0
   destroyOnHit: 0
   collisionEnterOnly: 0
   colliderOnly: 1
@@ -169,7 +170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21bc1e0a010a41438a1d268a26668e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  socialable: 0
 --- !u!1 &7729068236005059867
 GameObject:
   m_ObjectHideFlags: 0

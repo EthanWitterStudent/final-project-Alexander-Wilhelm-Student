@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Prefabs/Scenes/GameOver.unity
     guid: 3fa820fbf1b6276469449a478cb8c6c7
+  - enabled: 0
+    path: Assets/Prefabs/Scenes/level tagging test.unity
+    guid: 38b0e3ecb62ffb54e95c4f9be2bc60b4
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: f91a4772ff88be04cad92f6ddd624fe1, type: 2}
