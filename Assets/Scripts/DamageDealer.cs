@@ -6,6 +6,7 @@ public class DamageDealer : MonoBehaviour
 {
     [SerializeField] int damage = 10;
     [SerializeField] GameObject damageEffect;
+    [SerializeField] bool multipleDamage;
     [SerializeField] bool destroyOnHit;
     [SerializeField] bool collisionEnterOnly;
     [SerializeField] bool colliderOnly = true;
@@ -18,7 +19,8 @@ public class DamageDealer : MonoBehaviour
     AudioPlayer audioPlayer;
     float timer;
 
-    void Start() {
+    void Start()
+    {
         audioPlayer = FindObjectOfType<AudioPlayer>();
     }
     void FixedUpdate()
@@ -35,8 +37,8 @@ public class DamageDealer : MonoBehaviour
         if (collisionEnterOnly && (damageCollider == null || other.collider == damageCollider))
         {
             Health health = other.gameObject.GetComponent<Health>();
-            
-            DealDamage(health);
+            if (multipleDamage) MultipleDamage(); else SimpleDamage(health);
+            DamageStuff();
         }
     }
 
@@ -45,8 +47,8 @@ public class DamageDealer : MonoBehaviour
         if (!collisionEnterOnly && (damageCollider == null || other.collider == damageCollider))
         {
             Health health = other.gameObject.GetComponent<Health>();
-
-            DealDamage(health);
+            if (multipleDamage) MultipleDamage(); else SimpleDamage(health);
+            DamageStuff();
         }
     }
 
@@ -55,8 +57,8 @@ public class DamageDealer : MonoBehaviour
         if (!colliderOnly && collisionEnterOnly)
         {
             Health health = other.gameObject.GetComponent<Health>();
-
-            DealDamage(health);
+            if (multipleDamage) MultipleDamage(); else SimpleDamage(health);
+            DamageStuff();
         }
     }
 
@@ -65,27 +67,37 @@ public class DamageDealer : MonoBehaviour
         if (!colliderOnly && !collisionEnterOnly)
         {
             Health health = other.gameObject.GetComponent<Health>();
-
-            DealDamage(health);
+            if (multipleDamage) MultipleDamage(); else SimpleDamage(health);
+            DamageStuff();
         }
     }
 
-    void PlaySound() {
-        if (damageSounds.Length > 0) {
+    void PlaySound()
+    {
+        if (damageSounds.Length > 0)
+        {
             AudioClip damageSound = damageSounds[Random.Range(0, damageSounds.Length)];
             if (damageSound != null) audioPlayer.PlayClip(damageSound, damageVolume);
         }
     }
 
-    void DealDamage(Health health) {
+    void DamageStuff()
+    {
+            if (damageEffect != null) Instantiate(damageEffect, transform.position, Quaternion.identity);
+
+
+            PlaySound();
+            if (destroyOnHit) Destroy(gameObject);
+        
+    }
+
+    void SimpleDamage(Health health)
+    {
         if (health != null && timer < 0)
-            {
-                if (damageEffect != null) Instantiate(damageEffect, transform.position, Quaternion.identity);
-                health.TakeDamage(damage);
-                timer = damageInterval;
-                PlaySound();
-                if (destroyOnHit) Destroy(gameObject);
-            }
+        {
+            health.TakeDamage(damage);
+            timer = damageInterval;
+        }
     }
 
 
@@ -94,7 +106,24 @@ public class DamageDealer : MonoBehaviour
         return timer;
     }
 
+    void MultipleDamage()
+    {
+        if (timer < 0)
+        {
+            ContactFilter2D filter = new ContactFilter2D(); filter.SetLayerMask(LayerMask.GetMask("Enemy"));
+            List<Collider2D> results = new List<Collider2D>();
 
-
-
+            if (damageCollider.OverlapCollider(filter, results) > 0)
+            {
+                foreach (Collider2D col in results)
+                {
+                    if (col.isTrigger) continue;
+                    GameObject gobj = col.gameObject;
+                    col.GetComponent<Health>().TakeDamage(damage); //damage
+                                                                   // this only works properly if the enemy has only one proper collider2d. 
+                }
+            }
+            timer = damageInterval;
+        }
+    }
 }

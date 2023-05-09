@@ -9,12 +9,18 @@ public class TowerManager : MonoBehaviour
     [SerializeField] float boxCastSize;
     [SerializeField] BoxCollider2D towerCheck;
 
+    [SerializeField] AudioClip towerSelectSound;
+    [SerializeField] AudioClip alreadySelectedSound;
     [SerializeField] AudioClip placeFailSound;
+    [SerializeField] AudioClip insufficientCashSound;
     AudioPlayer audioPlayer;
     GameManager gm;
     UIScript uiscript;
 
+    public bool socialable; //Note to Alex: I think I fixed the issue
     int towerIndex;
+
+    LayerMask towerFilters;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +41,8 @@ public class TowerManager : MonoBehaviour
         }
 
         Destroy(tinfo); //don't need this no more!
+
+        towerFilters = LayerMask.GetMask(new string[]{"Tower", "Enemy"});
     }
 
 
@@ -42,13 +50,13 @@ public class TowerManager : MonoBehaviour
     public void PlaceTower()
     {
         int cashCost = towers[towerIndex].GetComponent<Health>().GetCashCost();
-        if (cashCost <= gm.GetCash())
+        if (cashCost <= gm.GetCash() && socialable == true)
         {
             Vector3 pos = FindObjectOfType<UIScript>().GridButtonClick();
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(pos); //get its position in the world
             worldPos = new Vector3(worldPos.x, worldPos.y, 0); //snap to zero 
             BoxCollider2D check = Instantiate(towerCheck, worldPos, Quaternion.identity);
-            ContactFilter2D filter = new ContactFilter2D(); filter.SetLayerMask(LayerMask.GetMask("Tower"));
+            ContactFilter2D filter = new ContactFilter2D(); filter.SetLayerMask(towerFilters);
             //List<Collider2D> hits = new List<Collider2D>();
             if (check.OverlapCollider(filter, new List<Collider2D>()) == 0) //ensure there are no collisions
             {
@@ -59,11 +67,21 @@ public class TowerManager : MonoBehaviour
             else audioPlayer.PlayClip(placeFailSound, 1);
             Destroy(check.gameObject);
         }
-        else audioPlayer.PlayClip(placeFailSound, 1);
+        else audioPlayer.PlayClip(insufficientCashSound, 1);
     }
 
     public void setTowerIndex(int x)
     {
-        towerIndex = x;
+        if (x == towerIndex) audioPlayer.PlayClip(alreadySelectedSound, 1);
+        else
+        {
+            int cashCost = towers[x].GetComponent<Health>().GetCashCost();
+            if (cashCost <= gm.GetCash())
+            {
+                towerIndex = x;
+                audioPlayer.PlayClip(towerSelectSound, 1);
+            }
+            else audioPlayer.PlayClip(insufficientCashSound, 1);
+        }
     }
 }
