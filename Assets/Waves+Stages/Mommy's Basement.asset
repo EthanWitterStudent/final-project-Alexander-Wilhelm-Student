@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93aba325c28d20d42a2d80f9286221c2, type: 3}
+  m_Name: Mommy's Basement
+  m_EditorClassIdentifier: 
+  stageName: 
+  waves:
+  - {fileID: 11400000, guid: be935f3beebfa634aa210c7b6edce97d, type: 2}
+  - {fileID: 11400000, guid: c1cf1f544f795cc409e332f9468d6376, type: 2}
+  - {fileID: 11400000, guid: bce6956bb0b6d0843855efebb59a9c8d, type: 2}
+  - {fileID: 11400000, guid: fc79bb8a015730e4dbb0f4de1bb24e42, type: 2}
+  - {fileID: 11400000, guid: b45f5df0e26c91b4ca108325c1d82169, type: 2}
+  - {fileID: 11400000, guid: d6ec7976aeac4bc4bada0824e3ae581b, type: 2}
+  introMusic: {fileID: 8300000, guid: 7fd2e9a2580140440853d272a5a0ce0b, type: 3}
+  loopMusic: {fileID: 8300000, guid: 03977dfb76d74d944b258f148b77b797, type: 3}
