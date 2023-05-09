@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     [SerializeField] int health = 50;
     [SerializeField] int cashCost = 0;
     [SerializeField] int cashOnDeath;
+    public bool LawnmowerImmunity;
 
     [Header("Effects")]
     [SerializeField] float flashLength = 0.025f;

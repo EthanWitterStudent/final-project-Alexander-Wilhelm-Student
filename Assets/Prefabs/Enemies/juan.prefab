@@ -100,6 +100,7 @@ MonoBehaviour:
   health: 200
   cashCost: 0
   cashOnDeath: 0
+  LawnmowerImmunity: 0
   flashLength: 0.075
   deathEffect: {fileID: 646044222004944096, guid: daf8931e116bfd74b9d5c4dccd326de9, type: 3}
   hitShakeAmount: 0
@@ -150,6 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   damageEffect: {fileID: 0}
+  multipleDamage: 0
   destroyOnHit: 0
   collisionEnterOnly: 0
   colliderOnly: 1
@@ -169,7 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21bc1e0a010a41438a1d268a26668e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  socialable: 0
 --- !u!1 &7729068236005059867
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +223,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8a8f5aa8dab3f4b4a94613704db342d5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
