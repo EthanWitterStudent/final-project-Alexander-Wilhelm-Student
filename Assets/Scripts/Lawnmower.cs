@@ -33,10 +33,11 @@ public class Lawnmower : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
 
         if (other.gameObject.tag == "Enemy") {
-            other.gameObject.GetComponent<Health>().DeathStuff();   //kill em
+            Health enemy = other.gameObject.GetComponent<Health>();
+            if (!enemy.LawnmowerImmunity) enemy.DeathStuff();   //kill em
             if (activateSound != null &! mowing) audioplayer.PlayClip(activateSound, soundVolume); //loud = funny
+            if (!mowing) FindObjectOfType<CameraShake>().setShake(screenShake, shakeDecay);
             mowing = true; //only start mowing once we kill a guy
-            FindObjectOfType<CameraShake>().setShake(screenShake, shakeDecay);
         }
     }
 }

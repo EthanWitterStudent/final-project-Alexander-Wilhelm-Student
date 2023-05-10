@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2218950390468324924}
   - component: {fileID: 2218950390468324923}
-  - component: {fileID: 7630520159250994486}
   m_Layer: 0
-  m_Name: Plush Dino
+  m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,10 +24,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2218950390468324925}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.1561571, y: 0.15615708, z: 0.15615708}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2218950390812419720}
   m_RootOrder: 0
@@ -74,38 +73,17 @@ SpriteRenderer:
   m_SortingLayerID: 1886952727
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 14f9cebf6ebd88a41a5a814b0936873e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 278ba8d3d5744fd46850266c10c2f64d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6, y: 6}
+  m_Size: {x: 1.6981132, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &7630520159250994486
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2218950390468324925}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a64fef3eb95f4f54481ecde779732ebf, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2218950390812419724
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +99,7 @@ GameObject:
   - component: {fileID: 2218950390812419719}
   - component: {fileID: -7450539848108967595}
   m_Layer: 7
-  m_Name: Plush Dino
+  m_Name: fake js
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,7 +133,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -188,7 +166,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.954686, y: 0.9395072}
+  m_Size: {x: 1.25, y: 0.98}
   m_EdgeRadius: 0
 --- !u!114 &2218950390812419723
 MonoBehaviour:
@@ -202,16 +180,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d73ca2253af1bb4db27790749f68958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
+  health: 50
   cashCost: 0
-  cashOnDeath: 1000
-  LawnmowerImmunity: 0
+  cashOnDeath: 0
   flashLength: 0.075
   deathEffect: {fileID: 646044222004944096, guid: daf8931e116bfd74b9d5c4dccd326de9, type: 3}
   hitShakeAmount: 0
   deathShakeAmount: 0
   ShakeDecay: 0
-  spawnSound: {fileID: 8300000, guid: 6bb1c563374d4984ca3a07dcac524b35, type: 3}
+  spawnSound: {fileID: 8300000, guid: f00694d16539cc5479027bfc6e7e3ba2, type: 3}
   spawnVolume: 0
   hitSounds:
   - {fileID: 8300000, guid: 54fd6949b36362745afdd757fbafe920, type: 3}
@@ -240,8 +217,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f0fe7a5be20ce469d606186ee3289a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 1
-  moveAccel: 40
+  maxSpeed: 12
+  moveAccel: 6
 --- !u!114 &-7450539848108967595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,7 +237,7 @@ MonoBehaviour:
   destroyOnHit: 0
   collisionEnterOnly: 0
   colliderOnly: 1
-  damageInterval: 0.5
+  damageInterval: 0.25
   damageCollider: {fileID: 0}
   damageSounds: []
   damageVolume: 0

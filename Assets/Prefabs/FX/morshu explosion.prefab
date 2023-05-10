@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 30
   damageEffect: {fileID: 0}
-  multipleDamage: 0
+  multipleDamage: 1
   destroyOnHit: 0
   collisionEnterOnly: 1
   colliderOnly: 0
