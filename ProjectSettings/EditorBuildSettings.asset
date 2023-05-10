@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/game.unity
     guid: d0019e4514ab5dc4889f9b3d8bb4c15c
   - enabled: 1
+    path: Assets/Scenes/ohio.unity
+    guid: 03b39b9e879083b49810e892132c27ef
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 3fa820fbf1b6276469449a478cb8c6c7
   m_configObjects:
