@@ -70,6 +70,7 @@ public class TowerManager : MonoBehaviour
         }
         else audioPlayer.PlayClip(insufficientCashSound, 1);
         }
+        uiscript.SelectTowerButton(towerIndex); //stop stupid grid button selection
     }
 
     public void setTowerIndex(int x)
@@ -77,10 +78,10 @@ public class TowerManager : MonoBehaviour
         if (x == towerIndex) audioPlayer.PlayClip(alreadySelectedSound, 1);
         else
         {
+            towerIndex = x;
             int cashCost = towers[x].GetComponent<Health>().GetCashCost();
             if (cashCost <= gm.GetCash())
             {
-                towerIndex = x;
                 audioPlayer.PlayClip(towerSelectSound, 1);
             }
             else audioPlayer.PlayClip(insufficientCashSound, 1);

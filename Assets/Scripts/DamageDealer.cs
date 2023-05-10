@@ -36,9 +36,7 @@ public class DamageDealer : MonoBehaviour
     {
         if (collisionEnterOnly && (damageCollider == null || other.collider == damageCollider))
         {
-            Health health = other.gameObject.GetComponent<Health>();
-            if (multipleDamage) MultipleDamage(); else SimpleDamage(health);
-            DamageStuff();
+            DamageCheck(other);
         }
     }
 
@@ -46,9 +44,7 @@ public class DamageDealer : MonoBehaviour
     {
         if (!collisionEnterOnly && (damageCollider == null || other.collider == damageCollider))
         {
-            Health health = other.gameObject.GetComponent<Health>();
-            if (multipleDamage) MultipleDamage(); else SimpleDamage(health);
-            DamageStuff();
+            DamageCheck(other);
         }
     }
 
@@ -56,9 +52,7 @@ public class DamageDealer : MonoBehaviour
     {
         if (!colliderOnly && collisionEnterOnly)
         {
-            Health health = other.gameObject.GetComponent<Health>();
-            if (multipleDamage) MultipleDamage(); else SimpleDamage(health);
-            DamageStuff();
+            DamageCheck(other);
         }
     }
 
@@ -66,11 +60,22 @@ public class DamageDealer : MonoBehaviour
     {
         if (!colliderOnly && !collisionEnterOnly)
         {
-            Health health = other.gameObject.GetComponent<Health>();
-            if (multipleDamage) MultipleDamage(); else SimpleDamage(health);
-            DamageStuff();
+            DamageCheck(other);
         }
     }
+
+    void DamageCheck(Collider2D other) {
+        Health health = other.gameObject.GetComponent<Health>();
+            if (multipleDamage) MultipleDamage(); else SimpleDamage(health);
+            if (health != null) DamageStuff(true); else DamageStuff(false);
+    }
+
+    void DamageCheck(Collision2D other) {
+        Health health = other.gameObject.GetComponent<Health>();
+            if (multipleDamage) MultipleDamage(); else SimpleDamage(health);
+            if (health != null) DamageStuff(true); else DamageStuff(false);
+    }
+
 
     void PlaySound()
     {
@@ -81,12 +86,12 @@ public class DamageDealer : MonoBehaviour
         }
     }
 
-    void DamageStuff()
+    void DamageStuff(bool sound)
     {
             if (damageEffect != null) Instantiate(damageEffect, transform.position, Quaternion.identity);
 
 
-            PlaySound();
+            if (sound) PlaySound();
             if (destroyOnHit) Destroy(gameObject);
         
     }

@@ -11,7 +11,7 @@ public class CashGenerator : MonoBehaviour
     [SerializeField] string animatorTrigger;
     Animator animator;
 
-    
+
     GameManager gm;
     AudioPlayer audioplayer;
     // Start is called before the first frame update
@@ -26,10 +26,13 @@ public class CashGenerator : MonoBehaviour
     // Update is called once per frame
     IEnumerator GiveCash()
     {
-        yield return new WaitForSeconds(cashInterval);
-        gm.AddCash(cashAmount);
-        FindObjectOfType<UIScript>().UpdateMoneyText();
-        if (animator != null && animatorTrigger != null) animator.SetTrigger(animatorTrigger);
-        audioplayer.PlayClip(cashSound, cashVolume);
+        while (true)
+        {
+            yield return new WaitForSeconds(cashInterval);
+            gm.AddCash(cashAmount);
+            FindObjectOfType<UIScript>().UpdateMoneyText();
+            if (animator != null && animatorTrigger != null) animator.SetTrigger(animatorTrigger);
+            audioplayer.PlayClip(cashSound, cashVolume);
+        }
     }
 }

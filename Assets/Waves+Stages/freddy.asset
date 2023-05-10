@@ -15,5 +15,5 @@ MonoBehaviour:
   stageName: FIVE NIGHTS AT FREDDY'S!!!
   waves:
   - {fileID: 11400000, guid: 91a62149d2c287b41a99e67596b8ddc2, type: 2}
-  introMusic: {fileID: 0}
-  loopMusic: {fileID: 8300000, guid: 57f1b6c50f8cb4d48be6ab4223e4fb9c, type: 3}
+  introMusic: {fileID: 8300000, guid: 50e9113f05fe4c54897bdc13d1fa472d, type: 3}
+  loopMusic: {fileID: 0}

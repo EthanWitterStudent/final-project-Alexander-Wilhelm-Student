@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1886952727
-  m_SortingLayer: 2
+  m_SortingLayerID: -939990321
+  m_SortingLayer: 3
   m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 8d5edf09f62c5a64b9544ef09dddf6e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -166,7 +166,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.985}
+  m_Size: {x: 0.75, y: 0.95}
   m_EdgeRadius: 0
 --- !u!114 &2218950390812419723
 MonoBehaviour:
@@ -226,8 +226,11 @@ MonoBehaviour:
   colliderOnly: 1
   damageInterval: 0.5
   damageCollider: {fileID: 0}
-  damageSounds: []
-  damageVolume: 0
+  damageSounds:
+  - {fileID: 8300000, guid: 8c80c8b5d999add48b26a3b755808364, type: 3}
+  - {fileID: 8300000, guid: 4bd4e29fc98a3ac4f9ae93354eed92d5, type: 3}
+  - {fileID: 8300000, guid: cbab00b055c0e7043b340c81469e5ef2, type: 3}
+  damageVolume: 0.6
 --- !u!114 &4837120839108345646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,5 +249,7 @@ MonoBehaviour:
   moveVariance: 0
   initialDelay: 3.5
   moveSounds:
-  - {fileID: 8300000, guid: c1ccdfc68169dbb4c9135978d84f5f31, type: 3}
-  moveVolume: 0.8
+  - {fileID: 8300000, guid: c124cd47e1338514ca0fc818d47b606a, type: 3}
+  - {fileID: 8300000, guid: c26d2540ac936ab4890258f4a7c6f2a2, type: 3}
+  - {fileID: 8300000, guid: 2490b1925ac4aaa42bdb4f8c31893b1c, type: 3}
+  moveVolume: 1.5

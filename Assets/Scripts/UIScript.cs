@@ -35,6 +35,7 @@ public class UIScript : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
         fadecolor = new Color(0, 0, 0, Time.deltaTime/panelFadeTime); //dont recalculate this
         UpdateMoneyText();
+        towerButtons[0].Select(); //select the first one
     }
 
     // Update is called once per frame
@@ -107,6 +108,9 @@ public class UIScript : MonoBehaviour
             }
         }
 
+    public void SelectTowerButton(int index) {
+        towerButtons[index].Select(); 
+    }
     /* from space defender, could be of use later
         put into ui script, let's not leave this here!!!!
 

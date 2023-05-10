@@ -52,7 +52,7 @@ public class Health : MonoBehaviour
         if (flashTimer > 0)
         {
             flash.SetFloat("_FlashAmount", 1);
-            Debug.Log("flash works");
+            //Debug.Log("flash works");
         }
         else flash.SetFloat("_FlashAmount", 0);
 
