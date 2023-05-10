@@ -35,7 +35,7 @@ public class Projectile : MonoBehaviour
         collide = GetComponent<Collider2D>();
 
         //TODO FOR FUTURE ALEX: make this a global method, headass
-        ContactFilter2D filter = new ContactFilter2D(); filter.SetLayerMask(LayerMask.GetMask("ProjEffect"));  //get a filter going
+        ContactFilter2D filter = new ContactFilter2D(); filter.SetLayerMask(LayerMask.GetMask("ProjEffect")); filter.useTriggers = true;  //get a filter going
         List<Collider2D> results = new List<Collider2D>(); 
         
         
