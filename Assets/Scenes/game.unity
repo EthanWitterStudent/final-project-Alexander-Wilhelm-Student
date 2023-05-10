@@ -9708,8 +9708,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageList:
-  - {fileID: 11400000, guid: 0be2ec3910347a04c9b3ba991b5aca84, type: 2}
-  - {fileID: 11400000, guid: 66dc020af2258d34d933b2b652a789f1, type: 2}
+  - {fileID: 11400000, guid: fb4789c7ec4cf794f81431f74dca023b, type: 2}
+  - {fileID: 11400000, guid: 446fba8d6749f8249818961ab19cfe9c, type: 2}
+  - {fileID: 11400000, guid: f98c2f8a5bdc30842904e8b8fc925a02, type: 2}
   stageStartDelay: 0
   stageEndDelay: 4
   musicFadeFactor: 3
