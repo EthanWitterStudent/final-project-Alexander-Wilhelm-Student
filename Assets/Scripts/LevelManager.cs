@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] float sceneLoadDelay = 2f;
+    LevelSelect ls;
     // ScoreKeeper scoreKeeper;
 
     // void Awake()
@@ -13,10 +14,22 @@ public class LevelManager : MonoBehaviour
     //     scoreKeeper = FindObjectOfType<ScoreKeeper>();
     // }
 
+    private void Start() 
+    {
+        ls = FindObjectOfType<LevelSelect>();
+    }
+
     public void LoadGame()
     {
-        // scoreKeeper.ResetScore();
-        SceneManager.LoadScene("game");
+        switch(ls.levelSelectedNumber)
+        {
+            case 1:
+                SceneManager.LoadScene("game");
+                break;
+            case 2:
+                SceneManager.LoadScene("ohio");
+                break;
+        }
     }
 
     public void LoadMainMenu()
