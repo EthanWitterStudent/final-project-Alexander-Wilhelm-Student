@@ -55,6 +55,7 @@ public class NewTowerMenu : MonoBehaviour
                 TowerButtonInfo tbInfo = sel.gameObject.GetComponentInParent<TowerButtonInfo>();
                 if (tbInfo.tower != null) towerinfo.towers.Add(tbInfo.tower);
                 if (tbInfo.towerImage != null) towerinfo.towerImgs.Add(tbInfo.towerImage);
+                Debug.Log("whar");
             }
         }
         FindObjectOfType<LevelManager>().LoadGame();

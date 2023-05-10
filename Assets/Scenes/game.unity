@@ -9741,7 +9741,7 @@ MonoBehaviour:
   towers:
   - {fileID: 5201306128907651694, guid: 46b318783b3b1ea4b89fbdd8dfa028c8, type: 3}
   - {fileID: 5201306128907651694, guid: 4625e82b1482ae94d8ab7f0364c7c079, type: 3}
-  - {fileID: 5201306128907651694, guid: 48c0dda462006894b8efd3f3e1ed3bfc, type: 3}
+  - {fileID: 5201306128907651694, guid: ba4784c5b4d35894588702b024971e97, type: 3}
   - {fileID: 5201306128907651694, guid: ee69e238a94f29c4085ff3f6e2b1707f, type: 3}
   - {fileID: 5201306128907651694, guid: 19fa154c95bf7b942ba927a50a761d25, type: 3}
   towerImages:

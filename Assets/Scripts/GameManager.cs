@@ -165,20 +165,20 @@ public class GameManager : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) { //lose the game idiot!!
-        Debug.Log("gg");
+        //Debug.Log("gg");
         if (other.gameObject.tag == "Enemy" && !lostGame) {
-            Debug.Log("wait");
+            //Debug.Log("wait");
             StartCoroutine(LoseGame());
         }
     }
 
     IEnumerator LoseGame() {
-        Debug.Log("whar???");
+        //Debug.Log("whar???");
         StopGame();
         lostGame = true;
         sfxSrc.PlayClip(loseSound, 1);
         StartCoroutine(uiscript.FadePanel());
-        Debug.Log("WHAR???");
+        //Debug.Log("WHAR???");
         yield return new WaitForSeconds(menuDelay);
         FindObjectOfType<LevelManager>().LoadGameOver();
     }

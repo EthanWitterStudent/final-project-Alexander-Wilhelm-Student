@@ -136,6 +136,7 @@ MonoBehaviour:
   moveSpeed: 20
   lifetime: 5
   impactSounds: {fileID: 0}
+  damageColor: {r: 1, g: 0.57254905, b: 0.57254905, a: 1}
 --- !u!114 &6450487868134819291
 MonoBehaviour:
   m_ObjectHideFlags: 0

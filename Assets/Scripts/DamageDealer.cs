@@ -32,6 +32,11 @@ public class DamageDealer : MonoBehaviour
         return damage;
     }
 
+    public void SetDamage(int value)
+    {
+        damage = value;
+    }
+
     void OnCollisionEnter2D(Collision2D other)
     {
         if (collisionEnterOnly && (damageCollider == null || other.collider == damageCollider))

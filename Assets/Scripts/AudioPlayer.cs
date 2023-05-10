@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioPlayer : MonoBehaviour
 {
-
+    //NOTE FOR FUTURE ALEX: make this a static class
     AudioSource src;
 
     void Start() {
@@ -18,4 +18,6 @@ public class AudioPlayer : MonoBehaviour
             src.PlayOneShot(clip, volume);
         }
     }
+
+    //NOTE FOR FUTURE ALEX: make a method for an array of clips, you fucking idiot
 }
