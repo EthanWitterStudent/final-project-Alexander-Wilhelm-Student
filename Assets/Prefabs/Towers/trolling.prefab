@@ -243,6 +243,7 @@ MonoBehaviour:
   health: 6969
   cashCost: 0
   cashOnDeath: 0
+  towerCooldown: 0.1
   LawnmowerImmunity: 1
   flashLength: 0.025
   deathEffect: {fileID: 0}

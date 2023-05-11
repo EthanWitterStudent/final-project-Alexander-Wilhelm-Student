@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     [SerializeField] int health = 50;
     [SerializeField] int cashCost = 0;
     [SerializeField] int cashOnDeath;
+    [SerializeField] float towerCooldown = 1f;
     public bool LawnmowerImmunity;
 
     [Header("Effects")]
@@ -112,6 +113,10 @@ public class Health : MonoBehaviour
     public int GetCashCost()
     {
         return cashCost;
+    }
+
+    public float GetCooldown() {
+        return towerCooldown;
     }
 
 

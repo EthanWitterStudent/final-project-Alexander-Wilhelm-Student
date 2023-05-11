@@ -5,6 +5,7 @@ using UnityEngine;
 public class DamageDealer : MonoBehaviour
 {
     [SerializeField] int damage = 10;
+    [SerializeField] Vector2 knockback;
     [SerializeField] GameObject damageEffect;
     [SerializeField] bool multipleDamage;
     [SerializeField] bool destroyOnHit;
@@ -13,6 +14,8 @@ public class DamageDealer : MonoBehaviour
 
     [SerializeField] float damageInterval;
     [SerializeField] Collider2D damageCollider;
+
+    
 
     [SerializeField] AudioClip[] damageSounds;
     [SerializeField] float damageVolume;
@@ -106,6 +109,7 @@ public class DamageDealer : MonoBehaviour
         if (health != null && timer < 0)
         {
             health.TakeDamage(damage);
+            health.gameObject.GetComponent<Rigidbody2D>().AddForce(knockback);
             timer = damageInterval;
         }
     }
@@ -130,6 +134,7 @@ public class DamageDealer : MonoBehaviour
                     if (col.isTrigger) continue;
                     GameObject gobj = col.gameObject;
                     col.GetComponent<Health>().TakeDamage(damage); //damage
+                    col.gameObject.GetComponent<Rigidbody2D>().AddForce(knockback);
                                                                    // this only works properly if the enemy has only one proper collider2d. 
                 }
             }

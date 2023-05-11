@@ -351,6 +351,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: lawnmower (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5227353597465690914, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
+      propertyPath: destroyPastX
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5227353597465690915, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -939,6 +943,10 @@ PrefabInstance:
     - target: {fileID: 5227353597465690910, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
       propertyPath: m_Name
       value: lawnmower (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227353597465690914, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
+      propertyPath: destroyPastX
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5227353597465690915, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
       propertyPath: m_RootOrder
@@ -1614,13 +1622,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 3bd51413f75aa264383060b97419ffaf, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &255869704
@@ -5093,13 +5101,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 3bd51413f75aa264383060b97419ffaf, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &781690467
@@ -7744,6 +7752,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: lawnmower (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5227353597465690914, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
+      propertyPath: destroyPastX
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5227353597465690915, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -9377,13 +9389,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 3bd51413f75aa264383060b97419ffaf, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1574145714
@@ -9711,10 +9723,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fb4789c7ec4cf794f81431f74dca023b, type: 2}
   - {fileID: 11400000, guid: 446fba8d6749f8249818961ab19cfe9c, type: 2}
   - {fileID: 11400000, guid: f98c2f8a5bdc30842904e8b8fc925a02, type: 2}
-  stageStartDelay: 0
+  stageStartDelay: 4
   stageEndDelay: 4
   musicFadeFactor: 3
-  startingCash: 500
+  startingCash: 6969
   passiveCashAmount: 50
   passiveCashDelay: 4
   passiveCashSound: {fileID: 8300000, guid: eb2a8955c9f0b614d94b1f2415e40986, type: 3}
@@ -9741,7 +9753,7 @@ MonoBehaviour:
   towers:
   - {fileID: 5201306128907651694, guid: 46b318783b3b1ea4b89fbdd8dfa028c8, type: 3}
   - {fileID: 5201306128907651694, guid: 4625e82b1482ae94d8ab7f0364c7c079, type: 3}
-  - {fileID: 5201306128907651694, guid: ba4784c5b4d35894588702b024971e97, type: 3}
+  - {fileID: 5201306128907651694, guid: 4134c671f2592a04e8f33c87e5779c93, type: 3}
   - {fileID: 5201306128907651694, guid: ee69e238a94f29c4085ff3f6e2b1707f, type: 3}
   - {fileID: 5201306128907651694, guid: 19fa154c95bf7b942ba927a50a761d25, type: 3}
   towerImages:
@@ -10343,13 +10355,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 3bd51413f75aa264383060b97419ffaf, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1692038738
@@ -10493,6 +10505,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711711937}
   m_CullTransparentMesh: 1
+--- !u!1 &1717577085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1717577086}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1717577086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717577085}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.625, y: 2.625, z: 0.37765718}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1734153884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10503,6 +10546,10 @@ PrefabInstance:
     - target: {fileID: 5227353597465690910, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
       propertyPath: m_Name
       value: lawnmower (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227353597465690914, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
+      propertyPath: destroyPastX
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5227353597465690915, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
       propertyPath: m_RootOrder
@@ -11066,13 +11113,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 3bd51413f75aa264383060b97419ffaf, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1785858396
@@ -12331,6 +12378,10 @@ PrefabInstance:
     - target: {fileID: 5227353597465690910, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
       propertyPath: m_Name
       value: lawnmower
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227353597465690914, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
+      propertyPath: destroyPastX
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5227353597465690915, guid: 7fbfa332e3858304c9b10ff813c14feb, type: 3}
       propertyPath: m_RootOrder

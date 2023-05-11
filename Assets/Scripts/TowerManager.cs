@@ -42,33 +42,36 @@ public class TowerManager : MonoBehaviour
 
         // Destroy(tinfo); //don't need this no more!
 
-        towerFilters = LayerMask.GetMask(new string[]{"Tower", "Enemy"});
+        towerFilters = LayerMask.GetMask(new string[] { "Tower", "Enemy" });
     }
 
 
 
     public void PlaceTower()
     {
-        if (juanCheck) audioPlayer.PlayClip(placeFailSound, 1); else {
-        int cashCost = towers[towerIndex].GetComponent<Health>().GetCashCost();
-        if (cashCost <= gm.GetCash())
+        if (juanCheck || uiscript.timers[towerIndex] > 0) audioPlayer.PlayClip(placeFailSound, 1);
+        else
         {
-            Vector3 pos = FindObjectOfType<UIScript>().GridButtonClick();
-            Vector3 worldPos = Camera.main.ScreenToWorldPoint(pos); //get its position in the world
-            worldPos = new Vector3(worldPos.x, worldPos.y, 0); //snap to zero 
-            BoxCollider2D check = Instantiate(towerCheck, worldPos, Quaternion.identity);
-            ContactFilter2D filter = new ContactFilter2D(); filter.SetLayerMask(towerFilters);
-            //List<Collider2D> hits = new List<Collider2D>();
-            if (check.OverlapCollider(filter, new List<Collider2D>()) == 0) //ensure there are no collisions
+            int cashCost = towers[towerIndex].GetComponent<Health>().GetCashCost();
+            if (cashCost <= gm.GetCash())
             {
-                Instantiate(towers[towerIndex], worldPos, Quaternion.identity);
-                gm.AddCash(-cashCost);
-                uiscript.UpdateMoneyText();
+                Vector3 pos = FindObjectOfType<UIScript>().GridButtonClick();
+                Vector3 worldPos = Camera.main.ScreenToWorldPoint(pos); //get its position in the world
+                worldPos = new Vector3(worldPos.x, worldPos.y, 0); //snap to zero 
+                BoxCollider2D check = Instantiate(towerCheck, worldPos, Quaternion.identity);
+                ContactFilter2D filter = new ContactFilter2D(); filter.SetLayerMask(towerFilters);
+                //List<Collider2D> hits = new List<Collider2D>();
+                if (check.OverlapCollider(filter, new List<Collider2D>()) == 0) //ensure there are no collisions
+                {
+                    Instantiate(towers[towerIndex], worldPos, Quaternion.identity);
+                    gm.AddCash(-cashCost);
+                    uiscript.UpdateMoneyText();
+                    uiscript.timers[towerIndex] = towers[towerIndex].GetComponent<Health>().GetCooldown();
+                }
+                else audioPlayer.PlayClip(placeFailSound, 1);
+                Destroy(check.gameObject);
             }
-            else audioPlayer.PlayClip(placeFailSound, 1);
-            Destroy(check.gameObject);
-        }
-        else audioPlayer.PlayClip(insufficientCashSound, 1);
+            else audioPlayer.PlayClip(insufficientCashSound, 1);
         }
         uiscript.SelectTowerButton(towerIndex); //stop stupid grid button selection
     }

@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  knockback: {x: 0.4, y: 0}
   damageEffect: {fileID: 0}
   multipleDamage: 0
   destroyOnHit: 1

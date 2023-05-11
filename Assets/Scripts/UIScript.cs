@@ -11,7 +11,9 @@ public class UIScript : MonoBehaviour
     [SerializeField] Canvas canvas;
     [SerializeField] TextMeshProUGUI moneyText;
     [SerializeField] Button[] towerButtons;
-    
+    [System.NonSerialized] public float[] cooldowns = new float[5];
+    [System.NonSerialized] public float[] timers = new float[5];
+
     [SerializeField] Transform[] gridButtons;
     [SerializeField] Image stonksPanel;
 
@@ -33,7 +35,7 @@ public class UIScript : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
-        fadecolor = new Color(0, 0, 0, Time.deltaTime/panelFadeTime); //dont recalculate this
+        fadecolor = new Color(0, 0, 0, Time.deltaTime / panelFadeTime); //dont recalculate this
         UpdateMoneyText();
         towerButtons[0].Select(); //select the first one
     }
@@ -41,18 +43,39 @@ public class UIScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        stonksPanel.fillAmount = gameManager.GetCashTimer()/gameManager.GetCashDelay();
+        stonksPanel.fillAmount = gameManager.GetCashTimer() / gameManager.GetCashDelay();
+        for (int i = 0; i < towerButtons.Length; i++)
+        {
+            if (towerButtons[i].enabled){
+            towerButtons[i].image.fillAmount = (cooldowns[i] - timers[i]) / cooldowns[i];
+            Debug.Log(towerButtons[i].name);
+            Debug.Log(cooldowns[i]);
+            Debug.Log(timers[i]);}
+        }
     }
 
-    public void setupTowerButton(int index, GameObject tower, Sprite image) {
+    void FixedUpdate()
+    {
+        for (int i = 0; i < timers.Length; i++) timers[i] -= Time.fixedDeltaTime;
+    }
+
+    public void setupTowerButton(int index, GameObject tower, Sprite image)
+    {
         //Debug.Log($"SETTING TOWER BUTTON INDEX {index} TOWER {tower.name} IMAGE {image.name}");
         Button button = towerButtons[index];
         button.gameObject.SetActive(true);
         if (image != null) button.GetComponent<Image>().sprite = image;
-        if (tower.GetComponent<Health>() != null) button.GetComponentInChildren<TextMeshProUGUI>().text = $"${tower.GetComponent<Health>().GetCashCost()}";
+        Health health = tower.GetComponent<Health>();
+        if (health != null)
+        {
+            Debug.Log(health.GetCooldown());
+            button.GetComponentInChildren<TextMeshProUGUI>().text = $"${health.GetCashCost()}";
+            cooldowns[index] = health.GetCooldown();
+        }
     }
 
-    public void UpdateMoneyText() {
+    public void UpdateMoneyText()
+    {
         moneyText.text = $"${gameManager.GetCash().ToString("D4")}";
     }
 
@@ -77,7 +100,7 @@ public class UIScript : MonoBehaviour
         Transform tMin = null;
         float minDist = Mathf.Infinity;
         Vector2 currentPos = Mouse.current.position.ReadValue();
-        
+
         foreach (Transform t in buttons)
         {
             float dist = Vector2.Distance(t.position, currentPos);
@@ -87,29 +110,33 @@ public class UIScript : MonoBehaviour
                 minDist = dist;
             }
         }
-        
+
         return tMin;
     }
 
-    public IEnumerator WinText() {
+    public IEnumerator WinText()
+    {
         winText.gameObject.SetActive(true);
-        while (true) {
+        while (true)
+        {
             winText.color = Color.white - new Color(Random.Range(0, randomTextColor), Random.Range(0, randomTextColor), Random.Range(0, randomTextColor), 0);
             yield return null;
         }
     }
-    public IEnumerator FadePanel() {
-            fadePanel.gameObject.SetActive(true);
-            fadePanel.color = new Color(0, 0, 0, 0);
-            while (fadePanel.color.a <= 1)
-            {
-                fadePanel.color += fadecolor;
-                yield return null;
-            }
+    public IEnumerator FadePanel()
+    {
+        fadePanel.gameObject.SetActive(true);
+        fadePanel.color = new Color(0, 0, 0, 0);
+        while (fadePanel.color.a <= 1)
+        {
+            fadePanel.color += fadecolor;
+            yield return null;
         }
+    }
 
-    public void SelectTowerButton(int index) {
-        towerButtons[index].Select(); 
+    public void SelectTowerButton(int index)
+    {
+        towerButtons[index].Select();
     }
     /* from space defender, could be of use later
         put into ui script, let's not leave this here!!!!
