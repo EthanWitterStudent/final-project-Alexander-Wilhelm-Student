@@ -11,23 +11,19 @@ public class MusicLoop : MonoBehaviour
     AudioSource src;
     public bool looping;
 
-
     void Start()
     {
         src = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!src.isPlaying && !src.loop && looping) { //what the FUCK. am i doing
             src.clip = LoopMusic;
             src.loop = true;
             src.Play();
-            //Debug.Log("huh");
         }
 
-        //Debug.Log($"IS PLAYING: {src.isPlaying} LOOP: {src.loop} LOOPING: {looping} LOADED {Time.timeSinceLevelLoad > 0.02}");
     }
 
     

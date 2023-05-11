@@ -13,7 +13,7 @@ public class CameraShake : MonoBehaviour
     void Start() {
         tf = Camera.main.transform;
     }
-    // Update is called once per frame
+
     void Update()
     {
         if (shakeAmount > 0) {
@@ -24,7 +24,6 @@ public class CameraShake : MonoBehaviour
     }
 
     public void setShake(float shake, float decay) {
-        //Debug.Log($"shake {shake} decay {decay}");
         if (shake >= shakeAmount || shakeAmount < Mathf.Epsilon) shakeDecay = decay; //dont remember why i checked shakeamount here but im sure its helpful yessir
         if (shake >= shakeAmount) shakeAmount = shake;
     }

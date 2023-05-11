@@ -38,30 +38,20 @@ public class Projectile : MonoBehaviour
         ContactFilter2D filter = new ContactFilter2D(); filter.SetLayerMask(LayerMask.GetMask("ProjEffect")); filter.useTriggers = true;  //get a filter going
         List<Collider2D> results = new List<Collider2D>(); 
         
-        
-        /*foreach (GameObject gobj in GameObject.FindGameObjectsWithTag("keeves")) {   //stupid hack to find keeves
-            gobj.layer = LayerMask.GetMask("Default");
-        } */
         if (collide.OverlapCollider(filter, results) > 0)
         {
             foreach (Collider2D col in results)
             {
-                Debug.Log(col.gameObject.name);
                 if (col.isTrigger && col.gameObject.tag == "keeves")
                 {
-                    Debug.Log("what");
                     damage.SetDamage(damage.GetDamage() * 2);
                     GetComponentInChildren<SpriteRenderer>().color = damageColor;
                 }//keeves damage multiplier
 
             }
         }
-        Debug.Log(results.Count);
-        
-
     }
 
-    // Update is called once per frame
     void Update()
     {
 

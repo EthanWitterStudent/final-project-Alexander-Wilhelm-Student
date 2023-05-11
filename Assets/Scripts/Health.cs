@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    // big chungus
+    // a list of variables half as big as your mom
     GameManager gm;
     [Header("General")]
     [SerializeField] int health = 50;
@@ -42,7 +42,6 @@ public class Health : MonoBehaviour
         audioPlayer = FindObjectOfType<AudioPlayer>();
         flash = GetComponentInChildren<SpriteRenderer>().material;
         shake = FindObjectOfType<CameraShake>();
-        //Debug.Log(gameObject.name);
         if (spawnSound != null) audioPlayer.PlayClip(spawnSound, spawnVolume);
         if (idleSounds.Length > 0) StartCoroutine(IdleSound());
 
@@ -53,7 +52,6 @@ public class Health : MonoBehaviour
         if (flashTimer > 0)
         {
             flash.SetFloat("_FlashAmount", 1);
-            //Debug.Log("flash works");
         }
         else flash.SetFloat("_FlashAmount", 0);
 

@@ -21,17 +21,10 @@ public class UIScript : MonoBehaviour
     [SerializeField] float randomTextColor;
     [SerializeField] Image fadePanel;
     [SerializeField] float panelFadeTime;
-
-    //[SerializeField] GameObject test;
-
     GameManager gameManager;
-
     Color fadecolor;
 
 
-
-
-    // Start is called before the first frame update
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
@@ -46,12 +39,9 @@ public class UIScript : MonoBehaviour
         stonksPanel.fillAmount = gameManager.GetCashTimer() / gameManager.GetCashDelay();
         for (int i = 0; i < towerButtons.Length; i++)
         {
-            if (towerButtons[i].enabled){
-            towerButtons[i].image.fillAmount = (cooldowns[i] - timers[i]) / cooldowns[i];
-            Debug.Log(towerButtons[i].name);
-            Debug.Log(cooldowns[i]);
-            Debug.Log(timers[i]);}
+            if (towerButtons[i].enabled) towerButtons[i].image.fillAmount = (cooldowns[i] - timers[i]) / cooldowns[i];
         }
+        
     }
 
     void FixedUpdate()
@@ -61,14 +51,12 @@ public class UIScript : MonoBehaviour
 
     public void setupTowerButton(int index, GameObject tower, Sprite image)
     {
-        //Debug.Log($"SETTING TOWER BUTTON INDEX {index} TOWER {tower.name} IMAGE {image.name}");
         Button button = towerButtons[index];
         button.gameObject.SetActive(true);
         if (image != null) button.GetComponent<Image>().sprite = image;
         Health health = tower.GetComponent<Health>();
         if (health != null)
         {
-            Debug.Log(health.GetCooldown());
             button.GetComponentInChildren<TextMeshProUGUI>().text = $"${health.GetCashCost()}";
             cooldowns[index] = health.GetCooldown();
         }
@@ -83,15 +71,6 @@ public class UIScript : MonoBehaviour
     {
         Transform tf = GetClosestButton(gridButtons); // get the screen position of the button we're clicking
         return tf.position;
-
-        /* unused
-        //Debug.Log("Screen point: " + tf.position);  
-        Vector3 worldPos = Camera.main.ScreenToWorldPoint(tf.position); //get its position in the world
-        worldPos = new Vector3(worldPos.x, worldPos.y, 0); //snap to zero 
-        //Debug.Log("World point: " + Camera.main.ScreenToWorldPoint(tf.position));
-        return worldPos;
-        //Instantiate(test, worldPos, Quaternion.identity); //test, later we use this to spawn towers
-        */
     }
 
 
@@ -138,22 +117,4 @@ public class UIScript : MonoBehaviour
     {
         towerButtons[index].Select();
     }
-    /* from space defender, could be of use later
-        put into ui script, let's not leave this here!!!!
-
-
-        public IEnumerator FadeText(TextMeshProUGUI text, float fadeFactor) {
-
-            text.color = new Color(text.color.r, text.color.g, text.color.b, 1);
-            yield return new WaitForSeconds(fadeHold);
-            Debug.Log($"{text.color.r} {text.color.g} {text.color.b} {text.color.a}");
-            while (text.color.a >= Mathf.Epsilon)
-            {
-                text.color = new Color(text.color.r, text.color.g, text.color.b, (text.color.a - (fadeFactor*Time.deltaTime))); //INSANE!!!! WHY AM I DOING THIS
-                yield return null;
-            }
-
-        }
-
-        */
 }

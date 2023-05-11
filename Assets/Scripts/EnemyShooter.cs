@@ -34,8 +34,6 @@ public class EnemyShooter : MonoBehaviour
     {
         gm = FindObjectOfType<GameManager>();
         audioPlayer = FindObjectOfType<AudioPlayer>();
-        Debug.Log(audioPlayer == null);
-        //player = FindObjectOfType<Player>().gameObject;
         StartCoroutine(FireStuff());
     }
 
@@ -50,18 +48,7 @@ public class EnemyShooter : MonoBehaviour
                 {
                     for (int j = 0; j < shootCount; j++)
                     {
-                        
-                        /*
-                        old logic from space defender, could be useful later
-                        if (aimAtPlayer)
-                        {
-                            //rot = -Vector2.Angle(transform.position, player.transform.position) ; //todo : get player angle
-
-                            Vector3 dir = player.transform.position - transform.position;
-                            dir = player.transform.InverseTransformDirection(dir);
-                            rot = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
-                            //Debug.Log(rot);
-                        } */
+                    
                         float rot = transform.rotation.eulerAngles.z;
                         rot += Random.Range(-randomSpread, randomSpread);
 

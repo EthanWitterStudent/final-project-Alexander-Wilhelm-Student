@@ -14,8 +14,7 @@ public class EnemyMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         moveVec = new Vector2(-moveAccel, 0);
     }
-
-    // Update is called once per frame
+    
     void FixedUpdate()
     {
         rb.AddForce(moveVec);

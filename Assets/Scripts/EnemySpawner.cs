@@ -6,17 +6,10 @@ public class EnemySpawner : MonoBehaviour
 {
 
     public List<WaveSO> waveList;
-    //[SerializeField] float waveDelay = 0f;
     WaveSO currentWave;
     public bool spawningEnemies;
 
     public Transform[] spawnPoints;
-    // START MORE LIKE DOO DOO FART HAHA!
-    void Start()
-    {
-        //StartCoroutine(SpawnWaves());
-    }
-
 
     public IEnumerator SpawnWaves()
     {

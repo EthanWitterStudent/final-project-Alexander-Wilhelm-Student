@@ -37,12 +37,6 @@ public class JazzMovement : MonoBehaviour
             if (moveSound != null) audioplayer.PlayClip(moveSound, moveVolume);
             yield return new WaitForSeconds(moveDuration);
             rb.velocity = new Vector2(0, 0);
-            /*if (col.IsTouchingLayers(LayerMask.GetMask("Tower"))) { 
-                Debug.Log("oshit");
-                rb.velocity = -moveVec;
-                yield return new WaitForSeconds(moveDuration);
-                rb.velocity = new Vector2(0, 0);
-            } */
             yield return new WaitForSeconds(moveDelay + Random.Range(0, moveVariance));
         }
     }

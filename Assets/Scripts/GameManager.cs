@@ -11,9 +11,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] float stageEndDelay;
     [System.NonSerialized] public bool stagePlaying;
 
-    //[SerializeField] TextMeshProUGUI stageStartText;
-    //[SerializeField] TextMeshProUGUI stageEndText;
-
     EnemySpawner enemySpawner;
 
     [Header("Music")]
@@ -83,9 +80,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(FadeMusic());
             yield return new WaitForSeconds(stageEndDelay);
         }
-        Debug.Log("based");
-        if (!lostGame) {
-            Debug.Log("super based?");
+        if (!lostGame) {;
             yield return new WaitForSeconds(winDelay);
             StartCoroutine(WinGame());
         }
@@ -104,9 +99,7 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator WinGame() {
-        Debug.Log("wintext");
         StartCoroutine(uiscript.WinText());
-        Debug.Log("winmusic");
         musicSrc.clip = winMusic;
         music.GetComponent<MusicLoop>().looping = false;
         musicSrc.loop = false;
@@ -165,20 +158,17 @@ public class GameManager : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) { //lose the game idiot!!
-        //Debug.Log("gg");
         if (other.gameObject.tag == "Enemy" && !lostGame) {
-            //Debug.Log("wait");
             StartCoroutine(LoseGame());
         }
     }
 
     IEnumerator LoseGame() {
-        //Debug.Log("whar???");
+
         StopGame();
         lostGame = true;
         sfxSrc.PlayClip(loseSound, 1);
         StartCoroutine(uiscript.FadePanel());
-        //Debug.Log("WHAR???");
         yield return new WaitForSeconds(menuDelay);
         FindObjectOfType<LevelManager>().LoadGameOver();
     }

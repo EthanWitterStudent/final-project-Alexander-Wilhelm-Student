@@ -7,12 +7,6 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] float sceneLoadDelay = 2f;
     LevelSelect ls;
-    // ScoreKeeper scoreKeeper;
-
-    // void Awake()
-    // {
-    //     scoreKeeper = FindObjectOfType<ScoreKeeper>();
-    // }
 
     private void Start() 
     {
