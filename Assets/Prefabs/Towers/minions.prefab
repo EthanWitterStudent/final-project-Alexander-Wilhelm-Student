@@ -154,13 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d73ca2253af1bb4db27790749f68958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   health: 75
   cashCost: 200
-=======
-  health: 55
-  cashCost: 150
->>>>>>> Stashed changes
   cashOnDeath: 0
   towerCooldown: 8
   LawnmowerImmunity: 0

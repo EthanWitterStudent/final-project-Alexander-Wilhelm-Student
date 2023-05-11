@@ -48,7 +48,7 @@ public class TowerManager : MonoBehaviour
 
 
     public void PlaceTower()
-    {
+    {   
         if (juanCheck || uiscript.timers[towerIndex] > 0) audioPlayer.PlayClip(placeFailSound, 1);
         else
         {
