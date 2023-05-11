@@ -888,6 +888,14 @@ PrefabInstance:
       propertyPath: towerImage
       value: 
       objectReference: {fileID: 21300000, guid: 17d66a0feb5c0b44d8ddd5e96b6dd5ed, type: 3}
+    - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1030523159}
+    - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: checkMaxTowers
+      objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3046,7 +3054,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &847109624
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3295,7 +3303,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947946167}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -474.59, y: -265.57, z: -5}
+  m_LocalPosition: {x: -475.39, y: -265.91, z: -5}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4507,7 +4515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1366539305
 RectTransform:
   m_ObjectHideFlags: 0
