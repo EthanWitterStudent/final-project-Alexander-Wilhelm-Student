@@ -46,6 +46,7 @@ public class Projectile : MonoBehaviour
                 {
                     damage.SetDamage(damage.GetDamage() * 2);
                     GetComponentInChildren<SpriteRenderer>().color = damageColor;
+                    break; // keeves damage does not stack
                 }//keeves damage multiplier
 
             }
