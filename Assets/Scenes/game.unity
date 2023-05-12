@@ -8876,8 +8876,8 @@ MonoBehaviour:
   alreadySelectedSound: {fileID: 8300000, guid: 457fee35193cc9946abc12abc4c44682, type: 3}
   placeFailSound: {fileID: 8300000, guid: e75bdf5b84b77b3468f65dec9b6e34f0, type: 3}
   insufficientCashSound: {fileID: 8300000, guid: 9e752f2bc19891240ac55513f7192aec, type: 3}
-  removeSound: {fileID: 8300000, guid: e75bdf5b84b77b3468f65dec9b6e34f0, type: 3}
-  removeFailSound: {fileID: 8300000, guid: 99e5bb530daf59649aab6ac35e8db957, type: 3}
+  removeSound: {fileID: 8300000, guid: faabcac5895033e45a11c9c6eb3b7fb4, type: 3}
+  removeFailSound: {fileID: 8300000, guid: c4939c1c027f2d642897e2098f64bbdd, type: 3}
   juanCheck: 0
 --- !u!61 &1603511465
 BoxCollider2D:
