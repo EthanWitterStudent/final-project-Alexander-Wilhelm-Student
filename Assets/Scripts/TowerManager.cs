@@ -13,6 +13,8 @@ public class TowerManager : MonoBehaviour
     [SerializeField] AudioClip alreadySelectedSound;
     [SerializeField] AudioClip placeFailSound;
     [SerializeField] AudioClip insufficientCashSound;
+    [SerializeField] AudioClip removeSound;
+    [SerializeField] AudioClip removeFailSound;
     AudioPlayer audioPlayer;
     GameManager gm;
     UIScript uiscript;
@@ -45,10 +47,8 @@ public class TowerManager : MonoBehaviour
         towerFilters = LayerMask.GetMask(new string[] { "Tower", "Enemy" });
     }
 
-
-
     public void PlaceTower()
-    {   
+    {
         if (juanCheck || uiscript.timers[towerIndex] > 0) audioPlayer.PlayClip(placeFailSound, 1);
         else
         {
@@ -74,6 +74,31 @@ public class TowerManager : MonoBehaviour
             else audioPlayer.PlayClip(insufficientCashSound, 1);
         }
         uiscript.SelectTowerButton(towerIndex); //stop stupid grid button selection
+    }
+
+
+    public void RemoveTower()
+    {
+        Vector3 pos = FindObjectOfType<UIScript>().GridButtonClick();
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(pos); //get its position in the world
+        worldPos = new Vector3(worldPos.x, worldPos.y, 0); //snap to zero 
+        BoxCollider2D check = Instantiate(towerCheck, worldPos, Quaternion.identity);
+        ContactFilter2D filter = new ContactFilter2D(); filter.SetLayerMask(LayerMask.GetMask("Tower"));
+        List<Collider2D> hits = new List<Collider2D>();
+        if (check.OverlapCollider(filter, hits) > 0)
+        {
+            foreach (Collider2D col in hits)
+            {
+                Destroy(col.gameObject);
+            }
+            audioPlayer.PlayClip(removeSound, 1);
+        }
+        else {
+            audioPlayer.PlayClip(removeFailSound, 1);
+        }
+        Destroy(check.gameObject);
+
+        
     }
 
     public void setTowerIndex(int x)

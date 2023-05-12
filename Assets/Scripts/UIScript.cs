@@ -117,4 +117,10 @@ public class UIScript : MonoBehaviour
     {
         towerButtons[index].Select();
     }
+
+    public bool getRightClick() {
+        Debug.Log("Got RMB check!");
+        Debug.Log(Mouse.current.rightButton.wasPressedThisFrame);
+        return Mouse.current.rightButton.wasPressedThisFrame;
+    }
 }
