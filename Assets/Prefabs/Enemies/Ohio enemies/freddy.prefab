@@ -180,9 +180,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d73ca2253af1bb4db27790749f68958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4000
+  health: 3000
   cashCost: 0
   cashOnDeath: 0
+  towerCooldown: 1
   LawnmowerImmunity: 1
   flashLength: 0.075
   deathEffect: {fileID: 646044222004944096, guid: daf8931e116bfd74b9d5c4dccd326de9, type: 3}
@@ -219,6 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1987
+  knockback: {x: 0, y: 0}
   damageEffect: {fileID: 0}
   multipleDamage: 0
   destroyOnHit: 0
