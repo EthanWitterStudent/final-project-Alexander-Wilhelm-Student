@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: growler time
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - enemy: {fileID: 2218950390812419724, guid: 869e26cdb4aeac343ac0dc5d20a4cfc7, type: 3}
+  - enemy: {fileID: 2218950390812419724, guid: 578465ed9561f704c8ad1861e9ac9f39, type: 3}
+    spawnLocation: 0
+  - enemy: {fileID: 2218950390812419724, guid: 578465ed9561f704c8ad1861e9ac9f39, type: 3}
     spawnLocation: 3
   - enemy: {fileID: 2218950390812419724, guid: 869e26cdb4aeac343ac0dc5d20a4cfc7, type: 3}
-    spawnLocation: 2
+    spawnLocation: 0
   - enemy: {fileID: 2218950390812419724, guid: 869e26cdb4aeac343ac0dc5d20a4cfc7, type: 3}
-    spawnLocation: 4
+    spawnLocation: 0
+  - enemy: {fileID: 2218950390812419724, guid: 869e26cdb4aeac343ac0dc5d20a4cfc7, type: 3}
+    spawnLocation: 0
   spawnInterval: 1.5
   spawnIntervalVariance: 0.4
   waveDuration: 7
