@@ -11,6 +11,7 @@ public class StageSO : ScriptableObject
 
     [SerializeField] AudioClip introMusic;
     [SerializeField] AudioClip loopMusic;
+    [SerializeField] bool EnableAmbientSFX = true;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,10 @@ public class StageSO : ScriptableObject
 
     public AudioClip GetLoopMusic() {
         return loopMusic;
+    }
+
+    public bool GetAmbient() {
+        return EnableAmbientSFX;
     }
 
 }

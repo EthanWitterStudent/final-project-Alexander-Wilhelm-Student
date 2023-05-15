@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
     //misc hidden vars
 
     bool lostGame; //unused as of yet, i plan to move losing logic here
+    [System.NonSerialized] public bool playAmbient;
     UIScript uiscript;
     
 
@@ -68,15 +69,17 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator HandleStages()
     {
+        yield return new WaitForSeconds(stageStartDelay);
         foreach (StageSO stage in stageList)
         {
             //stageStartText.text = stage.GetStageName();
-            yield return new WaitForSeconds(stageStartDelay);
+            
             NextStage(stage);
             stagePlaying = true;
             do { yield return null; }
             while (enemySpawner.spawningEnemies || GameObject.FindGameObjectsWithTag("Enemy").Length > 0);
             stagePlaying = false;
+            playAmbient = false;
             StartCoroutine(FadeMusic());
             yield return new WaitForSeconds(stageEndDelay);
         }
@@ -87,6 +90,8 @@ public class GameManager : MonoBehaviour
 
     }
 
+    
+
     void NextStage(StageSO stage)
     {
         enemySpawner.waveList = stage.GetWaves();
@@ -96,6 +101,7 @@ public class GameManager : MonoBehaviour
         musicSrc.loop = false;
         musicSrc.volume = defaultMusicVol;
         musicSrc.Play();
+        playAmbient = stage.GetAmbient();
     }
 
     IEnumerator WinGame() {

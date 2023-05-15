@@ -111,6 +111,10 @@ public class UIScript : MonoBehaviour
             fadePanel.color += fadecolor;
             yield return null;
         }
+
+    public void SelectTowerButton(int index) {
+        Debug.Log($"Index: {index}, button {towerButtons[index].gameObject.name}");
+        towerButtons[index].Select(); 
     }
 
     public void SelectTowerButton(int index)
