@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnAfterTime : MonoBehaviour
+public class SpawnAfterTime : MonoBehaviour //pants shitted
 {
     AudioPlayer audioPlayer;
     [SerializeField] GameObject spawnObject;
