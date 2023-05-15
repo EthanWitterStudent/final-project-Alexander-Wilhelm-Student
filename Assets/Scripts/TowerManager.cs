@@ -51,72 +51,73 @@ public class TowerManager : MonoBehaviour
     {
         if (juanCheck || uiscript.timers[towerIndex] > 0) audioPlayer.PlayClip(placeFailSound, 1);
         else
-        int x = towerIndex;
-        if (juanCheck) audioPlayer.PlayClip(placeFailSound, 1); else {
-        int cashCost = towers[towerIndex].GetComponent<Health>().GetCashCost();
-        if (cashCost <= gm.GetCash())
         {
-            int cashCost = towers[towerIndex].GetComponent<Health>().GetCashCost();
-            if (cashCost <= gm.GetCash())
+            int x = towerIndex;
+            if (juanCheck) audioPlayer.PlayClip(placeFailSound, 1);
+            else
             {
-                Vector3 pos = FindObjectOfType<UIScript>().GridButtonClick();
-                Vector3 worldPos = Camera.main.ScreenToWorldPoint(pos); //get its position in the world
-                worldPos = new Vector3(worldPos.x, worldPos.y, 0); //snap to zero 
-                BoxCollider2D check = Instantiate(towerCheck, worldPos, Quaternion.identity);
-                ContactFilter2D filter = new ContactFilter2D(); filter.SetLayerMask(towerFilters);
-                //List<Collider2D> hits = new List<Collider2D>();
-                if (check.OverlapCollider(filter, new List<Collider2D>()) == 0) //ensure there are no collisions
+                int cashCost = towers[towerIndex].GetComponent<Health>().GetCashCost();
+                if (cashCost <= gm.GetCash())
                 {
-                    Instantiate(towers[towerIndex], worldPos, Quaternion.identity);
-                    gm.AddCash(-cashCost);
-                    uiscript.UpdateMoneyText();
-                    uiscript.timers[towerIndex] = towers[towerIndex].GetComponent<Health>().GetCooldown();
+                    
+                        Vector3 pos = FindObjectOfType<UIScript>().GridButtonClick();
+                        Vector3 worldPos = Camera.main.ScreenToWorldPoint(pos); //get its position in the world
+                        worldPos = new Vector3(worldPos.x, worldPos.y, 0); //snap to zero 
+                        BoxCollider2D check = Instantiate(towerCheck, worldPos, Quaternion.identity);
+                        ContactFilter2D filter = new ContactFilter2D(); filter.SetLayerMask(towerFilters);
+                        //List<Collider2D> hits = new List<Collider2D>();
+                        if (check.OverlapCollider(filter, new List<Collider2D>()) == 0) //ensure there are no collisions
+                        {
+                            Instantiate(towers[towerIndex], worldPos, Quaternion.identity);
+                            gm.AddCash(-cashCost);
+                            uiscript.UpdateMoneyText();
+                            uiscript.timers[towerIndex] = towers[towerIndex].GetComponent<Health>().GetCooldown();
+                        }
+                        else audioPlayer.PlayClip(placeFailSound, 1);
+                        Destroy(check.gameObject);
                 }
-                else audioPlayer.PlayClip(placeFailSound, 1);
-                Destroy(check.gameObject);
+                uiscript.SelectTowerButton(x); //stop stupid grid button selection
             }
-            else audioPlayer.PlayClip(insufficientCashSound, 1);
         }
-        uiscript.SelectTowerButton(x); //stop stupid grid button selection
     }
 
-
-    public void RemoveTower()
-    {
-        Vector3 pos = FindObjectOfType<UIScript>().GridButtonClick();
-        Vector3 worldPos = Camera.main.ScreenToWorldPoint(pos); //get its position in the world
-        worldPos = new Vector3(worldPos.x, worldPos.y, 0); //snap to zero 
-        BoxCollider2D check = Instantiate(towerCheck, worldPos, Quaternion.identity);
-        ContactFilter2D filter = new ContactFilter2D(); filter.SetLayerMask(LayerMask.GetMask("Tower"));
-        List<Collider2D> hits = new List<Collider2D>();
-        if (check.OverlapCollider(filter, hits) > 0)
+        public void RemoveTower()
         {
-            foreach (Collider2D col in hits)
+            Vector3 pos = FindObjectOfType<UIScript>().GridButtonClick();
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(pos); //get its position in the world
+            worldPos = new Vector3(worldPos.x, worldPos.y, 0); //snap to zero 
+            BoxCollider2D check = Instantiate(towerCheck, worldPos, Quaternion.identity);
+            ContactFilter2D filter = new ContactFilter2D(); filter.SetLayerMask(LayerMask.GetMask("Tower"));
+            List<Collider2D> hits = new List<Collider2D>();
+            if (check.OverlapCollider(filter, hits) > 0)
             {
-                Destroy(col.gameObject);
+                foreach (Collider2D col in hits)
+                {
+                    Destroy(col.gameObject);
+                }
+                audioPlayer.PlayClip(removeSound, 1);
             }
-            audioPlayer.PlayClip(removeSound, 1);
-        }
-        else {
-            audioPlayer.PlayClip(removeFailSound, 1);
-        }
-        Destroy(check.gameObject);
+            else
+            {
+                audioPlayer.PlayClip(removeFailSound, 1);
+            }
+            Destroy(check.gameObject);
 
-        
-    }
 
-    public void setTowerIndex(int x)
-    {
-        if (x == towerIndex) audioPlayer.PlayClip(alreadySelectedSound, 1);
-        else
+        }
+
+        public void setTowerIndex(int x)
         {
-            towerIndex = x;
-            int cashCost = towers[x].GetComponent<Health>().GetCashCost();
-            if (cashCost <= gm.GetCash())
+            if (x == towerIndex) audioPlayer.PlayClip(alreadySelectedSound, 1);
+            else
             {
-                audioPlayer.PlayClip(towerSelectSound, 1);
+                towerIndex = x;
+                int cashCost = towers[x].GetComponent<Health>().GetCashCost();
+                if (cashCost <= gm.GetCash())
+                {
+                    audioPlayer.PlayClip(towerSelectSound, 1);
+                }
+                else audioPlayer.PlayClip(insufficientCashSound, 1);
             }
-            else audioPlayer.PlayClip(insufficientCashSound, 1);
         }
     }
-}
