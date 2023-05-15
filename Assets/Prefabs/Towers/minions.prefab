@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cashAmount: 50
-  cashInterval: 8
+  cashInterval: 6
   cashSound: {fileID: 8300000, guid: cb0bcc2b2f65e3445ac65b8644f05d7e, type: 3}
   cashVolume: 0.7
   animatorTrigger: cash
