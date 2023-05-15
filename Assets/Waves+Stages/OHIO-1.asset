@@ -19,6 +19,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b6445f29f4dc1cd43b2034feee271068, type: 2}
   - {fileID: 11400000, guid: 0a77ca148563a8b45ac9aac201049bc1, type: 2}
   - {fileID: 11400000, guid: 7af109443612eb74a84e2c1e89a3ea10, type: 2}
+  - {fileID: 11400000, guid: 7d23bcab105c74c48871a4cd79a0574b, type: 2}
+  - {fileID: 11400000, guid: 4e6a03a0b7e17ca469209918a025b724, type: 2}
   introMusic: {fileID: 8300000, guid: 2d656eb44b30f5d44b70d8bafbef29d3, type: 3}
   loopMusic: {fileID: 8300000, guid: 3db0fd3aeb8957e409834fc13c49c394, type: 3}
   EnableAmbientSFX: 1

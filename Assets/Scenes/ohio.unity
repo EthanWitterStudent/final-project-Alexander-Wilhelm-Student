@@ -10871,9 +10871,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0830a3b84bbd828418d3d274d61d03aa, type: 3}
   - {fileID: 8300000, guid: a4ad344636bbf13458d5b797ab45621a, type: 3}
   - {fileID: 8300000, guid: 300aa3ef35205c544870b62667ae6019, type: 3}
-  soundVolume: 0.85
-  soundInterval: 0.5
-  intervalVariance: 2
+  soundVolume: 0.65
+  soundInterval: 0.75
+  intervalVariance: 3
 --- !u!1 &2077638862
 GameObject:
   m_ObjectHideFlags: 0

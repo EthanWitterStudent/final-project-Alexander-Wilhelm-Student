@@ -50,7 +50,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
-  m_Mass: 0.6000001
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -136,8 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f0fe7a5be20ce469d606186ee3289a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 5
-  moveAccel: 30
+  maxSpeed: 15
+  moveAccel: 50
 --- !u!114 &-7450539848108967595
 MonoBehaviour:
   m_ObjectHideFlags: 0
