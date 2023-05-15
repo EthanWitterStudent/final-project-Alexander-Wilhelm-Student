@@ -38,6 +38,11 @@ public class EnemyShooter : MonoBehaviour
     }
 
 
+    //You may notice that most of this shit is completely unnecessary.
+    //This math garbage is carried over from my Laser Defender project.
+    //It is fucking expensive. It is fucking hideous to look at.
+    //I can't be assed to fix it. Get mad. -AJW
+
     IEnumerator FireStuff()
     {
         while (true)
@@ -46,7 +51,7 @@ public class EnemyShooter : MonoBehaviour
             {
                 if (gm.stagePlaying && (alwaysShoot || (shootTrigger != null && shootTrigger.IsTouchingLayers(LayerMask.GetMask("Enemy")))))
                 {
-                    for (int j = 0; j < shootCount; j++)
+                    for (int j = 0; j < shootCount; j++)                            
                     {
                     
                         float rot = transform.rotation.eulerAngles.z;

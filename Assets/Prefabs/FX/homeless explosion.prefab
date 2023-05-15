@@ -121,8 +121,8 @@ GameObject:
   - component: {fileID: 8292691317068173174}
   - component: {fileID: -5927533747785439825}
   - component: {fileID: -6100615212355412290}
-  m_Layer: 6
-  m_Name: tbh explosion 2
+  m_Layer: 7
+  m_Name: homeless explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5106858484410258268}
   - component: {fileID: 5696217138326942012}
   - component: {fileID: 8271696175021723154}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: morshu explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 30
+  knockback: {x: 0, y: 0}
   damageEffect: {fileID: 0}
   multipleDamage: 1
   destroyOnHit: 0

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Diagnostics;
 
@@ -17,6 +15,6 @@ public class crash : MonoBehaviour
 
     void Crash() {
             
-            Utils.ForceCrash(ForcedCrashCategory.AccessViolation);
+            Utils.ForceCrash(ForcedCrashCategory.AccessViolation); // we do a little trolling
     }
 }
