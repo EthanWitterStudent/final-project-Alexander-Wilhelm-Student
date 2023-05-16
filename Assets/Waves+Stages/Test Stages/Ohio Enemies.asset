@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93aba325c28d20d42a2d80f9286221c2, type: 3}
   m_Name: Ohio Enemies
   m_EditorClassIdentifier: 
-  stageName: 
+  stageName: POPPY PLAYTIME!!
   waves:
   - {fileID: 11400000, guid: a7af74684f48c2a46b1c71445063bc6a, type: 2}
   - {fileID: 11400000, guid: 3f40eb7923dc6014c9076181a5466ee3, type: 2}
