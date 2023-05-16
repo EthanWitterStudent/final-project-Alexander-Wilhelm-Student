@@ -125,7 +125,7 @@ public class DamageDealer : MonoBehaviour
 
     void MultipleDamage()
     {
-        if (timer < 0)
+        if (timer <= Mathf.Epsilon)
         {
             ContactFilter2D filter = new ContactFilter2D();   //for some reason explosions seem to hurt both teams... hopefully this fixes it
             int enemyLayer = LayerMask.NameToLayer("Enemy");

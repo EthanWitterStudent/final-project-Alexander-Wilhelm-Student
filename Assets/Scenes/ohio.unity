@@ -8712,7 +8712,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 66dc020af2258d34d933b2b652a789f1, type: 2}
   stageStartDelay: 4
   stageEndDelay: 4
-  musicFadeFactor: 3
+  musicFadeFactor: 0.5
   startingCash: 650
   passiveCashAmount: 50
   passiveCashDelay: 5
