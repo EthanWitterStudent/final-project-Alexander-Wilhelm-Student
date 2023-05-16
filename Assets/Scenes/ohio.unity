@@ -1697,7 +1697,7 @@ MonoBehaviour:
   m_text: $6969
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3211f9ddc99e0ed439a9d7943a2448c3, type: 2}
-  m_sharedMaterial: {fileID: -3645859736781860064, guid: 3211f9ddc99e0ed439a9d7943a2448c3, type: 2}
+  m_sharedMaterial: {fileID: 5116283731318500517, guid: 3211f9ddc99e0ed439a9d7943a2448c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1760,7 +1760,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &283231398
@@ -3437,7 +3437,7 @@ MonoBehaviour:
   m_text: $6969
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3211f9ddc99e0ed439a9d7943a2448c3, type: 2}
-  m_sharedMaterial: {fileID: -3645859736781860064, guid: 3211f9ddc99e0ed439a9d7943a2448c3, type: 2}
+  m_sharedMaterial: {fileID: 5116283731318500517, guid: 3211f9ddc99e0ed439a9d7943a2448c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3500,7 +3500,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &712598619
@@ -5975,7 +5975,7 @@ MonoBehaviour:
   m_text: $6969
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3211f9ddc99e0ed439a9d7943a2448c3, type: 2}
-  m_sharedMaterial: {fileID: -3645859736781860064, guid: 3211f9ddc99e0ed439a9d7943a2448c3, type: 2}
+  m_sharedMaterial: {fileID: 5116283731318500517, guid: 3211f9ddc99e0ed439a9d7943a2448c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6038,7 +6038,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1147918914
@@ -8200,7 +8200,7 @@ MonoBehaviour:
   m_text: $6969
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3211f9ddc99e0ed439a9d7943a2448c3, type: 2}
-  m_sharedMaterial: {fileID: -3645859736781860064, guid: 3211f9ddc99e0ed439a9d7943a2448c3, type: 2}
+  m_sharedMaterial: {fileID: 5116283731318500517, guid: 3211f9ddc99e0ed439a9d7943a2448c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8263,7 +8263,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1499879235
@@ -10487,7 +10487,7 @@ MonoBehaviour:
   m_text: $6969
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3211f9ddc99e0ed439a9d7943a2448c3, type: 2}
-  m_sharedMaterial: {fileID: -3645859736781860064, guid: 3211f9ddc99e0ed439a9d7943a2448c3, type: 2}
+  m_sharedMaterial: {fileID: 5116283731318500517, guid: 3211f9ddc99e0ed439a9d7943a2448c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10550,7 +10550,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2034871691
@@ -10871,9 +10871,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0830a3b84bbd828418d3d274d61d03aa, type: 3}
   - {fileID: 8300000, guid: a4ad344636bbf13458d5b797ab45621a, type: 3}
   - {fileID: 8300000, guid: 300aa3ef35205c544870b62667ae6019, type: 3}
-  soundVolume: 0.85
-  soundInterval: 0.5
-  intervalVariance: 2
+  soundVolume: 0.65
+  soundInterval: 0.75
+  intervalVariance: 3
 --- !u!1 &2077638862
 GameObject:
   m_ObjectHideFlags: 0
