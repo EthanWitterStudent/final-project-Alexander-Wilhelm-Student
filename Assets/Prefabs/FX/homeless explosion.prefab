@@ -5016,7 +5016,7 @@ MonoBehaviour:
   damageEffect: {fileID: 0}
   multipleDamage: 1
   destroyOnHit: 0
-  collisionEnterOnly: 1
+  collisionEnterOnly: 0
   colliderOnly: 0
   damageInterval: 5
   damageCollider: {fileID: 8292691317068173174}

@@ -15,12 +15,13 @@ public class DamageDealer : MonoBehaviour
     [SerializeField] float damageInterval;
     [SerializeField] Collider2D damageCollider;
 
-    
 
     [SerializeField] AudioClip[] damageSounds;
     [SerializeField] float damageVolume;
     AudioPlayer audioPlayer;
     float timer;
+
+
 
     void Start()
     {
@@ -72,16 +73,18 @@ public class DamageDealer : MonoBehaviour
         }
     }
 
-    void DamageCheck(Collider2D other) {
+    void DamageCheck(Collider2D other)
+    {
         Health health = other.gameObject.GetComponent<Health>();
-            if (multipleDamage) MultipleDamage(); else SimpleDamage(health);
-            if (health != null) DamageStuff(true); else DamageStuff(false);
+        if (multipleDamage) MultipleDamage(); else SimpleDamage(health);
+        if (health != null) DamageStuff(true); else DamageStuff(false);
     }
 
-    void DamageCheck(Collision2D other) {
+    void DamageCheck(Collision2D other)
+    {
         Health health = other.gameObject.GetComponent<Health>();
-            if (multipleDamage) MultipleDamage(); else SimpleDamage(health);
-            if (health != null) DamageStuff(true); else DamageStuff(false);
+        if (multipleDamage) MultipleDamage(); else SimpleDamage(health);
+        if (health != null) DamageStuff(true); else DamageStuff(false);
     }
 
 
@@ -96,12 +99,12 @@ public class DamageDealer : MonoBehaviour
 
     void DamageStuff(bool sound)
     {
-            if (damageEffect != null) Instantiate(damageEffect, transform.position, Quaternion.identity);
+        if (damageEffect != null) Instantiate(damageEffect, transform.position, Quaternion.identity);
 
 
-            if (sound) PlaySound();
-            if (destroyOnHit) Destroy(gameObject);
-        
+        if (sound) PlaySound();
+        if (destroyOnHit) Destroy(gameObject);
+
     }
 
     void SimpleDamage(Health health)
@@ -122,15 +125,20 @@ public class DamageDealer : MonoBehaviour
 
     void MultipleDamage()
     {
-        Debug.Log($"THIS LAYER: {gameObject.layer}");
-            Debug.Log($"TOWER LAYER: {LayerMask.GetMask("Tower")}");
-            Debug.Log($"ENEMY LAYER: {LayerMask.GetMask("Enemy")}");
         if (timer < 0)
         {
-            ContactFilter2D filter = new ContactFilter2D(); 
-            filter.SetLayerMask(LayerMask.GetMask("Enemy", "Tower"));
-            
-            
+            ContactFilter2D filter = new ContactFilter2D();   //for some reason explosions seem to hurt both teams... hopefully this fixes it
+            int enemyLayer = LayerMask.NameToLayer("Enemy");
+            int towerLayer = LayerMask.NameToLayer("Tower");
+
+            if (gameObject.layer == enemyLayer) filter.SetLayerMask(LayerMask.GetMask("Tower"));
+            else if (gameObject.layer == towerLayer) filter.SetLayerMask(LayerMask.GetMask("Enemy"));
+            else
+            {
+                Debug.LogWarning($"{gameObject.name}'s Multiple Damage Dealer not assigned to enemy or tower layer! Fix!!!");
+                filter.SetLayerMask(LayerMask.GetMask("Enemy", "Tower"));
+            }
+
             List<Collider2D> results = new List<Collider2D>();
 
             if (damageCollider.OverlapCollider(filter, results) > 0)
@@ -141,7 +149,7 @@ public class DamageDealer : MonoBehaviour
                     GameObject gobj = col.gameObject;
                     col.GetComponent<Health>().TakeDamage(damage); //damage
                     col.gameObject.GetComponent<Rigidbody2D>().AddForce(knockback);
-                                                                   // this only works properly if the enemy has only one proper collider2d. 
+                    // this only works properly if the enemy has only one proper collider2d. 
                 }
             }
             timer = damageInterval;

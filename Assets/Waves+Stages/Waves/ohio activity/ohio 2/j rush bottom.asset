@@ -16,13 +16,13 @@ MonoBehaviour:
   - enemy: {fileID: 2218950390812419724, guid: d6a4b6c89409cf647ab8dcadd4adaf90, type: 3}
     spawnLocation: 0
   - enemy: {fileID: 2218950390812419724, guid: d6a4b6c89409cf647ab8dcadd4adaf90, type: 3}
-    spawnLocation: 0
+    spawnLocation: 5
   - enemy: {fileID: 2218950390812419724, guid: d6a4b6c89409cf647ab8dcadd4adaf90, type: 3}
-    spawnLocation: 0
+    spawnLocation: 4
   - enemy: {fileID: 2218950390812419724, guid: d6a4b6c89409cf647ab8dcadd4adaf90, type: 3}
-    spawnLocation: 0
+    spawnLocation: 4
   - enemy: {fileID: 2218950390812419724, guid: d6a4b6c89409cf647ab8dcadd4adaf90, type: 3}
-    spawnLocation: 0
+    spawnLocation: 5
   spawnInterval: 0.1
   spawnIntervalVariance: 0
   waveDuration: 0.5

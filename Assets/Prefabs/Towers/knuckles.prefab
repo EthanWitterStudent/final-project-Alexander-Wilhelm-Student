@@ -248,7 +248,7 @@ MonoBehaviour:
   punchCollider: {fileID: -9079202605872292227}
   punchDamage: 60
   punchDuration: 2
-  punchKnockback: 3
+  punchKnockback: 7
   punchEffect: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
   animatorTrigger: beginPunch

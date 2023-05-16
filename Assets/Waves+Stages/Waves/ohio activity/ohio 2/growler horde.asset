@@ -23,11 +23,7 @@ MonoBehaviour:
     spawnLocation: 0
   - enemy: {fileID: 2218950390812419724, guid: 578465ed9561f704c8ad1861e9ac9f39, type: 3}
     spawnLocation: 0
-  - enemy: {fileID: 2218950390812419724, guid: 578465ed9561f704c8ad1861e9ac9f39, type: 3}
-    spawnLocation: 0
-  - enemy: {fileID: 2218950390812419724, guid: 578465ed9561f704c8ad1861e9ac9f39, type: 3}
-    spawnLocation: 0
-  spawnInterval: 0.3
+  spawnInterval: 0.4
   spawnIntervalVariance: 0.1
-  waveDuration: 2
+  waveDuration: 3
   waitToSpawn: 0
