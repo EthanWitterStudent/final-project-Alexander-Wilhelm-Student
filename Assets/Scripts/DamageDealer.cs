@@ -122,9 +122,15 @@ public class DamageDealer : MonoBehaviour
 
     void MultipleDamage()
     {
+        Debug.Log($"THIS LAYER: {gameObject.layer}");
+            Debug.Log($"TOWER LAYER: {LayerMask.GetMask("Tower")}");
+            Debug.Log($"ENEMY LAYER: {LayerMask.GetMask("Enemy")}");
         if (timer < 0)
         {
-            ContactFilter2D filter = new ContactFilter2D(); filter.SetLayerMask(LayerMask.GetMask("Enemy"));
+            ContactFilter2D filter = new ContactFilter2D(); 
+            filter.SetLayerMask(LayerMask.GetMask("Enemy", "Tower"));
+            
+            
             List<Collider2D> results = new List<Collider2D>();
 
             if (damageCollider.OverlapCollider(filter, results) > 0)

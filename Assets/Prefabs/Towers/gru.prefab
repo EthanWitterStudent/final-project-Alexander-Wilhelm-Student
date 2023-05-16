@@ -134,9 +134,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 250
-  cashCost: 100
+  cashCost: 250
   cashOnDeath: 0
-  towerCooldown: 3
+  towerCooldown: 2
   LawnmowerImmunity: 0
   flashLength: 0.1
   deathEffect: {fileID: 0}
@@ -198,10 +198,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alwaysShoot: 0
   shootTrigger: {fileID: 8530783661962324796}
-  shootSound: {fileID: 8300000, guid: 140c566c95911ab4b9e10146ed2072c1, type: 3}
+  shootSound: {fileID: 8300000, guid: 392aabca38bf2d843864e21dc2f64114, type: 3}
   shootVolume: 0.45
   projectilePrefab: {fileID: 2854810196801811929, guid: a15c75a9ee798c840a680f3693b1e9ae, type: 3}
-  fireRate: 2.5
+  fireRate: 2.25
   fireRateVariance: 0
   offset: {x: 0, y: 0, z: 0}
   aimAtPlayer: 0

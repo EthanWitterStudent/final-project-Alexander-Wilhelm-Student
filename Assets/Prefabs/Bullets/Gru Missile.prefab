@@ -74,7 +74,8 @@ MonoBehaviour:
   colliderOnly: 1
   damageInterval: 0
   damageCollider: {fileID: 0}
-  damageSounds: []
+  damageSounds:
+  - {fileID: 8300000, guid: 0051ecab10a97b64e9b6d704b084551d, type: 3}
   damageVolume: 0
 --- !u!61 &8788963998696668500
 BoxCollider2D:

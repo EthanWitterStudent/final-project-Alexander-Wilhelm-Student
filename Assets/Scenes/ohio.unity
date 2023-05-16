@@ -8708,11 +8708,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageList:
   - {fileID: 11400000, guid: 4250229fa5c163947bb9c2e215ce9625, type: 2}
+  - {fileID: 11400000, guid: 7ab664a5664841346a835654346e9a22, type: 2}
   - {fileID: 11400000, guid: 66dc020af2258d34d933b2b652a789f1, type: 2}
-  stageStartDelay: 0
+  stageStartDelay: 4
   stageEndDelay: 4
   musicFadeFactor: 3
-  startingCash: 500
+  startingCash: 650
   passiveCashAmount: 50
   passiveCashDelay: 5
   passiveCashSound: {fileID: 8300000, guid: eb2a8955c9f0b614d94b1f2415e40986, type: 3}
@@ -8740,8 +8741,8 @@ MonoBehaviour:
   - {fileID: 5201306128907651694, guid: 46b318783b3b1ea4b89fbdd8dfa028c8, type: 3}
   - {fileID: 5201306128907651694, guid: 4625e82b1482ae94d8ab7f0364c7c079, type: 3}
   - {fileID: 5201306128907651694, guid: 48c0dda462006894b8efd3f3e1ed3bfc, type: 3}
-  - {fileID: 5201306128907651694, guid: c63e1d00aef928e41b22228e8fb1e611, type: 3}
-  - {fileID: 5201306128907651694, guid: 9551c4da5995f7a4989aa773b0c5c467, type: 3}
+  - {fileID: 5201306128907651694, guid: ee69e238a94f29c4085ff3f6e2b1707f, type: 3}
+  - {fileID: 5201306128907651694, guid: ba4784c5b4d35894588702b024971e97, type: 3}
   towerImages:
   - {fileID: 21300000, guid: 02e03f90595a5674591847e952a321ee, type: 3}
   - {fileID: 21300000, guid: 02e03f90595a5674591847e952a321ee, type: 3}
@@ -10857,7 +10858,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: dc9f4ae4e19488a41a65b2502eb98c23, type: 3}
   - {fileID: 8300000, guid: 67744d27e1c5f614ca906908914caab8, type: 3}
   - {fileID: 8300000, guid: 130cbe2a750145e47abedb7c7577dc2f, type: 3}
-  - {fileID: 8300000, guid: ca3cee132eb7ab844a7cabf1cea70343, type: 3}
   - {fileID: 8300000, guid: 6e5cf17dd82c8a24bb9a962cd527f3cc, type: 3}
   - {fileID: 8300000, guid: 060cd8b89684ce740b6665373a562367, type: 3}
   - {fileID: 8300000, guid: 28500cc50bea086429128c6e7a4cf68a, type: 3}
@@ -10871,9 +10871,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0830a3b84bbd828418d3d274d61d03aa, type: 3}
   - {fileID: 8300000, guid: a4ad344636bbf13458d5b797ab45621a, type: 3}
   - {fileID: 8300000, guid: 300aa3ef35205c544870b62667ae6019, type: 3}
-  soundVolume: 0.65
-  soundInterval: 0.75
-  intervalVariance: 3
+  soundVolume: 0.45
+  soundInterval: 1.2
+  intervalVariance: 4
 --- !u!1 &2077638862
 GameObject:
   m_ObjectHideFlags: 0
