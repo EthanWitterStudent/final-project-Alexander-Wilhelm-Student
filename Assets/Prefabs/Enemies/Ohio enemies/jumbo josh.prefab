@@ -133,7 +133,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
-  m_Mass: 4
+  m_Mass: 3
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d73ca2253af1bb4db27790749f68958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1200
+  health: 900
   cashCost: 0
   cashOnDeath: 0
   towerCooldown: 1

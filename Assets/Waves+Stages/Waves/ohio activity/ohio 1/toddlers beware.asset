@@ -19,5 +19,5 @@ MonoBehaviour:
     spawnLocation: 4
   spawnInterval: 0.3
   spawnIntervalVariance: 0.4
-  waveDuration: 5
+  waveDuration: 6
   waitToSpawn: 1

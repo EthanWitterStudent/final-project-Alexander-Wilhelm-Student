@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   homingFactor: 0
-  moveSpeed: 10
+  moveSpeed: 12
   lifetime: 0.3
   impactSounds: {fileID: 0}
   damageColor: {r: 1, g: 0.57254905, b: 0.57254905, a: 1}

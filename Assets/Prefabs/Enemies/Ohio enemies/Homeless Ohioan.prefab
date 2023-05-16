@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d73ca2253af1bb4db27790749f68958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 280
+  health: 500
   cashCost: 0
   cashOnDeath: 0
   towerCooldown: 1
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 15
-  moveAccel: 50
+  moveAccel: 45
 --- !u!114 &-7450539848108967595
 MonoBehaviour:
   m_ObjectHideFlags: 0

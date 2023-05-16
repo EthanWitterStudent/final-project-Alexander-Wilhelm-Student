@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d73ca2253af1bb4db27790749f68958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 200
+  health: 300
   cashCost: 300
   cashOnDeath: 0
   towerCooldown: 4

@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class cube_rotation_script : MonoBehaviour
 {
-    public Vector3 rotateAmount;
+    public float rotateMagnitude;
+    Vector3 rotateAmount;
 
+    void Start() {
+        rotateAmount = Random.onUnitSphere * rotateMagnitude;
+    }
     void Update()
     {
         transform.Rotate(rotateAmount * Time.deltaTime);

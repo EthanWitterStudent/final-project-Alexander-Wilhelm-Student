@@ -183,26 +183,41 @@ MonoBehaviour:
   health: 150
   cashCost: 0
   cashOnDeath: 0
+  towerCooldown: 1
+  LawnmowerImmunity: 0
   flashLength: 0.075
   deathEffect: {fileID: 646044222004944096, guid: daf8931e116bfd74b9d5c4dccd326de9, type: 3}
   hitShakeAmount: 0
   deathShakeAmount: 0
   ShakeDecay: 0
-  spawnSound: {fileID: 8300000, guid: f00694d16539cc5479027bfc6e7e3ba2, type: 3}
-  spawnVolume: 0
+  spawnSound: {fileID: 8300000, guid: a4fa31089b0be344aafbb2e621c08cb7, type: 3}
+  spawnVolume: 0.6
   hitSounds:
-  - {fileID: 8300000, guid: 54fd6949b36362745afdd757fbafe920, type: 3}
-  - {fileID: 8300000, guid: 97afe18869fe17a45a66a20aff940db8, type: 3}
-  - {fileID: 8300000, guid: df2d766c3185efa4aa39480ee8f59bb7, type: 3}
+  - {fileID: 8300000, guid: 42691370573597b43b70ec4287361431, type: 3}
+  - {fileID: 8300000, guid: 2ac4f8b4a41115543a01aaae1e9bb596, type: 3}
+  - {fileID: 8300000, guid: 06f5bf7155f1d1c4ab4dd7a36cf84fc0, type: 3}
+  - {fileID: 8300000, guid: 7c39a2dd5411240478503aea41a3213c, type: 3}
+  - {fileID: 8300000, guid: c5daf1565e613fa47a8884c8d7d14a96, type: 3}
+  - {fileID: 8300000, guid: 36e9fb8a670d5174e87e967f289f7163, type: 3}
+  - {fileID: 8300000, guid: f3a0b20d414c19948a9a6c55ad395514, type: 3}
+  - {fileID: 8300000, guid: aaf986791e383d74481698395dbb185f, type: 3}
+  - {fileID: 8300000, guid: 6c4609444572f7f43b615f86a2dd505b, type: 3}
+  - {fileID: 8300000, guid: 21a845bc447273b4c92cfaa963f475e5, type: 3}
+  - {fileID: 8300000, guid: 486ab58ccf0db5f45901cfb622f28a93, type: 3}
+  - {fileID: 8300000, guid: bde128cbc5d53f94e9043bb44cb58b77, type: 3}
+  - {fileID: 8300000, guid: 4c26863e03918724296bfe564744d7f5, type: 3}
+  - {fileID: 8300000, guid: a195429be5686ca4cb384eb60ed7c97b, type: 3}
   hitVolume: 0.4
   deathSounds:
-  - {fileID: 8300000, guid: c1931f87125d1bb4ca237ec8d3c4f642, type: 3}
+  - {fileID: 8300000, guid: 1643a2f281e68924d891d3107411bfd2, type: 3}
+  - {fileID: 8300000, guid: 4f53d12310193f246a5e616f5ab8306b, type: 3}
+  - {fileID: 8300000, guid: 1c06b23e41cdf3b43b5be613613b716e, type: 3}
   deathVolume: 0.6
   idleSounds:
-  - {fileID: 8300000, guid: f00694d16539cc5479027bfc6e7e3ba2, type: 3}
-  - {fileID: 8300000, guid: 97afe18869fe17a45a66a20aff940db8, type: 3}
-  - {fileID: 8300000, guid: df2d766c3185efa4aa39480ee8f59bb7, type: 3}
-  idleVolume: 0.3
+  - {fileID: 8300000, guid: a4fa31089b0be344aafbb2e621c08cb7, type: 3}
+  - {fileID: 8300000, guid: 2f2f5cbe8f8b7b040813d52e633f2487, type: 3}
+  - {fileID: 8300000, guid: 1ac1a50a7693c8c4c949ed9e72766692, type: 3}
+  idleVolume: 0.4
   idleSoundInterval: 3
   idleSoundIntervalVariance: 2
 --- !u!114 &2218950390812419719
@@ -232,7 +247,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 30
+  knockback: {x: 0, y: 0}
   damageEffect: {fileID: 0}
+  multipleDamage: 0
   destroyOnHit: 0
   collisionEnterOnly: 0
   colliderOnly: 1

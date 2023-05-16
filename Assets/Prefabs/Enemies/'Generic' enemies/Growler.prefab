@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d73ca2253af1bb4db27790749f68958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 280
+  health: 260
   cashCost: 0
   cashOnDeath: 0
   towerCooldown: 0
@@ -190,21 +190,20 @@ MonoBehaviour:
   hitShakeAmount: 0
   deathShakeAmount: 0
   ShakeDecay: 0
-  spawnSound: {fileID: 8300000, guid: 9edd54920b3075d4aaf71f18c079248b, type: 3}
-  spawnVolume: 0.3
+  spawnSound: {fileID: 8300000, guid: ca7a9dd5484b33a428495a75d83d4469, type: 3}
+  spawnVolume: 0.6
   hitSounds:
-  - {fileID: 8300000, guid: 54fd6949b36362745afdd757fbafe920, type: 3}
-  - {fileID: 8300000, guid: 97afe18869fe17a45a66a20aff940db8, type: 3}
-  - {fileID: 8300000, guid: df2d766c3185efa4aa39480ee8f59bb7, type: 3}
-  hitVolume: 0.4
+  - {fileID: 8300000, guid: 783d688ed93ea0244b9aafe583b7b749, type: 3}
+  - {fileID: 8300000, guid: 30872d246cccabd41a24f7dfbbe16428, type: 3}
+  hitVolume: 0.6
   deathSounds:
-  - {fileID: 8300000, guid: c1931f87125d1bb4ca237ec8d3c4f642, type: 3}
-  deathVolume: 0.6
+  - {fileID: 8300000, guid: e170ab2c63588bb409dc9d1a994a487c, type: 3}
+  deathVolume: 0.8
   idleSounds:
-  - {fileID: 8300000, guid: f00694d16539cc5479027bfc6e7e3ba2, type: 3}
-  - {fileID: 8300000, guid: 97afe18869fe17a45a66a20aff940db8, type: 3}
-  - {fileID: 8300000, guid: df2d766c3185efa4aa39480ee8f59bb7, type: 3}
-  idleVolume: 0.3
+  - {fileID: 8300000, guid: ca7a9dd5484b33a428495a75d83d4469, type: 3}
+  - {fileID: 8300000, guid: d0ab9739abc87d145a3b9c271285a129, type: 3}
+  - {fileID: 8300000, guid: 80ae0ea69c23aa1468f03a0359df45a2, type: 3}
+  idleVolume: 0.6
   idleSoundInterval: 3
   idleSoundIntervalVariance: 2
 --- !u!114 &2218950390812419719

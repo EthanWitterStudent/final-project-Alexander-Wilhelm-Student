@@ -133,7 +133,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
-  m_Mass: 0.8
+  m_Mass: 0.7
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d73ca2253af1bb4db27790749f68958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 500
+  health: 450
   cashCost: 0
   cashOnDeath: 0
   towerCooldown: 1
@@ -190,20 +190,20 @@ MonoBehaviour:
   hitShakeAmount: 0
   deathShakeAmount: 0
   ShakeDecay: 0
-  spawnSound: {fileID: 8300000, guid: f00694d16539cc5479027bfc6e7e3ba2, type: 3}
-  spawnVolume: 0
+  spawnSound: {fileID: 8300000, guid: 396cb0a6589290e4db0cf92c04395967, type: 3}
+  spawnVolume: 0.7
   hitSounds:
-  - {fileID: 8300000, guid: 54fd6949b36362745afdd757fbafe920, type: 3}
-  - {fileID: 8300000, guid: 97afe18869fe17a45a66a20aff940db8, type: 3}
-  - {fileID: 8300000, guid: df2d766c3185efa4aa39480ee8f59bb7, type: 3}
+  - {fileID: 8300000, guid: 083e1a845a378b64698b3c22a40e89c6, type: 3}
+  - {fileID: 8300000, guid: a814915aa3a40b4468b6a9eff0710c56, type: 3}
+  - {fileID: 8300000, guid: 98622a3dd464b194c8df93a6a1a56286, type: 3}
   hitVolume: 0.4
   deathSounds:
-  - {fileID: 8300000, guid: c1931f87125d1bb4ca237ec8d3c4f642, type: 3}
+  - {fileID: 8300000, guid: 68bd4c1ad1148c140a3e0fbd11fd5e91, type: 3}
   deathVolume: 0.6
   idleSounds:
-  - {fileID: 8300000, guid: f00694d16539cc5479027bfc6e7e3ba2, type: 3}
-  - {fileID: 8300000, guid: 97afe18869fe17a45a66a20aff940db8, type: 3}
-  - {fileID: 8300000, guid: df2d766c3185efa4aa39480ee8f59bb7, type: 3}
+  - {fileID: 8300000, guid: 67ac9281ec23e4941add557206072825, type: 3}
+  - {fileID: 8300000, guid: 5aebb9e04c7ebf247851865c3ad8d08e, type: 3}
+  - {fileID: 8300000, guid: 8aac4259a88cf944fb200c503cd3ad96, type: 3}
   idleVolume: 0.3
   idleSoundInterval: 3
   idleSoundIntervalVariance: 2
