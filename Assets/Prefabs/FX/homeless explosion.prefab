@@ -5016,12 +5016,12 @@ MonoBehaviour:
   damageEffect: {fileID: 0}
   multipleDamage: 1
   destroyOnHit: 0
-  collisionEnterOnly: 0
+  collisionEnterOnly: 1
   colliderOnly: 0
   damageInterval: 5
   damageCollider: {fileID: 8292691317068173174}
   damageSounds: []
-  damageVolume: 0
+  damageVolume: 0.33
 --- !u!61 &8292691317068173174
 BoxCollider2D:
   m_ObjectHideFlags: 0

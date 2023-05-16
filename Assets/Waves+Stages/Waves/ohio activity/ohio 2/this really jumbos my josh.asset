@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d96437ffe01aacc4abb7740a088bba44, type: 3}
-  m_Name: toddlers beware
+  m_Name: this really jumbos my josh
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - enemy: {fileID: 2218950390812419724, guid: 57bb5244cfefa1744a4fac7dd01a09f5, type: 3}
+  - enemy: {fileID: 2218950390812419724, guid: 9f9a56a902bf13f4f9ca65decbfb5594, type: 3}
     spawnLocation: 0
-  spawnInterval: 0.3
-  spawnIntervalVariance: 0.4
-  waveDuration: 7
+  spawnInterval: 0.5
+  spawnIntervalVariance: 0
+  waveDuration: 0.5
   waitToSpawn: 0
