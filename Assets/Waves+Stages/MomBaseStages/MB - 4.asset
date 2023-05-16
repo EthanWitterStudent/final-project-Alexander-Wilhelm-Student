@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93aba325c28d20d42a2d80f9286221c2, type: 3}
+  m_Name: MB - 4
+  m_EditorClassIdentifier: 
+  stageName: 
+  waves:
+  - {fileID: 11400000, guid: 50e6ec734ba72944780dbb88a16ce853, type: 2}
+  - {fileID: 11400000, guid: 24e11987d82f31149b058083fac076da, type: 2}
+  - {fileID: 11400000, guid: 828c129333e1e854fb97128761e1200e, type: 2}
+  - {fileID: 11400000, guid: 31e65481f1157e54ba909d62354b523c, type: 2}
+  - {fileID: 11400000, guid: 5b819ddbbff364b49ae82b752cde245f, type: 2}
+  introMusic: {fileID: 8300000, guid: 57f1b6c50f8cb4d48be6ab4223e4fb9c, type: 3}
+  loopMusic: {fileID: 8300000, guid: 57f1b6c50f8cb4d48be6ab4223e4fb9c, type: 3}
+  EnableAmbientSFX: 1
