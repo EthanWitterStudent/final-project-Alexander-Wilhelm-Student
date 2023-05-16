@@ -8834,7 +8834,7 @@ MonoBehaviour:
   stageStartDelay: 4
   stageEndDelay: 4
   musicFadeFactor: 3
-  startingCash: 6969
+  startingCash: 500
   passiveCashAmount: 50
   passiveCashDelay: 4
   passiveCashSound: {fileID: 8300000, guid: eb2a8955c9f0b614d94b1f2415e40986, type: 3}
