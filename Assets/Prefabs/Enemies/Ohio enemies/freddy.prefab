@@ -186,19 +186,27 @@ MonoBehaviour:
   towerCooldown: 1
   LawnmowerImmunity: 1
   flashLength: 0.075
-  deathEffect: {fileID: 646044222004944096, guid: daf8931e116bfd74b9d5c4dccd326de9, type: 3}
+  deathEffect: {fileID: 646044222004944096, guid: 737a450d28cdc934e8fd4fac0cea0707, type: 3}
   hitShakeAmount: 0
   deathShakeAmount: 0
   ShakeDecay: 0
   spawnSound: {fileID: 8300000, guid: 9edd54920b3075d4aaf71f18c079248b, type: 3}
   spawnVolume: 0.3
   hitSounds:
-  - {fileID: 8300000, guid: 54fd6949b36362745afdd757fbafe920, type: 3}
-  - {fileID: 8300000, guid: 97afe18869fe17a45a66a20aff940db8, type: 3}
-  - {fileID: 8300000, guid: df2d766c3185efa4aa39480ee8f59bb7, type: 3}
-  hitVolume: 0.4
+  - {fileID: 8300000, guid: ae565b9d5f149454fb526e355f4628eb, type: 3}
+  - {fileID: 8300000, guid: c607fbe123d5580478c4c1ac10063300, type: 3}
+  - {fileID: 8300000, guid: 4c140b063abebc04d911d232066f8f50, type: 3}
+  - {fileID: 8300000, guid: f1daa2f0f6c07f348b97e70e445ee317, type: 3}
+  - {fileID: 8300000, guid: a2f814d80cf3f1749ab69486b7869014, type: 3}
+  - {fileID: 8300000, guid: e666044e1008b354983ed85e84f4c4a5, type: 3}
+  - {fileID: 8300000, guid: 4d4b03d82125bee4f88c5f05e24a732e, type: 3}
+  - {fileID: 8300000, guid: dbd532cb06491a44db1c44901c8f4fe8, type: 3}
+  - {fileID: 8300000, guid: 0dd9d8d3b505c954982bf69e80b3b438, type: 3}
+  - {fileID: 8300000, guid: bf4279d559c37854c9e47489ea4f0eb5, type: 3}
+  - {fileID: 8300000, guid: 409e40da03468ee49ab0a83f744b3955, type: 3}
+  hitVolume: 0.6
   deathSounds:
-  - {fileID: 8300000, guid: c1931f87125d1bb4ca237ec8d3c4f642, type: 3}
+  - {fileID: 0}
   deathVolume: 0.6
   idleSounds:
   - {fileID: 8300000, guid: f00694d16539cc5479027bfc6e7e3ba2, type: 3}
@@ -249,9 +257,10 @@ MonoBehaviour:
   moveDuration: 0.1
   moveDelay: 3
   moveVariance: 0
-  initialDelay: 3.5
+  initialDelay: 3
   moveSounds:
   - {fileID: 8300000, guid: c124cd47e1338514ca0fc818d47b606a, type: 3}
   - {fileID: 8300000, guid: c26d2540ac936ab4890258f4a7c6f2a2, type: 3}
   - {fileID: 8300000, guid: 2490b1925ac4aaa42bdb4f8c31893b1c, type: 3}
-  moveVolume: 1.5
+  - {fileID: 8300000, guid: 47ae0b9f82bf9a842851166a77da9f84, type: 3}
+  moveVolume: 2.2

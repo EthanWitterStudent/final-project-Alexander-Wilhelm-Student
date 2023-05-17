@@ -32,6 +32,8 @@ public class NewTowerMenu : MonoBehaviour
     public void TowerSetup()
     {
         TowerInfo towerinfo = FindObjectOfType<TowerInfo>();
+        towerinfo.towers.Clear();
+        towerinfo.towerImgs.Clear();
         foreach (Toggle sel in towerSelectors)
         {
             if (sel.isOn)

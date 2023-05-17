@@ -214,11 +214,9 @@ MonoBehaviour:
   ShakeDecay: 0
   spawnSound: {fileID: 0}
   spawnVolume: 0
-  hitSounds:
-  - {fileID: 8300000, guid: 54fd6949b36362745afdd757fbafe920, type: 3}
+  hitSounds: []
   hitVolume: 0.4
-  deathSounds:
-  - {fileID: 8300000, guid: c1931f87125d1bb4ca237ec8d3c4f642, type: 3}
+  deathSounds: []
   deathVolume: 0.6
   idleSounds: []
   idleVolume: 0.3
