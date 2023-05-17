@@ -143,7 +143,7 @@ MonoBehaviour:
   hitShakeAmount: 0
   deathShakeAmount: 0
   ShakeDecay: 0
-  spawnSound: {fileID: 0}
+  spawnSound: {fileID: 8300000, guid: bf9814695eeff8942844bd4b7a588f94, type: 3}
   spawnVolume: 0.9
   hitSounds:
   - {fileID: 8300000, guid: ec8a344e23e1de34a8dc81330ab07b3e, type: 3}
