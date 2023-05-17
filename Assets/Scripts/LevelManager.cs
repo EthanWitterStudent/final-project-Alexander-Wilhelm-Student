@@ -7,12 +7,23 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] float sceneLoadDelay = 2f;
     LevelSelect ls;
+    static LevelManager instance;
 
     private void Start() 
     {
+       if(instance != null)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
         ls = FindObjectOfType<LevelSelect>();
     }
-
+   
     public void LoadGame()
     {
         switch(ls.levelSelectedNumber)

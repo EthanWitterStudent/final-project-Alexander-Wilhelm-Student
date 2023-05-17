@@ -12,6 +12,7 @@ TagManager:
   - Tower
   - Selector
   - keeves
+  - Level Manager
   layers:
   - Default
   - TransparentFX
