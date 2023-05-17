@@ -40,4 +40,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 72b09664224c0264fbb9b39a068401c6, type: 2}
   introMusic: {fileID: 8300000, guid: f94c8c004325a7d4fad717bea3dbb83f, type: 3}
   loopMusic: {fileID: 8300000, guid: a37f1d8622e8dce4a89f04c3c191e09b, type: 3}
+  musicVol: 0.6
   EnableAmbientSFX: 1

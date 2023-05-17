@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93aba325c28d20d42a2d80f9286221c2, type: 3}
   m_Name: OHIO-2
   m_EditorClassIdentifier: 
-  stageName: GARTEN OF BANBAN!!!!!
+  stageName: GARTEN OF BANBAN!!!!!!
   waves:
   - {fileID: 11400000, guid: 14a40a4d56bbe7949bf449afae1892ba, type: 2}
   - {fileID: 11400000, guid: 26f58fd9603f2fe47abda309bee539b1, type: 2}
@@ -46,6 +46,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 72b09664224c0264fbb9b39a068401c6, type: 2}
   - {fileID: 11400000, guid: 72b09664224c0264fbb9b39a068401c6, type: 2}
   - {fileID: 11400000, guid: 72b09664224c0264fbb9b39a068401c6, type: 2}
-  introMusic: {fileID: 8300000, guid: f94c8c004325a7d4fad717bea3dbb83f, type: 3}
-  loopMusic: {fileID: 8300000, guid: a37f1d8622e8dce4a89f04c3c191e09b, type: 3}
+  introMusic: {fileID: 8300000, guid: 9401a5678b3ae9742a238434004ded97, type: 3}
+  loopMusic: {fileID: 0}
+  musicVol: 0.9
   EnableAmbientSFX: 1
