@@ -202,7 +202,7 @@ MonoBehaviour:
   shootVolume: 3
   projectilePrefab: {fileID: 2854810196801811929, guid: c4cc2b6f0f0c2664d8186234dc8d056b, type: 3}
   fireRate: 1.25
-  fireRateVariance: 0
+  fireRateVariance: 0.2
   offset: {x: 0, y: 0, z: 0}
   aimAtPlayer: 0
   randomSpread: 0

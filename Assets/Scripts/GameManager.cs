@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
         if (stage.GetIntroMusic() != null) musicSrc.clip = stage.GetIntroMusic();
         if (stage.GetLoopMusic() != null) music.GetComponent<MusicLoop>().LoopMusic = stage.GetLoopMusic();
         musicSrc.loop = false;
-        musicSrc.volume = defaultMusicVol;
+        musicSrc.volume = stage.GetVolume();
         musicSrc.Play();
         playAmbient = stage.GetAmbient();
     }

@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 350
-  cashCost: 325
+  cashCost: 300
   cashOnDeath: 0
   towerCooldown: 4
   LawnmowerImmunity: 0
