@@ -6,6 +6,8 @@ public class TowerInfo : MonoBehaviour //this is what transitions the tower sele
 {
     public List<GameObject> towers;
     public List<Sprite> towerImgs; //for ui later
+
+    public int levelindex;
     
     static TowerInfo instance;
     void Start() { //epic singleton pattern

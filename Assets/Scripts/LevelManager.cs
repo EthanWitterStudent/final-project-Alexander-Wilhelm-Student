@@ -7,11 +7,11 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] float sceneLoadDelay = 2f;
     LevelSelect ls;
-    static LevelManager instance;
+    LevelManager instance;
 
-    private void Start() 
+    private void Start()
     {
-       if(instance != null)
+        if (instance != null)
         {
             gameObject.SetActive(false);
             Destroy(gameObject);
@@ -23,10 +23,10 @@ public class LevelManager : MonoBehaviour
         }
         ls = FindObjectOfType<LevelSelect>();
     }
-   
+
     public void LoadGame()
     {
-        switch(ls.levelSelectedNumber)
+        switch (ls.levelSelectedNumber)
         {
             case 1:
                 SceneManager.LoadScene("game");
@@ -34,8 +34,37 @@ public class LevelManager : MonoBehaviour
             case 2:
                 SceneManager.LoadScene("ohio");
                 break;
+            default:
+                Debug.LogWarning("Could not get level index from level select!");
+                SceneManager.LoadScene("main menu");
+                break;
         }
     }
+
+    public void RetryGame()
+    {
+        if (FindObjectOfType<TowerInfo>() != null) //only work if towerinfo exists
+        {
+            switch (FindObjectOfType<TowerInfo>().levelindex)
+            {
+                case 1:
+                    SceneManager.LoadScene("game");
+                    break;
+                case 2:
+                    SceneManager.LoadScene("ohio");
+                    break;
+                default:
+                    Debug.LogWarning("Could not get level index from towerinfo!");
+                    SceneManager.LoadScene("main menu");
+                    break;
+            }
+        } else {
+            Debug.LogWarning("Towerinfo does not exist!");
+                    SceneManager.LoadScene("main menu");
+        }
+    }
+
+
 
     public void LoadMainMenu()
     {
