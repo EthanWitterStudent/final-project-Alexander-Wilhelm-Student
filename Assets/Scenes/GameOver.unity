@@ -1426,10 +1426,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 805668928473566534, guid: 56fa29c551b3f704099f7887d09874af, type: 3}
-      propertyPath: sceneLoadDelay
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1288249107266058069, guid: 56fa29c551b3f704099f7887d09874af, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1478,6 +1474,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelManager
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1762541319972134863, guid: 56fa29c551b3f704099f7887d09874af, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56fa29c551b3f704099f7887d09874af, type: 3}
