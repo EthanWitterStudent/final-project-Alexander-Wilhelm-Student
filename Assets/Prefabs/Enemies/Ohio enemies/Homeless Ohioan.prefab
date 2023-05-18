@@ -110,17 +110,14 @@ MonoBehaviour:
   spawnSound: {fileID: 8300000, guid: 926756e7d0b60214187b0ce1da173ee3, type: 3}
   spawnVolume: 0
   hitSounds:
-  - {fileID: 8300000, guid: 54fd6949b36362745afdd757fbafe920, type: 3}
-  - {fileID: 8300000, guid: 97afe18869fe17a45a66a20aff940db8, type: 3}
-  - {fileID: 8300000, guid: df2d766c3185efa4aa39480ee8f59bb7, type: 3}
-  hitVolume: 0.4
-  deathSounds:
-  - {fileID: 8300000, guid: c1931f87125d1bb4ca237ec8d3c4f642, type: 3}
+  - {fileID: 8300000, guid: 13dcf705365eaa44995a797e9c6e21b8, type: 3}
+  - {fileID: 8300000, guid: d064103936476af448c47f35e1cd3b2f, type: 3}
+  - {fileID: 8300000, guid: b2f59fc100835fe4c84f2d35c998f9bd, type: 3}
+  - {fileID: 8300000, guid: 7ee01645be151c540a08367a4c49e12e, type: 3}
+  hitVolume: 0.6
+  deathSounds: []
   deathVolume: 0.6
-  idleSounds:
-  - {fileID: 8300000, guid: f00694d16539cc5479027bfc6e7e3ba2, type: 3}
-  - {fileID: 8300000, guid: 97afe18869fe17a45a66a20aff940db8, type: 3}
-  - {fileID: 8300000, guid: df2d766c3185efa4aa39480ee8f59bb7, type: 3}
+  idleSounds: []
   idleVolume: 0.3
   idleSoundInterval: 3
   idleSoundIntervalVariance: 2

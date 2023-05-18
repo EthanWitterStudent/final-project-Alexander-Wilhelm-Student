@@ -8671,6 +8671,7 @@ GameObject:
   - component: {fileID: 1603511463}
   - component: {fileID: 1603511464}
   - component: {fileID: 1603511465}
+  - component: {fileID: 1603511466}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -8783,6 +8784,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 9}
   m_EdgeRadius: 0
+--- !u!114 &1603511466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603511461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d14958f6c64a474aaccf97b1603456f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneLoadDelay: 2
 --- !u!1 &1646518037
 GameObject:
   m_ObjectHideFlags: 0
