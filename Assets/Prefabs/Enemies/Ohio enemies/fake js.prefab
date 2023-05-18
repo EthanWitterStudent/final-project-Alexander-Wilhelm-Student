@@ -193,17 +193,17 @@ MonoBehaviour:
   spawnSound: {fileID: 8300000, guid: 48eb434e00e4f8340803021f0ec86e53, type: 3}
   spawnVolume: 0
   hitSounds:
-  - {fileID: 8300000, guid: 54fd6949b36362745afdd757fbafe920, type: 3}
-  - {fileID: 8300000, guid: 97afe18869fe17a45a66a20aff940db8, type: 3}
-  - {fileID: 8300000, guid: df2d766c3185efa4aa39480ee8f59bb7, type: 3}
+  - {fileID: 8300000, guid: 29b5a7c6c4dc3d046b5de1b9d95ecf4e, type: 3}
+  - {fileID: 8300000, guid: 0d597f1566ff9ce46a5fa7c3a93cf739, type: 3}
+  - {fileID: 8300000, guid: 789ccb16c3ed991408437452b3709f58, type: 3}
   hitVolume: 0.4
   deathSounds:
-  - {fileID: 8300000, guid: c1931f87125d1bb4ca237ec8d3c4f642, type: 3}
+  - {fileID: 8300000, guid: 926756e7d0b60214187b0ce1da173ee3, type: 3}
   deathVolume: 0.6
   idleSounds:
-  - {fileID: 8300000, guid: f00694d16539cc5479027bfc6e7e3ba2, type: 3}
-  - {fileID: 8300000, guid: 97afe18869fe17a45a66a20aff940db8, type: 3}
-  - {fileID: 8300000, guid: df2d766c3185efa4aa39480ee8f59bb7, type: 3}
+  - {fileID: 8300000, guid: ec8a344e23e1de34a8dc81330ab07b3e, type: 3}
+  - {fileID: 8300000, guid: 9e71902018a9eea41b86d0d066601b4e, type: 3}
+  - {fileID: 8300000, guid: 0d68ab8eace04604188f813fbb45fdc5, type: 3}
   idleVolume: 0.3
   idleSoundInterval: 3
   idleSoundIntervalVariance: 2
