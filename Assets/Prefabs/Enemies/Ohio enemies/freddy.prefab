@@ -208,10 +208,7 @@ MonoBehaviour:
   deathSounds:
   - {fileID: 0}
   deathVolume: 0.6
-  idleSounds:
-  - {fileID: 8300000, guid: f00694d16539cc5479027bfc6e7e3ba2, type: 3}
-  - {fileID: 8300000, guid: 97afe18869fe17a45a66a20aff940db8, type: 3}
-  - {fileID: 8300000, guid: df2d766c3185efa4aa39480ee8f59bb7, type: 3}
+  idleSounds: []
   idleVolume: 0.3
   idleSoundInterval: 3
   idleSoundIntervalVariance: 2
