@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] float sceneLoadDelay = 2f;
     LevelSelect ls;
-    LevelManager instance;
+    static LevelManager instance;
 
     private void Start()
     {
@@ -21,11 +21,12 @@ public class LevelManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        ls = FindObjectOfType<LevelSelect>();
     }
 
     public void LoadGame()
     {
+        ls = FindObjectOfType<LevelSelect>();
+        Debug.Log(ls.levelSelectedNumber);
         switch (ls.levelSelectedNumber)
         {
             case 1:
