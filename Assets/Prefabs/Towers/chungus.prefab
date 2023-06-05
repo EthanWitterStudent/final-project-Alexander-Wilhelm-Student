@@ -201,7 +201,7 @@ MonoBehaviour:
   alwaysShoot: 0
   shootTrigger: {fileID: 8530783661962324796}
   shootSound: {fileID: 8300000, guid: a043f274cf63865468b1dcab4981499b, type: 3}
-  shootVolume: 0.6
+  shootVolume: 0.54
   projectilePrefab: {fileID: 2854810196801811929, guid: 74cc131447c45b4469958070dec04319, type: 3}
   fireRate: 1.3
   fireRateVariance: 0
