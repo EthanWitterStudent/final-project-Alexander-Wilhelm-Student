@@ -795,8 +795,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278651967
+  m_fontColor: {r: 0.24528301, g: 0.046845544, b: 0.028924879, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -881,7 +881,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &171895929
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5799,7 +5799,7 @@ MonoBehaviour:
   m_text: Right Click = Remove Tower
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3211f9ddc99e0ed439a9d7943a2448c3, type: 2}
-  m_sharedMaterial: {fileID: -3645859736781860064, guid: 3211f9ddc99e0ed439a9d7943a2448c3, type: 2}
+  m_sharedMaterial: {fileID: 5116283731318500517, guid: 3211f9ddc99e0ed439a9d7943a2448c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6075,8 +6075,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4279584285
+  m_fontColor: {r: 0.11221645, g: 0.2735849, b: 0.081301175, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6842,7 +6842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1366539305
 RectTransform:
   m_ObjectHideFlags: 0
