@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5033174, g: 0.49926096, b: 0.47094893, a: 1}
+  m_IndirectSpecularColor: {r: 0.5033214, g: 0.49926436, b: 0.47095162, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -146,6 +146,14 @@ PrefabInstance:
       propertyPath: towerImage
       value: 
       objectReference: {fileID: 21300000, guid: 60b4e7b0c7e165f468206eff6c907272, type: 3}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_text
+      value: Pog!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -240,7 +248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 182
+      value: 290.53
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -496,7 +504,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 330, y: -110}
+  m_AnchoredPosition: {x: 412, y: -179}
   m_SizeDelta: {x: 220, y: 72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &105582797
@@ -986,6 +994,10 @@ PrefabInstance:
       propertyPath: towerImage
       value: 
       objectReference: {fileID: 21300000, guid: 4f470e3ceb311214ca3b4d4b142d1c80, type: 3}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_text
+      value: punch
+      objectReference: {fileID: 0}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1080,11 +1092,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 182
+      value: 1012.12
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -314
+      value: -226.6
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1227,6 +1239,14 @@ PrefabInstance:
       propertyPath: towerImage
       value: 
       objectReference: {fileID: 21300000, guid: 17d66a0feb5c0b44d8ddd5e96b6dd5ed, type: 3}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_text
+      value: Bombs?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_fontStyle
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1301,7 +1321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 446
+      value: 771.58997
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2129,7 +2149,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Alex Wilhelm
+  m_text: roblox 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ab254e192f5f560478d518cb2b7d2081, type: 2}
   m_sharedMaterial: {fileID: -4283531187668970159, guid: ab254e192f5f560478d518cb2b7d2081, type: 2}
@@ -2379,6 +2399,10 @@ PrefabInstance:
       propertyPath: towerImage
       value: 
       objectReference: {fileID: 21300000, guid: 58859b6965ed1c8439fc6ceda81042c4, type: 3}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_text
+      value: ;)
+      objectReference: {fileID: 0}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2473,11 +2497,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 182
+      value: 771.58997
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -446
+      value: -403.2
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3071,6 +3095,10 @@ PrefabInstance:
       propertyPath: towerImage
       value: 
       objectReference: {fileID: 21300000, guid: b07382a9a8509084b8cf37c2a7e4b820, type: 3}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_text
+      value: Stop! Morb Ab!
+      objectReference: {fileID: 0}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3165,11 +3193,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 314
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -314
+      value: -403.2
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3295,6 +3323,22 @@ PrefabInstance:
       propertyPath: towerImage
       value: 
       objectReference: {fileID: 21300000, guid: dc925ac5c8003ff46b9fe8136cfd7966, type: 3}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_text
+      value: Shotgunnin' or Nothin'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_margin.y
+      value: 25.389652
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_margin.z
+      value: -35.72902
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3389,11 +3433,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 182
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -182
+      value: -226.6
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3580,6 +3624,22 @@ PrefabInstance:
       propertyPath: towerImage
       value: 
       objectReference: {fileID: 21300000, guid: 77403e2fbffc7c74dbd482708812125c, type: 3}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_text
+      value: '*Breaks Wind uwu*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_margin.x
+      value: -5.275566
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_margin.z
+      value: -6.5943527
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3674,11 +3734,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50
+      value: 1012.12
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -182
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3865,6 +3925,10 @@ PrefabInstance:
       propertyPath: towerImage
       value: 
       objectReference: {fileID: 21300000, guid: b7e91baad1a79d04ebfebe14f600aa40, type: 3}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_text
+      value: Rocket Launcher
+      objectReference: {fileID: 0}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3959,7 +4023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 314
+      value: 531.06
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4351,7 +4415,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Reddit Simulator 2009
+  m_text: Reddit Simulator 2009-2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9e9be97a4963a4f42b65f23574190077, type: 2}
   m_sharedMaterial: {fileID: -7565070115619907324, guid: 9e9be97a4963a4f42b65f23574190077, type: 2}
@@ -4414,7 +4478,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -361.80826, y: 0, z: -361.80835, w: -74.8031}
+  m_margin: {x: -381.24768, y: 0, z: -403.1172, w: -74.8031}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5276,6 +5340,10 @@ PrefabInstance:
       propertyPath: towerImage
       value: 
       objectReference: {fileID: 21300000, guid: 85011204d8be7a04f84a3b2b35c4cf1c, type: 3}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_text
+      value: Lovable Celebrity
+      objectReference: {fileID: 0}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -5370,11 +5438,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 446
+      value: 290.53
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -314
+      value: -403.2
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5575,7 +5643,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32, y: 210}
+  m_AnchoredPosition: {x: -567, y: 161}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1113937821
@@ -5599,9 +5667,9 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 32, y: 32}
+  m_Spacing: {x: 140.53, y: 76.6}
   m_Constraint: 1
-  m_ConstraintCount: 4
+  m_ConstraintCount: 5
 --- !u!1 &1134986521
 GameObject:
   m_ObjectHideFlags: 0
@@ -6435,6 +6503,10 @@ PrefabInstance:
       propertyPath: towerImage
       value: 
       objectReference: {fileID: 21300000, guid: 56876ce2689399844a37dcfb8970442f, type: 3}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_text
+      value: Gotta go Speed
+      objectReference: {fileID: 0}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -6529,11 +6601,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50
+      value: 531.06
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -446
+      value: -403.2
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6725,6 +6797,10 @@ PrefabInstance:
       propertyPath: towerImage
       value: 
       objectReference: {fileID: 21300000, guid: 3bd51413f75aa264383060b97419ffaf, type: 3}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_text
+      value: Sussy Vent
+      objectReference: {fileID: 0}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6795,11 +6871,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 446
+      value: 531.06
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -182
+      value: -226.6
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6816,6 +6892,10 @@ PrefabInstance:
     - target: {fileID: 3553188234861714849, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_Name
       value: Amogus Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553188235591678850, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
@@ -7094,6 +7174,10 @@ PrefabInstance:
       propertyPath: towerImage
       value: 
       objectReference: {fileID: 21300000, guid: 3bceede33e19feb49b63de8e178fdc74, type: 3}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_text
+      value: Pika PikWHAA
+      objectReference: {fileID: 0}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -7188,11 +7272,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50
+      value: 771.58997
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -314
+      value: -226.6
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7284,7 +7368,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480295344}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.47844106, w: 0.8781197}
   m_LocalPosition: {x: 0, y: 0, z: 1.2215859}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7292,10 +7376,10 @@ RectTransform:
   - {fileID: 300638595}
   m_Father: {fileID: 1625815419}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -57.167}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -301.82996, y: 269.34094}
+  m_AnchoredPosition: {x: 522, y: 253}
   m_SizeDelta: {x: 265.8258, y: 36.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1480295346
@@ -7451,7 +7535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 160, y: 114}
+  m_AnchoredPosition: {x: 1093, y: -136}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1559861552
@@ -7539,7 +7623,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.61901855, y: 0, z: -2.1115723, w: -74.8031}
+  m_margin: {x: -7.5703125, y: 0, z: -2.1115723, w: -31.357513}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -8160,6 +8244,10 @@ PrefabInstance:
       propertyPath: towerImage
       value: 
       objectReference: {fileID: 21300000, guid: 805348c355fce1147801825425d55f05, type: 3}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_text
+      value: YIPPEE!!
+      objectReference: {fileID: 0}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -8254,11 +8342,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 314
+      value: 290.53
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -182
+      value: -226.6
       objectReference: {fileID: 0}
     - target: {fileID: 3553188234861714848, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9069,7 +9157,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ethan Witter
+  m_text: 'Shotgunnin'' Crusader
 
 '
   m_isRightToLeft: 0
@@ -9418,7 +9506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 0.86
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -9775,6 +9863,10 @@ PrefabInstance:
       propertyPath: towerImage
       value: 
       objectReference: {fileID: 21300000, guid: 31e518ede5d5b98498c056c00f58372a, type: 3}
+    - target: {fileID: 1995439333507518488, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
+      propertyPath: m_text
+      value: I count da money
+      objectReference: {fileID: 0}
     - target: {fileID: 3553188234841514704, guid: f47ebf97e335443429ac9ac8a308fbf8, type: 3}
       propertyPath: m_TargetGraphic
       value: 

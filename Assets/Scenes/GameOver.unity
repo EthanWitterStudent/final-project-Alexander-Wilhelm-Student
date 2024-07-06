@@ -576,8 +576,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986969558}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -409.9562, y: -267.76, z: 0}
-  m_LocalScale: {x: 1.7994006, y: 1.486498, z: 1}
+  m_LocalPosition: {x: -410.0648, y: -267.76, z: 0}
+  m_LocalScale: {x: 2.1225936, y: 1.486498, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 153946765}
@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 1135457344}
   - component: {fileID: 1135457345}
   m_Layer: 0
-  m_Name: unnamed 1
+  m_Name: Game Over text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -660,8 +660,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135457343}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -415.9, y: -266, z: 0}
-  m_LocalScale: {x: 1.7986751, y: 1.7986751, z: 1.7986751}
+  m_LocalPosition: {x: -410.27, y: -261.3, z: 0}
+  m_LocalScale: {x: 3.5801096, y: 3.4683633, z: 1.7986751}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 153946765}
@@ -730,7 +730,7 @@ GameObject:
   - component: {fileID: 1175403433}
   - component: {fileID: 1175403434}
   m_Layer: 0
-  m_Name: unnamed
+  m_Name: Scott
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1059,7 +1059,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MAIN MENU
+  m_text: EMBRACE DEATH
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff2175906dacf9048b024dcc88058aba, type: 2}
   m_sharedMaterial: {fileID: -3420352491475053962, guid: ff2175906dacf9048b024dcc88058aba, type: 2}
@@ -1086,8 +1086,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 52.3
+  m_fontSizeBase: 52.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1162,7 +1162,7 @@ RectTransform:
   m_GameObject: {fileID: 1508371269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.85, y: 0.85, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1599999044}
@@ -1238,8 +1238,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 214.0922, y: -52.656147}
-  m_SizeDelta: {x: 428.1844, y: 105.312294}
+  m_AnchoredPosition: {x: 214.67555, y: -52.448418}
+  m_SizeDelta: {x: 429.3511, y: 104.896835}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1599999045
 MonoBehaviour:
