@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class quitbutton : MonoBehaviour
 {
-    public void doExitGame()
+    public void doExitGame() //doesn't work in WebGL
     {
         Application.Quit();
     }
